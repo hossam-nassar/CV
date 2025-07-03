@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +6,6 @@
   <title>Hossam Aly - HR Leader & Data Analytics Expert</title>
 
   <!-- SEO Meta Tags -->
-
   <meta name="description" content="Expert HR Leader & Data Analytics Specialist in Qatar. 10+ years experience in Power BI, ERP systems, and team management. Transform your HR with data-driven insights.">
   <meta name="keywords" content="HR Leader Qatar, Power BI HR Analytics, ERP Systems Specialist, HR Management Doha, Data Visualization Expert">
   <meta name="author" content="Hossam Aly">
@@ -19,11 +17,9 @@
   <link rel="canonical" href="https://hossamaly.com">
 
   <!-- Favicon -->
-
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png" />
 
   <!-- Google Fonts -->
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -642,7 +638,6 @@
       transform: translateY(0);
     }
   </style>
-
 </head>
 
 <body>
@@ -651,14 +646,12 @@
   <div class="floating-bg"></div>
 
   <!-- Language Switcher -->
-
   <div class="language-switcher">
     <button onclick="switchLanguage('en')" aria-label="Switch to English">EN</button>
     <button onclick="switchLanguage('ar')" aria-label="Switch to Arabic">AR</button>
   </div>
 
   <!-- Header -->
-
   <header class="header-card">
     <nav>
       <div class="hamburger" aria-label="Menu">
@@ -670,13 +663,13 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero -->
-
   <section class="hero">
     <div class="hero-card">
       <div class="hero-avatar">
@@ -696,7 +689,6 @@
   </section>
 
   <!-- About Section -->
-
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
@@ -717,11 +709,15 @@
           <p>Successfully managing 500+ employees from diverse backgrounds while ensuring 100% compliance with Qatar Labor Law and maximizing team performance.</p>
         </div>
       </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto;">
+          I believe that empowering people through technology creates sustainable success.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-
   <section id="skills" class="section">
     <div class="container">
       <h2 class="section-title">Technical Expertise</h2>
@@ -797,7 +793,6 @@
   </section>
 
   <!-- Experience Section -->
-
   <section id="experience" class="section">
     <div class="container">
       <h2 class="section-title">Professional Journey</h2>
@@ -821,8 +816,31 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title">Key Achievements</h2>
+      <div class="cards-grid">
+        <div class="card animate-on-scroll">
+          <span class="card-icon" aria-hidden="true">✅</span>
+          <h3>Process Automation</h3>
+          <p>Automated leave management and HR workflows, reducing processing time by 70% and improving employee satisfaction.</p>
+        </div>
+        <div class="card animate-on-scroll">
+          <span class="card-icon" aria-hidden="true">📈</span>
+          <h3>Data-Driven Insights</h3>
+          <p>Developed Power BI dashboards adopted by senior management to drive strategic decisions across departments.</p>
+        </div>
+        <div class="card animate-on-scroll">
+          <span class="card-icon" aria-hidden="true">⚖️</span>
+          <h3>Compliance Excellence</h3>
+          <p>Led HR audits that achieved 100% compliance with Qatar Labor Law for 500+ employees across multiple entities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">Let's Connect</h2>
@@ -860,7 +878,7 @@
           <h4>LinkedIn</h4>
           <p>
             <a href="https://www.linkedin.com/in/hossam-ali-2234a32a0/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hossam Aly LinkedIn profile">
-              View Profile
+              Visit My LinkedIn Profile
             </a>
           </p>
         </div>
@@ -1007,13 +1025,13 @@
           
           // Section Titles
           document.querySelectorAll('.section-title').forEach((el, index) => {
-            const titles = ['نبذة عني', 'الخبرات التقنية', 'الرحلة المهنية', 'لنتواصل'];
+            const titles = ['نبذة عني', 'الخبرات التقنية', 'الرحلة المهنية', 'الإنجازات الرئيسية', 'لنتواصل'];
             if (titles[index]) el.textContent = titles[index];
           });
           
           // Navigation
           const navLinks = document.querySelectorAll('.nav-links a');
-          const navTexts = ['نبذة', 'المهارات', 'الخبرة', 'التواصل'];
+          const navTexts = ['نبذة', 'المهارات', 'الخبرة', 'الإنجازات', 'التواصل'];
           navLinks.forEach((link, index) => {
             if (navTexts[index]) link.textContent = navTexts[index];
           });
@@ -1077,9 +1095,30 @@
             expCards[2].querySelector('p:last-child').textContent = 'إدارة العلاقات الحكومية، ومعالجة الوثائق الرسمية، وضمان الامتثال التنظيمي. بناء أساس قوي في بيئة الأعمال القطرية والإطار القانوني.';
           }
           
+          // Achievements Section
+          const achievementsCards = document.querySelectorAll('#achievements .card');
+          if (achievementsCards[0]) {
+            achievementsCards[0].querySelector('h3').textContent = 'أتمتة العمليات';
+            achievementsCards[0].querySelector('p').textContent = 'أتمت إدارة الإجازات وسير العمل في الموارد البشرية، مما قلل وقت المعالجة بنسبة 70٪ وحسّن رضا الموظفين.';
+          }
+          if (achievementsCards[1]) {
+            achievementsCards[1].querySelector('h3').textContent = 'رؤى قائمة على البيانات';
+            achievementsCards[1].querySelector('p').textContent = 'تطوير لوحات Power BI اعتمدت عليها الإدارة العليا لاتخاذ قرارات استراتيجية عبر الأقسام.';
+          }
+          if (achievementsCards[2]) {
+            achievementsCards[2].querySelector('h3').textContent = 'تميز الامتثال';
+            achievementsCards[2].querySelector('p').textContent = 'قيادة تدقيق الموارد البشرية الذي حقق امتثالًا بنسبة 100٪ لقانون العمل القطري لأكثر من 500 موظف.';
+          }
+          
+          // About Philosophy
+          const aboutPhilosophy = document.querySelector('#about p[style*="font-size: 1.2rem"]');
+          if (aboutPhilosophy) {
+            aboutPhilosophy.textContent = 'أؤمن بأن تمكين الأشخاص من خلال التكنولوجيا يخلق نجاحاً مستداماً.';
+          }
+          
           // Contact Section
           const contactText = document.querySelector('#contact p');
-          if (contactText) {
+          if (contactText && contactText.textContent.includes('Ready to discuss')) {
             contactText.textContent = 'مستعد لمناقشة كيف يمكن للموارد البشرية القائمة على البيانات أن تحول مؤسستك؟';
           }
           
@@ -1088,6 +1127,12 @@
           contactCards.forEach((card, index) => {
             if (contactTexts[index]) card.textContent = contactTexts[index];
           });
+          
+          // LinkedIn link text
+          const linkedinLink = document.querySelector('#contact .contact-card a[href*="linkedin"]');
+          if (linkedinLink) {
+            linkedinLink.textContent = 'زيارة ملفي على LinkedIn';
+          }
           
           const finalCTA = document.querySelector('#contact .cta-button');
           if (finalCTA) finalCTA.textContent = 'أرسل رسالة';
@@ -1101,13 +1146,13 @@
           
           // Section Titles
           document.querySelectorAll('.section-title').forEach((el, index) => {
-            const titles = ['About Me', 'Technical Expertise', 'Professional Journey', 'Let\'s Connect'];
+            const titles = ['About Me', 'Technical Expertise', 'Professional Journey', 'Key Achievements', 'Let\'s Connect'];
             if (titles[index]) el.textContent = titles[index];
           });
           
           // Navigation
           const navLinks = document.querySelectorAll('.nav-links a');
-          const navTexts = ['About', 'Skills', 'Experience', 'Contact'];
+          const navTexts = ['About', 'Skills', 'Experience', 'Achievements', 'Contact'];
           navLinks.forEach((link, index) => {
             if (navTexts[index]) link.textContent = navTexts[index];
           });
@@ -1171,9 +1216,30 @@
             expCards[2].querySelector('p:last-child').textContent = 'Managed government relations, processed official documentation, and ensured regulatory compliance. Built a strong foundation in Qatar\'s business environment and legal framework.';
           }
           
+          // Achievements Section
+          const achievementsCards = document.querySelectorAll('#achievements .card');
+          if (achievementsCards[0]) {
+            achievementsCards[0].querySelector('h3').textContent = 'Process Automation';
+            achievementsCards[0].querySelector('p').textContent = 'Automated leave management and HR workflows, reducing processing time by 70% and improving employee satisfaction.';
+          }
+          if (achievementsCards[1]) {
+            achievementsCards[1].querySelector('h3').textContent = 'Data-Driven Insights';
+            achievementsCards[1].querySelector('p').textContent = 'Developed Power BI dashboards adopted by senior management to drive strategic decisions across departments.';
+          }
+          if (achievementsCards[2]) {
+            achievementsCards[2].querySelector('h3').textContent = 'Compliance Excellence';
+            achievementsCards[2].querySelector('p').textContent = 'Led HR audits that achieved 100% compliance with Qatar Labor Law for 500+ employees across multiple entities.';
+          }
+          
+          // About Philosophy
+          const aboutPhilosophy = document.querySelector('#about p[style*="font-size: 1.2rem"]');
+          if (aboutPhilosophy) {
+            aboutPhilosophy.textContent = 'I believe that empowering people through technology creates sustainable success.';
+          }
+          
           // Contact Section
           const contactText = document.querySelector('#contact p');
-          if (contactText) {
+          if (contactText && !contactText.textContent.includes('Ready to discuss')) {
             contactText.textContent = 'Ready to discuss how data-driven HR can transform your organization?';
           }
           
@@ -1182,6 +1248,12 @@
           contactCards.forEach((card, index) => {
             if (contactTexts[index]) card.textContent = contactTexts[index];
           });
+          
+          // LinkedIn link text
+          const linkedinLink = document.querySelector('#contact .contact-card a[href*="linkedin"]');
+          if (linkedinLink) {
+            linkedinLink.textContent = 'Visit My LinkedIn Profile';
+          }
           
           const finalCTA = document.querySelector('#contact .cta-button');
           if (finalCTA) finalCTA.textContent = 'Send Message';
@@ -1210,6 +1282,5 @@
       }
     });
   </script>
-
 </body>
 </html>

@@ -83,54 +83,56 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column; /* تخلي العناصر عمودية */
+  text-align: center;
   background: radial-gradient(circle at 20% 50%, #120a8f 0%, #000000 50%),
               radial-gradient(circle at 80% 50%, #8b0000 0%, #000000 50%);
 }
+
+/* Hero Card */
 .hero-card {
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(30px);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 30px;
   padding: 4rem;
-  text-align: center;
   max-width: 700px;
   box-shadow: 0 30px 60px rgba(0,0,0,0.5);
 }
+
+/* Hero Avatar */
 .hero-avatar {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 2rem;
-  background: linear-gradient(45deg, #64ffda, #00bfa5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0f0f23;
-  font-size: 3rem;
-  font-weight: 800;
-  box-shadow: 0 20px 40px rgba(100, 255, 218, 0.3);
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
 }
+
 .hero-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
+
+/* Hero Title */
 .hero h1 {
   font-size: 3.5rem;
   font-weight: 800;
   color: white;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #64ffda, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
+
+/* Hero Subtitle */
 .hero-subtitle {
   font-size: 1.3rem;
   color: rgba(255,255,255,0.8);
   margin-bottom: 2rem;
 }
+
+/* Hero Tags */
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
@@ -138,6 +140,8 @@ nav {
   justify-content: center;
   margin-bottom: 2rem;
 }
+
+/* Tag Style */
 .tag {
   background: rgba(100,255,218,0.2);
   color: #64ffda;
@@ -145,7 +149,11 @@ nav {
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
-  border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+/* Space Between Hero Items */
+.hero-card > *:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 /* CTA Button */
@@ -430,7 +438,7 @@ nav {
   <!-- Hero -->
   <section class="hero">
     <div class="hero-avatar">
-  <img src="profile.jpg" alt="Hossam Aly" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" />
+  <img src="profile.jpg" alt="Hossam Aly" />
 </div>
 
       <h1>HOSSAM ALY</h1>

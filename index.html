@@ -47,7 +47,7 @@ body {
 /* Header */
 .header-card {
   position: fixed;
-  top: 20px;
+  top: calc(20px + env(safe-area-inset-top));
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.1);
@@ -67,12 +67,6 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-}
-.logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #64ffda;
-  text-decoration: none;
 }
 .nav-links {
   display: flex;
@@ -821,7 +815,7 @@ let ticking = false;
 function updateHeader() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop && scrollTop > 100) {
-    headerCard.style.transform = 'translateX(-50%) translateY(-100px)';
+    headerCard.style.transform = 'translateX(-50%) translateY(calc(-100px + env(safe-area-inset-top)))';
     headerCard.style.opacity = '0.8';
   } else {
     headerCard.style.transform = 'translateX(-50%) translateY(0)';

@@ -1,14 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hossam Aly - HR Leader & Data Analytics Expert</title>
-  
+
+  <!-- SEO Meta Tags -->
+
+  <meta name="description" content="Expert HR Leader & Data Analytics Specialist in Qatar. 10+ years experience in Power BI, ERP systems, and team management. Transform your HR with data-driven insights.">
+  <meta name="keywords" content="HR Leader, Data Analytics, Power BI, ERP Systems, Qatar, HR Management, Data Visualization, Team Leadership">
+  <meta name="author" content="Hossam Aly">
+  <meta property="og:title" content="Hossam Aly - HR Leader & Data Analytics Expert">
+  <meta property="og:description" content="Expert HR Leader & Data Analytics Specialist in Qatar with 10+ years experience">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hossamaly.com">
+  <meta property="og:image" content="profile.jpg">
+
   <!-- Favicon -->
+
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png" />
 
   <!-- Google Fonts -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -83,7 +97,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* تخلي العناصر عمودية */
+  flex-direction: column;
   text-align: center;
   background: radial-gradient(circle at 20% 50%, #120a8f 0%, #000000 50%),
               radial-gradient(circle at 80% 50%, #8b0000 0%, #000000 50%);
@@ -197,7 +211,7 @@ nav {
   gap: 2rem;
 }
 
-/* Cards */
+/* Performance Optimizations */
 .card,.skill-card,.stat-card,.contact-card,.timeline-card {
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(20px);
@@ -207,6 +221,7 @@ nav {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  will-change: transform;
 }
 
 .card::before, .skill-card::before, .timeline-card::before {
@@ -219,6 +234,7 @@ nav {
   background: linear-gradient(90deg, #64ffda, #00bfa5);
   transform: scaleX(0);
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .card:hover,.skill-card:hover,.stat-card:hover,.contact-card:hover,.timeline-card:hover {
@@ -394,6 +410,36 @@ nav {
   50% { transform: translateY(-20px) rotate(180deg); }
 }
 
+/* Keyboard Navigation Support */
+.keyboard-navigation *:focus {
+  outline: 2px solid #64ffda;
+  outline-offset: 2px;
+}
+
+/* Loading Animation */
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(100, 255, 218, 0.1);
+  border-top: 3px solid #64ffda;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.page-loaded .loading-spinner {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width:768px){
   .hero h1 { font-size:2.2rem; }
@@ -401,6 +447,26 @@ nav {
   .nav-links { display:none; }
   .cards-grid { grid-template-columns: 1fr; }
   .hero-tags { flex-direction: column; align-items: center; }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card, .skill-card, .stat-card, .contact-card, .timeline-card {
+    border: 2px solid #64ffda;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floating-bg {
+    animation: none;
+  }
 }
 
 /* Scroll Animations */
@@ -415,6 +481,7 @@ nav {
   transform: translateY(0);
 }
   </style>
+
 </head>
 
 <body>
@@ -423,6 +490,7 @@ nav {
   <div class="floating-bg"></div>
 
   <!-- Header -->
+
   <header class="header-card">
     <nav>
       <a href="#" class="logo">H.A</a>
@@ -436,11 +504,12 @@ nav {
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="hero-avatar">
-  <img src="profile.jpg" alt="Hossam Aly" />
-</div>
 
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-avatar">
+        <img src="profile.jpg" alt="Hossam Aly - HR Leader and Data Analytics Expert" />
+      </div>
       <h1>HOSSAM ALY</h1>
       <p class="hero-subtitle">HR Leader & Data Analytics Expert</p>
       <div class="hero-tags">
@@ -454,22 +523,23 @@ nav {
   </section>
 
   <!-- About Section -->
+
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <div class="cards-grid">
         <div class="card animate-on-scroll">
-          <span class="card-icon">🚀</span>
+          <span class="card-icon" role="img" aria-label="Rocket">🚀</span>
           <h3>Innovation Leader</h3>
           <p>Transforming traditional HR practices through cutting-edge technology and data-driven insights. Over 10 years of progressive experience in Qatar's dynamic business landscape.</p>
         </div>
         <div class="card animate-on-scroll">
-          <span class="card-icon">📊</span>
+          <span class="card-icon" role="img" aria-label="Chart">📊</span>
           <h3>Data Analytics Expert</h3>
           <p>Specialized in Power BI dashboard development, ERP integration, and advanced HR analytics that drive strategic decision-making and operational excellence.</p>
         </div>
         <div class="card animate-on-scroll">
-          <span class="card-icon">🌍</span>
+          <span class="card-icon" role="img" aria-label="Globe">🌍</span>
           <h3>Multicultural Management</h3>
           <p>Successfully managing 500+ employees from diverse backgrounds while ensuring 100% compliance with Qatar Labor Law and maximizing team performance.</p>
         </div>
@@ -478,13 +548,14 @@ nav {
   </section>
 
   <!-- Skills Section -->
+
   <section id="skills" class="section">
     <div class="container">
       <h2 class="section-title">Technical Expertise</h2>
       <div class="cards-grid">
         <div class="skill-card animate-on-scroll">
           <div class="skill-category-title">
-            <span style="font-size:2rem;">📊</span>
+            <span style="font-size:2rem;" role="img" aria-label="Chart">📊</span>
             <h4>Data Analytics</h4>
           </div>
           <div class="skill-item">
@@ -506,7 +577,7 @@ nav {
         </div>
         <div class="skill-card animate-on-scroll">
           <div class="skill-category-title">
-            <span style="font-size:2rem;">⚙️</span>
+            <span style="font-size:2rem;" role="img" aria-label="Settings">⚙️</span>
             <h4>ERP Systems</h4>
           </div>
           <div class="skill-item">
@@ -528,7 +599,7 @@ nav {
         </div>
         <div class="skill-card animate-on-scroll">
           <div class="skill-category-title">
-            <span style="font-size:2rem;">💼</span>
+            <span style="font-size:2rem;" role="img" aria-label="Briefcase">💼</span>
             <h4>HR Leadership</h4>
           </div>
           <div class="skill-item">
@@ -553,6 +624,7 @@ nav {
   </section>
 
   <!-- Experience Section -->
+
   <section id="experience" class="section">
     <div class="container">
       <h2 class="section-title">Professional Journey</h2>
@@ -577,6 +649,7 @@ nav {
   </section>
 
   <!-- Contact Section -->
+
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">Let's Connect</h2>
@@ -587,40 +660,40 @@ nav {
       </div>
       <div class="cards-grid">
         <div class="contact-card animate-on-scroll">
-          <span class="contact-icon">📧</span>
+          <span class="contact-icon" role="img" aria-label="Email">📧</span>
           <h4>Email</h4>
           <p>
-            <a href="mailto:aly.a.hossam@outlook.com">
+            <a href="mailto:aly.a.hossam@outlook.com" aria-label="Send email to Hossam Aly">
               aly.a.hossam@outlook.com
             </a>
           </p>
         </div>
         <div class="contact-card animate-on-scroll">
-          <span class="contact-icon">📱</span>
+          <span class="contact-icon" role="img" aria-label="Phone">📱</span>
           <h4>Phone</h4>
           <p>
-            <a href="tel:+97433190656">
+            <a href="tel:+97433190656" aria-label="Call Hossam Aly">
               +974 33190656
             </a>
           </p>
         </div>
         <div class="contact-card animate-on-scroll">
-          <span class="contact-icon">📍</span>
+          <span class="contact-icon" role="img" aria-label="Location">📍</span>
           <h4>Location</h4>
           <p>Doha, Qatar</p>
         </div>
         <div class="contact-card animate-on-scroll">
-          <span class="contact-icon">💼</span>
+          <span class="contact-icon" role="img" aria-label="LinkedIn">💼</span>
           <h4>LinkedIn</h4>
           <p>
-            <a href="https://www.linkedin.com/in/hossam-ali-2234a32a0/" target="_blank">
+            <a href="https://www.linkedin.com/in/hossam-ali-2234a32a0/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hossam Aly LinkedIn profile">
               View Profile
             </a>
           </p>
         </div>
       </div>
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="mailto:aly.a.hossam@outlook.com" class="cta-button">Send Message</a>
+        <a href="mailto:aly.a.hossam@outlook.com" class="cta-button" aria-label="Send message to Hossam Aly">Send Message</a>
       </div>
     </div>
   </section>
@@ -658,11 +731,12 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => {
   observer.observe(el);
 });
 
-// Header hide on scroll
-let lastScrollTop = 0;
+// Performance optimization - Reduce reflows
 const headerCard = document.querySelector('.header-card');
+let lastScrollTop = 0;
+let ticking = false;
 
-window.addEventListener('scroll', () => {
+function updateHeader() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop && scrollTop > 100) {
     headerCard.style.transform = 'translateX(-50%) translateY(-100px)';
@@ -672,17 +746,53 @@ window.addEventListener('scroll', () => {
     headerCard.style.opacity = '1';
   }
   lastScrollTop = scrollTop;
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(updateHeader);
+    ticking = true;
+  }
 });
 
-// Click effects
+// Enhanced click effects with better performance
 document.querySelectorAll('.card, .skill-card, .stat-card, .contact-card').forEach(card => {
   card.addEventListener('click', function() {
     this.style.transform = 'scale(0.98)';
+    this.style.transition = 'transform 0.1s ease';
     setTimeout(() => {
       this.style.transform = '';
+      this.style.transition = 'all 0.3s ease';
     }, 150);
   });
 });
+
+// Add focus styles for keyboard navigation
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Tab') {
+    document.body.classList.add('keyboard-navigation');
+  }
+});
+
+document.addEventListener('mousedown', function() {
+  document.body.classList.remove('keyboard-navigation');
+});
+
+// Preload critical resources
+function preloadImages() {
+  const images = ['profile.jpg'];
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  preloadImages();
+});
   </script>
+
 </body>
 </html>

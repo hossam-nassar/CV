@@ -65,6 +65,7 @@ body {
 nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 .logo {
@@ -112,6 +113,13 @@ nav {
   padding: 4rem;
   max-width: 700px;
   box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  transition: all 0.4s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  background: rgba(255,255,255,0.08);
 }
 
 /* Hero Avatar */
@@ -122,6 +130,31 @@ nav {
   overflow: hidden;
   margin: 0 auto 2rem;
   box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hero-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(100, 255, 218, 0.3);
+}
+
+.hero-avatar::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #64ffda, #00bfa5);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hero-avatar:hover::before {
+  opacity: 1;
 }
 
 .hero-avatar img {
@@ -137,6 +170,12 @@ nav {
   font-weight: 800;
   color: white;
   margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero-card:hover h1 {
+  color: #64ffda;
+  text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
 }
 
 /* Hero Subtitle */
@@ -144,6 +183,16 @@ nav {
   font-size: 1.3rem;
   color: rgba(255,255,255,0.8);
   margin-bottom: 2rem;
+}
+
+/* Hero Experience */
+.hero-experience {
+  font-size: 1.1rem;
+  color: #64ffda;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Hero Tags */
@@ -163,6 +212,21 @@ nav {
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: rgba(100,255,218,0.3);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+}
+
+.tag-icon {
+  font-size: 1rem;
 }
 
 /* Space Between Hero Items */
@@ -182,7 +246,25 @@ nav {
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
   font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
 }
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
 .cta-button:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 20px 40px rgba(100, 255, 218, 0.4);
@@ -493,7 +575,6 @@ nav {
 
   <header class="header-card">
     <nav>
-      <a href="#" class="logo">H.A</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -512,11 +593,12 @@ nav {
       </div>
       <h1>HOSSAM ALY</h1>
       <p class="hero-subtitle">HR Leader & Data Analytics Expert</p>
+      <p class="hero-experience">10+ Years Experience</p>
       <div class="hero-tags">
-        <span class="tag">Power BI</span>
-        <span class="tag">ERP Systems</span>
-        <span class="tag">HR Analytics</span>
-        <span class="tag">Team Leadership</span>
+        <span class="tag"><span class="tag-icon">📊</span>Power BI</span>
+        <span class="tag"><span class="tag-icon">⚙️</span>ERP Systems</span>
+        <span class="tag"><span class="tag-icon">📈</span>HR Analytics</span>
+        <span class="tag"><span class="tag-icon">👥</span>Team Leadership</span>
       </div>
       <a href="#contact" class="cta-button">Let's Connect</a>
     </div>

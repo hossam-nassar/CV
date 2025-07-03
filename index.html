@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,13 +9,14 @@
   <!-- SEO Meta Tags -->
 
   <meta name="description" content="Expert HR Leader & Data Analytics Specialist in Qatar. 10+ years experience in Power BI, ERP systems, and team management. Transform your HR with data-driven insights.">
-  <meta name="keywords" content="HR Leader, Data Analytics, Power BI, ERP Systems, Qatar, HR Management, Data Visualization, Team Leadership">
+  <meta name="keywords" content="HR Leader Qatar, Power BI HR Analytics, ERP Systems Specialist, HR Management Doha, Data Visualization Expert">
   <meta name="author" content="Hossam Aly">
   <meta property="og:title" content="Hossam Aly - HR Leader & Data Analytics Expert">
   <meta property="og:description" content="Expert HR Leader & Data Analytics Specialist in Qatar with 10+ years experience">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hossamaly.com">
-  <meta property="og:image" content="profile.jpg">
+  <meta property="og:image" content="profile.webp">
+  <link rel="canonical" href="https://hossamaly.com">
 
   <!-- Favicon -->
 
@@ -23,539 +24,617 @@
 
   <!-- Google Fonts -->
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #0f0f23;
-  overflow-x: hidden;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    :root {
+      --primary-color: #64ffda;
+      --secondary-color: #00bfa5;
+      --card-bg: rgba(255,255,255,0.05);
+      --card-bg-hover: rgba(255,255,255,0.08);
+      --text-muted: rgba(255,255,255,0.9);
+      --card-border: rgba(255,255,255,0.1);
+      --shadow: 0 20px 40px rgba(0,0,0,0.3);
+      --transition: all 0.3s ease;
+    }
 
-/* Header */
-.header-card {
-  position: fixed;
-  top: calc(20px + env(safe-area-inset-top));
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 15px 30px;
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-.header-card:hover {
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-.nav-links a:hover {
-  background: rgba(100,255,218,0.2);
-  color: #64ffda;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Hero */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  background: radial-gradient(circle at 20% 50%, #120a8f 0%, #000000 50%),
-              radial-gradient(circle at 80% 50%, #8b0000 0%, #000000 50%);
-}
+    body {
+      font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #0f0f23;
+      overflow-x: hidden;
+    }
 
-/* Hero Card */
-.hero-card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(30px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 30px;
-  padding: 4rem;
-  max-width: 700px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-  transition: all 0.4s ease;
-}
+    body[lang="ar"] {
+      direction: rtl;
+      font-family: 'Cairo', 'Inter', sans-serif;
+    }
 
-.hero-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
-  background: rgba(255,255,255,0.08);
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-/* Hero Avatar */
-.hero-avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 2rem;
-  box-shadow: 0 0 30px rgba(0,0,0,0.4);
-  transition: all 0.3s ease;
-  position: relative;
-}
+    /* Screen Reader Only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
 
-.hero-avatar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(100, 255, 218, 0.3);
-}
+    /* Header */
+    .header-card {
+      position: fixed;
+      top: calc(20px + env(safe-area-inset-top));
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 15px 30px;
+      z-index: 1000;
+      transition: var(--transition);
+    }
 
-.hero-avatar::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background: linear-gradient(45deg, #64ffda, #00bfa5);
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+    .header-card:hover {
+      background: var(--card-bg-hover);
+      box-shadow: var(--shadow);
+    }
 
-.hero-avatar:hover::before {
-  opacity: 1;
-}
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
 
-.hero-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
 
-/* Hero Title */
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: white;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 12px;
+      transition: var(--transition);
+    }
 
-.hero-card:hover h1 {
-  color: #64ffda;
-  text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
-}
+    .nav-links a:hover {
+      background: rgba(100,255,218,0.2);
+      color: var(--primary-color);
+    }
 
-/* Hero Subtitle */
-.hero-subtitle {
-  font-size: 1.3rem;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 2rem;
-}
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
 
-/* Hero Experience */
-.hero-experience {
-  font-size: 1.1rem;
-  color: #64ffda;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: var(--transition);
+    }
 
-/* Hero Tags */
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
 
-/* Tag Style */
-.tag {
-  background: rgba(100,255,218,0.2);
-  color: #64ffda;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
 
-.tag:hover {
-  background: rgba(100,255,218,0.3);
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
-}
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
 
-.tag-icon {
-  font-size: 1rem;
-}
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      padding: 1rem;
+      border-radius: 0 0 20px 20px;
+    }
 
-/* Space Between Hero Items */
-.hero-card > *:not(:last-child) {
-  margin-bottom: 1rem;
-}
+    /* Hero */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: radial-gradient(circle at 20% 50%, #120a8f 0%, #000000 50%),
+                  radial-gradient(circle at 80% 50%, #8b0000 0%, #000000 50%);
+    }
 
-/* CTA Button */
-.cta-button {
-  display: inline-block;
-  padding: 15px 40px;
-  background: linear-gradient(45deg, #64ffda, #00bfa5);
-  color: #0f0f23;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
-  font-size: 1.1rem;
-  position: relative;
-  overflow: hidden;
-}
+    .hero-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(30px);
+      border: 1px solid var(--card-border);
+      border-radius: 30px;
+      padding: 4rem;
+      max-width: 700px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+    }
 
-.cta-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  transition: left 0.5s ease;
-}
+    @supports not (backdrop-filter: blur(30px)) {
+      .hero-card, .header-card, .card, .skill-card, .timeline-card, .contact-card {
+        background: rgba(15,15,35,0.9);
+      }
+    }
 
-.cta-button:hover::before {
-  left: 100%;
-}
+    .hero-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      background: var(--card-bg-hover);
+    }
 
-.cta-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(100, 255, 218, 0.4);
-}
+    .hero-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 2rem;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+      transition: var(--transition);
+      position: relative;
+    }
 
-/* Sections */
-.section {
-  padding: 80px 0;
-}
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 3rem;
-  background: linear-gradient(45deg, #64ffda, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+    .hero-avatar:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(100, 255, 218, 0.3);
+    }
 
-/* Cards Grid */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  gap: 2rem;
-}
+    .hero-avatar::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+      transition: var(--transition);
+    }
 
-/* Performance Optimizations */
-.card,.skill-card,.stat-card,.contact-card,.timeline-card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 20px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  will-change: transform;
-}
+    .hero-avatar:hover::before {
+      opacity: 1;
+    }
 
-.card::before, .skill-card::before, .timeline-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #64ffda, #00bfa5);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  will-change: transform;
-}
+    .hero-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.card:hover,.skill-card:hover,.stat-card:hover,.contact-card:hover,.timeline-card:hover {
-  transform: translateY(-8px);
-  background: rgba(255,255,255,0.08);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 1rem;
+      transition: var(--transition);
+    }
 
-.card:hover::before, .skill-card:hover::before, .timeline-card:hover::before {
-  transform: scaleX(1);
-}
+    .hero-card:hover h1 {
+      color: var(--primary-color);
+      text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    }
 
-/* Card Content */
-.card-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  display: block;
-}
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
 
-.card h3 {
-  color: #64ffda;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
+    .hero-experience {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-.card p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
-}
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
 
-/* Skills Cards */
-.skill-category-title {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
+    .tag {
+      background: rgba(100,255,218,0.2);
+      color: var(--primary-color);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
 
-.skill-category-title h4 {
-  font-size: 1.5rem;
-  color: #64ffda;
-  font-weight: 700;
-}
+    .tag:hover {
+      background: rgba(100,255,218,0.3);
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+    }
 
-.skill-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  transition: all 0.3s ease;
-}
+    .tag-icon {
+      font-size: 1rem;
+    }
 
-.skill-item:hover {
-  background: rgba(100, 255, 218, 0.1);
-  transform: translateX(5px);
-}
+    .cta-button {
+      display: inline-block;
+      padding: 15px 40px;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      color: #0f0f23;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 700;
+      transition: var(--transition);
+      box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+      font-size: 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
 
-.skill-name {
-  color: white;
-  font-weight: 600;
-}
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s ease;
+    }
 
-.skill-level {
-  background: rgba(100, 255, 218, 0.2);
-  color: #64ffda;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
+    .cta-button:hover::before {
+      left: 100%;
+    }
 
-/* Experience Cards */
-.timeline-card h4 {
-  color: #64ffda;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(100, 255, 218, 0.4);
+    }
 
-.timeline-card .company {
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
+    .section {
+      padding: 80px 0;
+    }
 
-.timeline-card p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
-}
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 3rem;
+      background: linear-gradient(45deg, var(--primary-color), #ffffff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-/* Contact Cards */
-.contact-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: block;
-}
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      align-items: start;
+    }
 
-.contact-card {
-  text-align: center;
-  cursor: pointer;
-}
+    .card, .skill-card, .stat-card, .contact-card, .timeline-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      will-change: transform;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
-.contact-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  background: rgba(100, 255, 218, 0.1);
-}
+    .skill-card {
+      min-height: 350px;
+    }
 
-.contact-card h4 {
-  color: #64ffda;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-}
+    .timeline-card {
+      min-height: 250px;
+    }
 
-.contact-card p {
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-}
+    .contact-card {
+      min-height: 200px;
+      justify-content: center;
+    }
 
-.contact-card a {
-  color: #64ffda;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+    .card:hover, .skill-card:hover, .stat-card:hover, .contact-card:hover, .timeline-card:hover {
+      transform: translateY(-8px);
+      background: var(--card-bg-hover);
+      box-shadow: var(--shadow);
+    }
 
-.contact-card a:hover {
-  color: #00bfa5;
-  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
-}
+    .card::before, .skill-card::before, .timeline-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      will-change: transform;
+    }
 
-/* Animations */
-.fade-in {
-  animation: fadeIn 1s ease forwards;
-}
+    .card:hover::before, .skill-card:hover::before, .timeline-card:hover::before {
+      transform: scaleX(1);
+    }
 
-@keyframes fadeIn {
-  0% { opacity:0; transform: translateY(20px); }
-  100% { opacity:1; transform: translateY(0); }
-}
+    .card-icon, .contact-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
 
-/* Floating BG */
-.floating-bg {
-  position: fixed;
-  pointer-events: none;
-  z-index: -1;
-}
-.floating-bg:nth-child(1) {
-  top: 20%;
-  left: 10%;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(100,255,218,0.1), transparent);
-  border-radius: 50%;
-  animation: float 8s ease-in-out infinite;
-}
-.floating-bg:nth-child(2) {
-  bottom: 20%;
-  right: 10%;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(100,255,218,0.05), transparent);
-  border-radius: 50%;
-  animation: float 10s ease-in-out infinite reverse;
-}
+    .card h3, .skill-category-title h4, .timeline-card h3, .contact-card h4 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
-}
+    .card p, .timeline-card p, .contact-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
 
-/* Keyboard Navigation Support */
-.keyboard-navigation *:focus {
-  outline: 2px solid #64ffda;
-  outline-offset: 2px;
-}
+    .skill-category-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
 
-/* Loading Animation */
-.loading-spinner {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(100, 255, 218, 0.1);
-  border-top: 3px solid #64ffda;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  z-index: 9999;
-}
+    .skill-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      transition: var(--transition);
+    }
 
-@keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
+    .skill-item:hover {
+      background: rgba(100, 255, 218, 0.1);
+      transform: translateX(5px);
+    }
 
-.page-loaded .loading-spinner {
-  display: none;
-}
+    .skill-name {
+      color: white;
+      font-weight: 600;
+    }
 
-/* Responsive */
-@media (max-width:768px){
-  .hero h1 { font-size:2.2rem; }
-  .hero-card { padding:2rem; margin: 0 1rem; }
-  .nav-links { display:none; }
-  .cards-grid { grid-template-columns: 1fr; }
-  .hero-tags { flex-direction: column; align-items: center; }
-}
+    .skill-level {
+      background: rgba(100,255,218,0.2);
+      color: var(--primary-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .card, .skill-card, .stat-card, .contact-card, .timeline-card {
-    border: 2px solid #64ffda;
-  }
-}
+    .timeline-card .company {
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .floating-bg {
-    animation: none;
-  }
-}
+    .contact-card {
+      text-align: center;
+      cursor: pointer;
+    }
 
-/* Scroll Animations */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
+    .contact-card a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+    .contact-card a:hover {
+      color: var(--secondary-color);
+      text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .floating-bg {
+      position: fixed;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .floating-bg:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(100,255,218,0.1), transparent);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .floating-bg:nth-child(2) {
+      bottom: 20%;
+      right: 10%;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, rgba(100,255,218,0.05), transparent);
+      border-radius: 50%;
+      animation: float 10s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    .keyboard-navigation *:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    .loading-spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(100, 255, 218, 0.1);
+      border-top: 3px solid var(--primary-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      z-index: 9999;
+    }
+
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .page-loaded .loading-spinner {
+      display: none;
+    }
+
+    /* Language Switcher */
+    .language-switcher {
+      position: fixed;
+      top: calc(20px + env(safe-area-inset-top));
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .language-switcher button {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      color: white;
+      border: 1px solid var(--card-border);
+      padding: 8px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-left: 5px;
+    }
+
+    .language-switcher button:hover {
+      background: var(--primary-color);
+      color: #0f0f23;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero-card { padding: 2rem; margin: 0 1rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-tags { flex-direction: column; align-items: center; }
+      .language-switcher { 
+        top: calc(80px + env(safe-area-inset-top)); 
+        right: 10px;
+      }
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .card, .skill-card, .timeline-card, .contact-card {
+        padding: 1.5rem;
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-card { padding: 1.5rem; }
+      .hero h1 { font-size: 2rem; }
+      .cards-grid { gap: 1.5rem; }
+      .card, .skill-card, .timeline-card, .contact-card {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (prefers-contrast: high) {
+      .card, .skill-card, .stat-card, .contact-card, .timeline-card {
+        border: 2px solid var(--primary-color);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .floating-bg { animation: none; }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 
 </head>
@@ -565,10 +644,22 @@ nav {
   <div class="floating-bg"></div>
   <div class="floating-bg"></div>
 
+  <!-- Language Switcher -->
+
+  <div class="language-switcher">
+    <button onclick="switchLanguage('en')" aria-label="Switch to English">EN</button>
+    <button onclick="switchLanguage('ar')" aria-label="Switch to Arabic">AR</button>
+  </div>
+
   <!-- Header -->
 
   <header class="header-card">
     <nav>
+      <div class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -583,16 +674,19 @@ nav {
   <section class="hero">
     <div class="hero-card">
       <div class="hero-avatar">
-        <img src="profile.jpg" alt="Hossam Aly - HR Leader and Data Analytics Expert" />
+        <picture>
+          <source srcset="profile.webp" type="image/webp">
+          <img src="profile.jpg" alt="Hossam Aly - HR Leader and Data Analytics Expert" width="150" height="150" loading="lazy" />
+        </picture>
       </div>
       <h1>HOSSAM ALY</h1>
       <p class="hero-subtitle">HR Leader & Data Analytics Expert</p>
       <p class="hero-experience">10+ Years Experience</p>
       <div class="hero-tags">
-        <span class="tag"><span class="tag-icon">📊</span>Power BI</span>
-        <span class="tag"><span class="tag-icon">⚙️</span>ERP Systems</span>
-        <span class="tag"><span class="tag-icon">📈</span>HR Analytics</span>
-        <span class="tag"><span class="tag-icon">👥</span>Team Leadership</span>
+        <span class="tag"><span class="tag-icon" aria-hidden="true">📊</span><span class="sr-only">Power BI</span>Power BI</span>
+        <span class="tag"><span class="tag-icon" aria-hidden="true">⚙️</span><span class="sr-only">ERP Systems</span>ERP Systems</span>
+        <span class="tag"><span class="tag-icon" aria-hidden="true">📈</span><span class="sr-only">HR Analytics</span>HR Analytics</span>
+        <span class="tag"><span class="tag-icon" aria-hidden="true">👥</span><span class="sr-only">Team Leadership</span>Team Leadership</span>
       </div>
       <a href="#contact" class="cta-button">Let's Connect</a>
     </div>
@@ -605,17 +699,17 @@ nav {
       <h2 class="section-title">About Me</h2>
       <div class="cards-grid">
         <div class="card animate-on-scroll">
-          <span class="card-icon" role="img" aria-label="Rocket">🚀</span>
+          <span class="card-icon" aria-hidden="true">🚀</span>
           <h3>Innovation Leader</h3>
           <p>Transforming traditional HR practices through cutting-edge technology and data-driven insights. Over 10 years of progressive experience in Qatar's dynamic business landscape.</p>
         </div>
         <div class="card animate-on-scroll">
-          <span class="card-icon" role="img" aria-label="Chart">📊</span>
+          <span class="card-icon" aria-hidden="true">📊</span>
           <h3>Data Analytics Expert</h3>
           <p>Specialized in Power BI dashboard development, ERP integration, and advanced HR analytics that drive strategic decision-making and operational excellence.</p>
         </div>
         <div class="card animate-on-scroll">
-          <span class="card-icon" role="img" aria-label="Globe">🌍</span>
+          <span class="card-icon" aria-hidden="true">🌍</span>
           <h3>Multicultural Management</h3>
           <p>Successfully managing 500+ employees from diverse backgrounds while ensuring 100% compliance with Qatar Labor Law and maximizing team performance.</p>
         </div>
@@ -631,7 +725,7 @@ nav {
       <div class="cards-grid">
         <div class="skill-card animate-on-scroll">
           <div class="skill-category-title">
-            <span style="font-size:2rem;" role="img" aria-label="Chart">📊</span>
+            <span style="font-size:2rem;" aria-hidden="true">📊</span>
             <h4>Data Analytics</h4>
           </div>
           <div class="skill-item">
@@ -653,7 +747,7 @@ nav {
         </div>
         <div class="skill-card animate-on-scroll">
           <div class="skill-category-title">
-            <span style="font-size:2rem;" role="img" aria-label="Settings">⚙️</span>
+            <span style="font-size:2rem;" aria-hidden="true">⚙️</span>
             <h4>ERP Systems</h4>
           </div>
           <div class="skill-item">
@@ -675,7 +769,7 @@ nav {
         </div>
         <div class="skill-card animate-on-scroll">
           <div class="skill-category-title">
-            <span style="font-size:2rem;" role="img" aria-label="Briefcase">💼</span>
+            <span style="font-size:2rem;" aria-hidden="true">💼</span>
             <h4>HR Leadership</h4>
           </div>
           <div class="skill-item">
@@ -706,17 +800,17 @@ nav {
       <h2 class="section-title">Professional Journey</h2>
       <div class="cards-grid">
         <div class="timeline-card animate-on-scroll">
-          <h4>HR & Admin Supervisor</h4>
+          <h3>HR & Admin Supervisor</h3>
           <p class="company">FBA GROUP | Feb 2017 - Present</p>
           <p>Leading HR operations for 500+ employees, implementing ERP-integrated systems, and developing Power BI dashboards for executive decision-making. Achieved 40% efficiency improvement and 100% compliance with Qatar Labor Law.</p>
         </div>
         <div class="timeline-card animate-on-scroll">
-          <h4>HR & Admin Coordinator</h4>
+          <h3>HR & Admin Coordinator</h3>
           <p class="company">IL FIORE ROSSO | Mar 2015 - Feb 2017</p>
           <p>Established digital document management systems, automated workflow processes, and HR analytics frameworks. Reduced transition time by 35% and improved collaboration across departments.</p>
         </div>
         <div class="timeline-card animate-on-scroll">
-          <h4>Public Relations Officer</h4>
+          <h3>Public Relations Officer</h3>
           <p class="company">Sama Alwatan Contracting | Oct 2013 - Feb 2015</p>
           <p>Managed government relations, processed official documentation, and ensured regulatory compliance. Built a strong foundation in Qatar's business environment and legal framework.</p>
         </div>
@@ -730,13 +824,13 @@ nav {
     <div class="container">
       <h2 class="section-title">Let's Connect</h2>
       <div style="text-align: center; margin-bottom: 3rem;">
-        <p style="font-size: 1.3rem; color: rgba(255,255,255,0.8);">
+        <p style="font-size: 1.3rem; color: var(--text-muted);">
           Ready to discuss how data-driven HR can transform your organization?
         </p>
       </div>
       <div class="cards-grid">
         <div class="contact-card animate-on-scroll">
-          <span class="contact-icon" role="img" aria-label="Email">📧</span>
+          <span class="contact-icon" aria-hidden="true">📧</span>
           <h4>Email</h4>
           <p>
             <a href="mailto:aly.a.hossam@outlook.com" aria-label="Send email to Hossam Aly">
@@ -745,7 +839,7 @@ nav {
           </p>
         </div>
         <div class="contact-card animate-on-scroll">
-          <span class="contact-icon" role="img" aria-label="Phone">📱</span>
+          <span class="contact-icon" aria-hidden="true">📱</span>
           <h4>Phone</h4>
           <p>
             <a href="tel:+97433190656" aria-label="Call Hossam Aly">
@@ -754,12 +848,12 @@ nav {
           </p>
         </div>
         <div class="contact-card animate-on-scroll">
-          <span class="contact-icon" role="img" aria-label="Location">📍</span>
+          <span class="contact-icon" aria-hidden="true">📍</span>
           <h4>Location</h4>
           <p>Doha, Qatar</p>
         </div>
         <div class="contact-card animate-on-scroll">
-          <span class="contact-icon" role="img" aria-label="LinkedIn">💼</span>
+          <span class="contact-icon" aria-hidden="true">💼</span>
           <h4>LinkedIn</h4>
           <p>
             <a href="https://www.linkedin.com/in/hossam-ali-2234a32a0/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hossam Aly LinkedIn profile">
@@ -775,99 +869,334 @@ nav {
   </section>
 
   <script>
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        try {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        } catch (error) {
+          console.error('Error in smooth scrolling:', error);
+        }
+      });
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
       });
     }
-  });
-});
 
-// Scroll observer
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
+    // Scroll observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      try {
+        observer.observe(el);
+      } catch (error) {
+        console.error('Error in IntersectionObserver:', error);
+      }
+    });
+
+    // Performance optimization - Reduce reflows
+    const headerCard = document.querySelector('.header-card');
+    let lastScrollTop = 0;
+    let ticking = false;
+
+    function updateHeader() {
+      try {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          headerCard.style.transform = 'translateX(-50%) translateY(calc(-100px + env(safe-area-inset-top)))';
+          headerCard.style.opacity = '0.8';
+        } else {
+          headerCard.style.transform = 'translateX(-50%) translateY(0)';
+          headerCard.style.opacity = '1';
+        }
+        lastScrollTop = scrollTop;
+      } catch (error) {
+        console.error('Error in header scroll handling:', error);
+      }
+      ticking = false;
     }
-  });
-}, observerOptions);
 
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
-  observer.observe(el);
-});
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
 
-// Performance optimization - Reduce reflows
-const headerCard = document.querySelector('.header-card');
-let lastScrollTop = 0;
-let ticking = false;
+    // Enhanced click effects
+    document.querySelectorAll('.card, .skill-card, .stat-card, .contact-card').forEach(card => {
+      card.addEventListener('click', function() {
+        try {
+          this.style.transform = 'scale(0.98)';
+          this.style.transition = 'transform 0.1s ease';
+          setTimeout(() => {
+            this.style.transform = '';
+            this.style.transition = 'all 0.3s ease';
+          }, 150);
+        } catch (error) {
+          console.error('Error in click effect:', error);
+        }
+      });
+    });
 
-function updateHeader() {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop && scrollTop > 100) {
-    headerCard.style.transform = 'translateX(-50%) translateY(calc(-100px + env(safe-area-inset-top)))';
-    headerCard.style.opacity = '0.8';
-  } else {
-    headerCard.style.transform = 'translateX(-50%) translateY(0)';
-    headerCard.style.opacity = '1';
-  }
-  lastScrollTop = scrollTop;
-  ticking = false;
-}
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    });
 
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(updateHeader);
-    ticking = true;
-  }
-});
+    document.addEventListener('mousedown', function() {
+      document.body.classList.remove('keyboard-navigation');
+    });
 
-// Enhanced click effects with better performance
-document.querySelectorAll('.card, .skill-card, .stat-card, .contact-card').forEach(card => {
-  card.addEventListener('click', function() {
-    this.style.transform = 'scale(0.98)';
-    this.style.transition = 'transform 0.1s ease';
-    setTimeout(() => {
-      this.style.transform = '';
-      this.style.transition = 'all 0.3s ease';
-    }, 150);
-  });
-});
+    // Preload critical resources
+    function preloadImages() {
+      const images = ['profile.webp', 'profile.jpg'];
+      images.forEach(src => {
+        try {
+          const img = new Image();
+          img.src = src;
+        } catch (error) {
+          console.error('Error preloading image:', error);
+        }
+      });
+    }
 
-// Add focus styles for keyboard navigation
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Tab') {
-    document.body.classList.add('keyboard-navigation');
-  }
-});
+    // Language switcher
+    function switchLanguage(lang) {
+      try {
+        document.documentElement.setAttribute('lang', lang);
+        document.body.setAttribute('lang', lang);
+        
+        if (lang === 'ar') {
+          // Hero Section
+          document.querySelector('.hero h1').textContent = 'حسام علي';
+          document.querySelector('.hero-subtitle').textContent = 'قائد الموارد البشرية وخبير تحليل البيانات';
+          document.querySelector('.hero-experience').textContent = 'أكثر من 10 سنوات من الخبرة';
+          document.querySelector('.cta-button').textContent = 'لنتواصل';
+          
+          // Section Titles
+          document.querySelectorAll('.section-title').forEach((el, index) => {
+            const titles = ['نبذة عني', 'الخبرات التقنية', 'الرحلة المهنية', 'لنتواصل'];
+            if (titles[index]) el.textContent = titles[index];
+          });
+          
+          // Navigation
+          const navLinks = document.querySelectorAll('.nav-links a');
+          const navTexts = ['نبذة', 'المهارات', 'الخبرة', 'التواصل'];
+          navLinks.forEach((link, index) => {
+            if (navTexts[index]) link.textContent = navTexts[index];
+          });
+          
+          // About Section Cards
+          const aboutCards = document.querySelectorAll('#about .card');
+          if (aboutCards[0]) {
+            aboutCards[0].querySelector('h3').textContent = 'قائد الابتكار';
+            aboutCards[0].querySelector('p').textContent = 'تحويل ممارسات الموارد البشرية التقليدية من خلال التكنولوجيا المتطورة والرؤى القائمة على البيانات. أكثر من 10 سنوات من الخبرة المتطورة في بيئة الأعمال الديناميكية في قطر.';
+          }
+          if (aboutCards[1]) {
+            aboutCards[1].querySelector('h3').textContent = 'خبير تحليل البيانات';
+            aboutCards[1].querySelector('p').textContent = 'متخصص في تطوير لوحات Power BI، وتكامل أنظمة ERP، وتحليلات الموارد البشرية المتقدمة التي تدفع اتخاذ القرارات الاستراتيجية والتميز التشغيلي.';
+          }
+          if (aboutCards[2]) {
+            aboutCards[2].querySelector('h3').textContent = 'إدارة متعددة الثقافات';
+            aboutCards[2].querySelector('p').textContent = 'إدارة ناجحة لأكثر من 500 موظف من خلفيات متنوعة مع ضمان الامتثال بنسبة 100% لقانون العمل القطري وتعظيم أداء الفريق.';
+          }
+          
+          // Skills Section
+          const skillTitles = document.querySelectorAll('.skill-category-title h4');
+          const skillTexts = ['تحليل البيانات', 'أنظمة ERP', 'قيادة الموارد البشرية'];
+          skillTitles.forEach((title, index) => {
+            if (skillTexts[index]) title.textContent = skillTexts[index];
+          });
+          
+          // Skill Items
+          const skillItems = document.querySelectorAll('.skill-item');
+          const skillNames = [
+            'Power BI', 'Excel المتقدم', 'SQL', 'تصور البيانات',
+            'SAP HR', 'Oracle HCM', 'Workday', 'Microsoft Dynamics',
+            'التخطيط الاستراتيجي', 'إدارة الفرق', 'قانون العمل القطري', 'التحول الرقمي'
+          ];
+          const skillLevels = [
+            'خبير', 'خبير', 'متقدم', 'خبير',
+            'متقدم', 'متقدم', 'متوسط', 'متقدم',
+            'خبير', 'خبير', 'خبير', 'متقدم'
+          ];
+          skillItems.forEach((item, index) => {
+            const nameEl = item.querySelector('.skill-name');
+            const levelEl = item.querySelector('.skill-level');
+            if (skillNames[index] && nameEl) nameEl.textContent = skillNames[index];
+            if (skillLevels[index] && levelEl) levelEl.textContent = skillLevels[index];
+          });
+          
+          // Experience Section
+          const expCards = document.querySelectorAll('#experience .timeline-card');
+          if (expCards[0]) {
+            expCards[0].querySelector('h3').textContent = 'مشرف الموارد البشرية والإدارة';
+            expCards[0].querySelector('.company').textContent = 'مجموعة FBA | فبراير 2017 - حتى الآن';
+            expCards[0].querySelector('p:last-child').textContent = 'قيادة عمليات الموارد البشرية لأكثر من 500 موظف، وتنفيذ أنظمة متكاملة مع ERP، وتطوير لوحات Power BI لاتخاذ القرارات التنفيذية. تحقيق تحسن في الكفاءة بنسبة 40% والامتثال بنسبة 100% لقانون العمل القطري.';
+          }
+          if (expCards[1]) {
+            expCards[1].querySelector('h3').textContent = 'منسق الموارد البشرية والإدارة';
+            expCards[1].querySelector('.company').textContent = 'IL FIORE ROSSO | مارس 2015 - فبراير 2017';
+            expCards[1].querySelector('p:last-child').textContent = 'إنشاء أنظمة إدارة الوثائق الرقمية، وأتمتة عمليات سير العمل، وأطر تحليلات الموارد البشرية. تقليل وقت الانتقال بنسبة 35% وتحسين التعاون عبر الأقسام.';
+          }
+          if (expCards[2]) {
+            expCards[2].querySelector('h3').textContent = 'مسؤول العلاقات العامة';
+            expCards[2].querySelector('.company').textContent = 'شركة سما الوطن للمقاولات | أكتوبر 2013 - فبراير 2015';
+            expCards[2].querySelector('p:last-child').textContent = 'إدارة العلاقات الحكومية، ومعالجة الوثائق الرسمية، وضمان الامتثال التنظيمي. بناء أساس قوي في بيئة الأعمال القطرية والإطار القانوني.';
+          }
+          
+          // Contact Section
+          const contactText = document.querySelector('#contact p');
+          if (contactText) {
+            contactText.textContent = 'مستعد لمناقشة كيف يمكن للموارد البشرية القائمة على البيانات أن تحول مؤسستك؟';
+          }
+          
+          const contactCards = document.querySelectorAll('#contact .contact-card h4');
+          const contactTexts = ['البريد الإلكتروني', 'الهاتف', 'الموقع', 'LinkedIn'];
+          contactCards.forEach((card, index) => {
+            if (contactTexts[index]) card.textContent = contactTexts[index];
+          });
+          
+          const finalCTA = document.querySelector('#contact .cta-button');
+          if (finalCTA) finalCTA.textContent = 'أرسل رسالة';
+          
+        } else {
+          // English content
+          document.querySelector('.hero h1').textContent = 'HOSSAM ALY';
+          document.querySelector('.hero-subtitle').textContent = 'HR Leader & Data Analytics Expert';
+          document.querySelector('.hero-experience').textContent = '10+ Years Experience';
+          document.querySelector('.cta-button').textContent = 'Let\'s Connect';
+          
+          // Section Titles
+          document.querySelectorAll('.section-title').forEach((el, index) => {
+            const titles = ['About Me', 'Technical Expertise', 'Professional Journey', 'Let\'s Connect'];
+            if (titles[index]) el.textContent = titles[index];
+          });
+          
+          // Navigation
+          const navLinks = document.querySelectorAll('.nav-links a');
+          const navTexts = ['About', 'Skills', 'Experience', 'Contact'];
+          navLinks.forEach((link, index) => {
+            if (navTexts[index]) link.textContent = navTexts[index];
+          });
+          
+          // About Section Cards
+          const aboutCards = document.querySelectorAll('#about .card');
+          if (aboutCards[0]) {
+            aboutCards[0].querySelector('h3').textContent = 'Innovation Leader';
+            aboutCards[0].querySelector('p').textContent = 'Transforming traditional HR practices through cutting-edge technology and data-driven insights. Over 10 years of progressive experience in Qatar\'s dynamic business landscape.';
+          }
+          if (aboutCards[1]) {
+            aboutCards[1].querySelector('h3').textContent = 'Data Analytics Expert';
+            aboutCards[1].querySelector('p').textContent = 'Specialized in Power BI dashboard development, ERP integration, and advanced HR analytics that drive strategic decision-making and operational excellence.';
+          }
+          if (aboutCards[2]) {
+            aboutCards[2].querySelector('h3').textContent = 'Multicultural Management';
+            aboutCards[2].querySelector('p').textContent = 'Successfully managing 500+ employees from diverse backgrounds while ensuring 100% compliance with Qatar Labor Law and maximizing team performance.';
+          }
+          
+          // Skills Section
+          const skillTitles = document.querySelectorAll('.skill-category-title h4');
+          const skillTexts = ['Data Analytics', 'ERP Systems', 'HR Leadership'];
+          skillTitles.forEach((title, index) => {
+            if (skillTexts[index]) title.textContent = skillTexts[index];
+          });
+          
+          // Skill Items
+          const skillItems = document.querySelectorAll('.skill-item');
+          const skillNames = [
+            'Power BI', 'Advanced Excel', 'SQL', 'Data Visualization',
+            'SAP HR', 'Oracle HCM', 'Workday', 'Microsoft Dynamics',
+            'Strategic Planning', 'Team Management', 'Qatar Labor Law', 'Digital Transformation'
+          ];
+          const skillLevels = [
+            'Expert', 'Expert', 'Advanced', 'Expert',
+            'Advanced', 'Advanced', 'Intermediate', 'Advanced',
+            'Expert', 'Expert', 'Expert', 'Advanced'
+          ];
+          skillItems.forEach((item, index) => {
+            const nameEl = item.querySelector('.skill-name');
+            const levelEl = item.querySelector('.skill-level');
+            if (skillNames[index] && nameEl) nameEl.textContent = skillNames[index];
+            if (skillLevels[index] && levelEl) levelEl.textContent = skillLevels[index];
+          });
+          
+          // Experience Section
+          const expCards = document.querySelectorAll('#experience .timeline-card');
+          if (expCards[0]) {
+            expCards[0].querySelector('h3').textContent = 'HR & Admin Supervisor';
+            expCards[0].querySelector('.company').textContent = 'FBA GROUP | Feb 2017 - Present';
+            expCards[0].querySelector('p:last-child').textContent = 'Leading HR operations for 500+ employees, implementing ERP-integrated systems, and developing Power BI dashboards for executive decision-making. Achieved 40% efficiency improvement and 100% compliance with Qatar Labor Law.';
+          }
+          if (expCards[1]) {
+            expCards[1].querySelector('h3').textContent = 'HR & Admin Coordinator';
+            expCards[1].querySelector('.company').textContent = 'IL FIORE ROSSO | Mar 2015 - Feb 2017';
+            expCards[1].querySelector('p:last-child').textContent = 'Established digital document management systems, automated workflow processes, and HR analytics frameworks. Reduced transition time by 35% and improved collaboration across departments.';
+          }
+          if (expCards[2]) {
+            expCards[2].querySelector('h3').textContent = 'Public Relations Officer';
+            expCards[2].querySelector('.company').textContent = 'Sama Alwatan Contracting | Oct 2013 - Feb 2015';
+            expCards[2].querySelector('p:last-child').textContent = 'Managed government relations, processed official documentation, and ensured regulatory compliance. Built a strong foundation in Qatar\'s business environment and legal framework.';
+          }
+          
+          // Contact Section
+          const contactText = document.querySelector('#contact p');
+          if (contactText) {
+            contactText.textContent = 'Ready to discuss how data-driven HR can transform your organization?';
+          }
+          
+          const contactCards = document.querySelectorAll('#contact .contact-card h4');
+          const contactTexts = ['Email', 'Phone', 'Location', 'LinkedIn'];
+          contactCards.forEach((card, index) => {
+            if (contactTexts[index]) card.textContent = contactTexts[index];
+          });
+          
+          const finalCTA = document.querySelector('#contact .cta-button');
+          if (finalCTA) finalCTA.textContent = 'Send Message';
+        }
+      } catch (error) {
+        console.error('Error in language switch:', error);
+      }
+    }
 
-document.addEventListener('mousedown', function() {
-  document.body.classList.remove('keyboard-navigation');
-});
-
-// Preload critical resources
-function preloadImages() {
-  const images = ['profile.jpg'];
-  images.forEach(src => {
-    const img = new Image();
-    img.src = src;
-  });
-}
-
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  preloadImages();
-});
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      try {
+        preloadImages();
+        document.body.classList.add('page-loaded');
+      } catch (error) {
+        console.error('Error in initialization:', error);
+      }
+    });
   </script>
 
 </body>

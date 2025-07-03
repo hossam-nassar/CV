@@ -299,6 +299,11 @@
       font-size: 1rem;
     }
 
+    /* Space Between Hero Items */
+    .hero-card > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
     .cta-button {
       display: inline-block;
       padding: 15px 40px;
@@ -623,6 +628,7 @@
         transition-duration: 0.01ms !important;
       }
       .floating-bg { animation: none; }
+      .hero-experience { animation: none; }
     }
 
     .animate-on-scroll {
@@ -674,10 +680,7 @@
   <section class="hero">
     <div class="hero-card">
       <div class="hero-avatar">
-        <picture>
-          <source srcset="profile.webp" type="image/webp">
-          <img src="profile.jpg" alt="Hossam Aly - HR Leader and Data Analytics Expert" width="150" height="150" loading="lazy" />
-        </picture>
+        <img src="profile.jpg" alt="Hossam Aly - HR Leader and Data Analytics Expert" width="150" height="150" loading="eager" />
       </div>
       <h1>HOSSAM ALY</h1>
       <p class="hero-subtitle">HR Leader & Data Analytics Expert</p>
@@ -978,7 +981,7 @@
 
     // Preload critical resources
     function preloadImages() {
-      const images = ['profile.webp', 'profile.jpg'];
+      const images = ['profile.jpg'];
       images.forEach(src => {
         try {
           const img = new Image();
@@ -1193,6 +1196,15 @@
       try {
         preloadImages();
         document.body.classList.add('page-loaded');
+        
+        // Hide loading spinner after content loads
+        setTimeout(() => {
+          const spinner = document.querySelector('.loading-spinner');
+          if (spinner) {
+            spinner.style.opacity = '0';
+            setTimeout(() => spinner.style.display = 'none', 300);
+          }
+        }, 1000);
       } catch (error) {
         console.error('Error in initialization:', error);
       }

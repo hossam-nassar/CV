@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hossam Aly - HR Leader & Data Analytics Expert</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #0f0f23;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header-card {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 15px 30px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.header-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #64ffda;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.nav-links a:hover {
+  background: rgba(100,255,218,0.2);
+  color: #64ffda;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 20% 50%, #120a8f 0%, #000000 50%),
+              radial-gradient(circle at 80% 50%, #8b0000 0%, #000000 50%);
+}
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 30px;
+  padding: 4rem;
+  text-align: center;
+  max-width: 700px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+.hero-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+  background: linear-gradient(45deg, #64ffda, #00bfa5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f0f23;
+  font-size: 3rem;
+  font-weight: 800;
+  box-shadow: 0 20px 40px rgba(100, 255, 218, 0.3);
+}
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #64ffda, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2rem;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.tag {
+  background: rgba(100,255,218,0.2);
+  color: #64ffda;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(45deg, #64ffda, #00bfa5);
+  color: #0f0f23;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+  font-size: 1.1rem;
+}
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(100, 255, 218, 0.4);
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #64ffda, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 2rem;
+}
+
+/* Cards */
+.card,.skill-card,.stat-card,.contact-card,.timeline-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before, .skill-card::before, .timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #64ffda, #00bfa5);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card:hover,.skill-card:hover,.stat-card:hover,.contact-card:hover,.timeline-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover::before, .skill-card:hover::before, .timeline-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Card Content */
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.card h3 {
+  color: #64ffda;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+
+/* Skills Cards */
+.skill-category-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill-category-title h4 {
+  font-size: 1.5rem;
+  color: #64ffda;
+  font-weight: 700;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateX(5px);
+}
+
+.skill-name {
+  color: white;
+  font-weight: 600;
+}
+
+.skill-level {
+  background: rgba(100, 255, 218, 0.2);
+  color: #64ffda;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Experience Cards */
+.timeline-card h4 {
+  color: #64ffda;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.timeline-card .company {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.timeline-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+
+/* Contact Cards */
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.contact-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(100, 255, 218, 0.1);
+}
+
+.contact-card h4 {
+  color: #64ffda;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.contact-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.contact-card a {
+  color: #64ffda;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: #00bfa5;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity:0; transform: translateY(20px); }
+  100% { opacity:1; transform: translateY(0); }
+}
+
+/* Floating BG */
+.floating-bg {
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+}
+.floating-bg:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(100,255,218,0.1), transparent);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+.floating-bg:nth-child(2) {
+  bottom: 20%;
+  right: 10%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(100,255,218,0.05), transparent);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .hero h1 { font-size:2.2rem; }
+  .hero-card { padding:2rem; margin: 0 1rem; }
+  .nav-links { display:none; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .hero-tags { flex-direction: column; align-items: center; }
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  </style>
+</head>
+
+<body>
+  <!-- Floating Background -->
+  <div class="floating-bg"></div>
+  <div class="floating-bg"></div>
+
+  <!-- Header -->
+  <header class="header-card">
+    <nav>
+      <a href="#" class="logo">H.A</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-card fade-in">
+      <div class="hero-avatar">
+        H.A
+      </div>
+      <h1>HOSSAM ALY</h1>
+      <p class="hero-subtitle">HR Leader & Data Analytics Expert</p>
+      <div class="hero-tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">ERP Systems</span>
+        <span class="tag">HR Analytics</span>
+        <span class="tag">Team Leadership</span>
+      </div>
+      <a href="#contact" class="cta-button">Let's Connect</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="cards-grid">
+        <div class="card animate-on-scroll">
+          <span class="card-icon">🚀</span>
+          <h3>Innovation Leader</h3>
+          <p>Transforming traditional HR practices through cutting-edge technology and data-driven insights. Over 10 years of progressive experience in Qatar's dynamic business landscape.</p>
+        </div>
+        <div class="card animate-on-scroll">
+          <span class="card-icon">📊</span>
+          <h3>Data Analytics Expert</h3>
+          <p>Specialized in Power BI dashboard development, ERP integration, and advanced HR analytics that drive strategic decision-making and operational excellence.</p>
+        </div>
+        <div class="card animate-on-scroll">
+          <span class="card-icon">🌍</span>
+          <h3>Multicultural Management</h3>
+          <p>Successfully managing 500+ employees from diverse backgrounds while ensuring 100% compliance with Qatar Labor Law and maximizing team performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Technical Expertise</h2>
+      <div class="cards-grid">
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-category-title">
+            <span style="font-size:2rem;">📊</span>
+            <h4>Data Analytics</h4>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Power BI</span>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Advanced Excel</span>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">SQL</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Data Visualization</span>
+            <span class="skill-level">Expert</span>
+          </div>
+        </div>
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-category-title">
+            <span style="font-size:2rem;">⚙️</span>
+            <h4>ERP Systems</h4>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">SAP HR</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Oracle HCM</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Workday</span>
+            <span class="skill-level">Intermediate</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Microsoft Dynamics</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+        </div>
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-category-title">
+            <span style="font-size:2rem;">💼</span>
+            <h4>HR Leadership</h4>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Strategic Planning</span>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Team Management</span>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Qatar Labor Law</span>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Digital Transformation</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Professional Journey</h2>
+      <div class="cards-grid">
+        <div class="timeline-card animate-on-scroll">
+          <h4>HR & Admin Supervisor</h4>
+          <p class="company">FBA GROUP | Feb 2017 - Present</p>
+          <p>Leading HR operations for 500+ employees, implementing ERP-integrated systems, and developing Power BI dashboards for executive decision-making. Achieved 40% efficiency improvement and 100% compliance with Qatar Labor Law.</p>
+        </div>
+        <div class="timeline-card animate-on-scroll">
+          <h4>HR & Admin Coordinator</h4>
+          <p class="company">IL FIORE ROSSO | Mar 2015 - Feb 2017</p>
+          <p>Established digital document management systems, automated workflow processes, and HR analytics frameworks. Reduced transition time by 35% and improved collaboration across departments.</p>
+        </div>
+        <div class="timeline-card animate-on-scroll">
+          <h4>Public Relations Officer</h4>
+          <p class="company">Sama Alwatan Contracting | Oct 2013 - Feb 2015</p>
+          <p>Managed government relations, processed official documentation, and ensured regulatory compliance. Built a strong foundation in Qatar's business environment and legal framework.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Let's Connect</h2>
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <p style="font-size: 1.3rem; color: rgba(255,255,255,0.8);">
+          Ready to discuss how data-driven HR can transform your organization?
+        </p>
+      </div>
+      <div class="cards-grid">
+        <div class="contact-card animate-on-scroll">
+          <span class="contact-icon">📧</span>
+          <h4>Email</h4>
+          <p>
+            <a href="mailto:aly.a.hossam@outlook.com">
+              aly.a.hossam@outlook.com
+            </a>
+          </p>
+        </div>
+        <div class="contact-card animate-on-scroll">
+          <span class="contact-icon">📱</span>
+          <h4>Phone</h4>
+          <p>
+            <a href="tel:+97433190656">
+              +974 33190656
+            </a>
+          </p>
+        </div>
+        <div class="contact-card animate-on-scroll">
+          <span class="contact-icon">📍</span>
+          <h4>Location</h4>
+          <p>Doha, Qatar</p>
+        </div>
+        <div class="contact-card animate-on-scroll">
+          <span class="contact-icon">💼</span>
+          <h4>LinkedIn</h4>
+          <p>
+            <a href="https://www.linkedin.com/in/hossam-ali-2234a32a0/" target="_blank">
+              View Profile
+            </a>
+          </p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="mailto:aly.a.hossam@outlook.com" class="cta-button">Send Message</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Scroll observer
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el);
+});
+
+// Header hide on scroll
+let lastScrollTop = 0;
+const headerCard = document.querySelector('.header-card');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop && scrollTop > 100) {
+    headerCard.style.transform = 'translateX(-50%) translateY(-100px)';
+    headerCard.style.opacity = '0.8';
+  } else {
+    headerCard.style.transform = 'translateX(-50%) translateY(0)';
+    headerCard.style.opacity = '1';
+  }
+  lastScrollTop = scrollTop;
+});
+
+// Click effects
+document.querySelectorAll('.card, .skill-card, .stat-card, .contact-card').forEach(card => {
+  card.addEventListener('click', function() {
+    this.style.transform = 'scale(0.98)';
+    setTimeout(() => {
+      this.style.transform = '';
+    }, 150);
+  });
+});
+  </script>
+</body>
+</html>

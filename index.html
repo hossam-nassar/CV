@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hossam Aly - HR Leader & Data Analytics Expert</title>
+  <title>Hossam Aly - HR & Admin Supervisor | HR Analytics & Qatar Labor Law</title>
 
   <!-- SEO & Open Graph -->
-  <meta name="description" content="Expert HR Leader & Data Analytics Specialist in Qatar. 10+ years experience in Power BI, ERP systems, and team management. Transform your HR with data-driven insights.">
+  <meta name="description" content="HR & Admin Supervisor in Qatar with 10+ years. HR analytics (Excel/PowerBI), digital HR transformation, and Qatar Labor Law compliance.">
   <meta name="keywords" content="HR Leader Qatar, Power BI HR Analytics, ERP Systems Specialist, HR Management Doha, Data Visualization Expert">
   <meta name="author" content="Hossam Aly">
-  <meta property="og:title" content="Hossam Aly - HR Leader & Data Analytics Expert">
-  <meta property="og:description" content="Expert HR Leader & Data Analytics Specialist in Qatar with 10+ years experience">
+  <meta property="og:title" content="Hossam Aly - HR & Admin Supervisor">
+  <meta property="og:description" content="HR & Admin Supervisor in Qatar | HR analytics, automation & Qatar Labor Law.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hossamaly.com">
   <meta property="og:image" content="https://hossamaly.com/profile.jpg">
@@ -204,7 +204,52 @@
     }
     .animate-on-scroll{opacity:0;transform:translateY(30px);transition:all .8s ease}
     .animate-on-scroll.visible{opacity:1;transform:translateY(0)}
-  </style>
+  
+    /* Services Section */
+    .services-section{
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(100,255,218,0.10), transparent 60%),
+                  radial-gradient(1200px 600px at 90% 90%, rgba(0,191,165,0.10), transparent 60%),
+                  linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));
+      padding: var(--space-xxl) 0;
+    }
+    .services-grid{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: var(--space-lg);
+    }
+    @media (max-width: 1024px){
+      .services-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 640px){
+      .services-grid{ grid-template-columns: 1fr; }
+    }
+    .service-card{
+      background: var(--color-card-bg);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: var(--space-lg);
+      transition: transform .25s ease, background .25s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    .service-card:hover{
+      transform: translateY(-6px);
+      background: var(--color-card-bg-hover);
+    }
+    .service-card .icon{
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: var(--space-md);
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.45));
+    }
+    .cta-row{
+      display:flex; gap: var(--space-md); align-items:center; margin-top: var(--space-xl); flex-wrap:wrap;
+    }
+    .section-note{ color: var(--color-text-muted); margin-bottom: var(--space-md); }
+    /* Reveal on scroll */
+    .reveal{ opacity:0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible{ opacity:1; transform: translateY(0); }
+    
+</style>
 </head>
 
 <body>
@@ -233,7 +278,9 @@
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
         <li><a href="#achievements" data-i18n="nav.achievements">Achievements</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-      </ul>
+      
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        </ul>
     </nav>
   </header>
 
@@ -285,7 +332,41 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="section" aria-labelledby="skills-heading">
+  
+    <section id="services" class="section services-section reveal">
+      <div class="container">
+        <h2 class="section-title" data-i18n="services.title">Professional Consulting Services</h2>
+        <p class="section-note" data-i18n="services.note">Free initial consultation • Customized solutions • Proven expertise</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="icon">🏢</div>
+            <h3 data-i18n="services.card1.title">Company Formation in Qatar</h3>
+            <p data-i18n="services.card1.text">Complete guidance through Qatar's company registration and licensing.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon">⚖️</div>
+            <h3 data-i18n="services.card2.title">Qatar Labor Law Consulting</h3>
+            <p data-i18n="services.card2.text">Advisory on Qatar Labor Law No. 14 of 2004, contracts, EOS, and policies.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon">🧩</div>
+            <h3 data-i18n="services.card3.title">HR Systems & Strategy</h3>
+            <p data-i18n="services.card3.text">End-to-end HR solutions: policies, HRIS, payroll, performance, and organization design.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon">📄</div>
+            <h3 data-i18n="services.card4.title">Business Activities & Licensing</h3>
+            <p data-i18n="services.card4.text">Strategic advice on commercial activities, trade/industrial licenses, and approvals.</p>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" target="_blank" rel="noopener" id="whatsapp-cta" data-i18n="services.cta" href="#">📅 Schedule Consultation</a>
+          <span class="welcome" data-i18n="services.welcome">Welcome! I'm happy to help—tell me about your business and I’ll guide you step by step.</span>
+        </div>
+      </div>
+    </section>
+    
+<section id="skills" class="section" aria-labelledby="skills-heading">
     <div class="container">
       <h2 id="skills-heading" class="section-title" data-i18n="skills.title">Technical Expertise</h2>
       <div class="cards-grid">
@@ -300,7 +381,7 @@
           <div class="skill-category-title"><span style="font-size:2rem;" aria-hidden="true">⚙️</span><h4 data-i18n="skills.category2">ERP Systems</h4></div>
           <div class="skill-item"><span class="skill-name" data-i18n="skills.skill5">SAP HR</span><span class="skill-level" data-i18n="skills.level5">Advanced</span></div>
           <div class="skill-item"><span class="skill-name" data-i18n="skills.skill6">Oracle HCM</span><span class="skill-level" data-i18n="skills.level6">Advanced</span></div>
-          <div class="skill-item"><span class="skill-name" data-i18n="skills.skill7">Workday</span><span class="skill-level" data-i18n="skills.level7">Intermediate</span></div>
+          <div class="skill-item"><span class="skill-name" data-i18n="skills.skill7">Odoo</span><span class="skill-level" data-i18n="skills.level7">Intermediate</span></div>
           <div class="skill-item"><span class="skill-name" data-i18n="skills.skill8">Microsoft Dynamics</span><span class="skill-level" data-i18n="skills.level8">Advanced</span></div>
         </div>
         <div class="skill-card animate-on-scroll">
@@ -410,21 +491,21 @@
     const translations={
       en:{
         "nav.about":"About","nav.skills":"Skills","nav.experience":"Experience","nav.achievements":"Achievements","nav.contact":"Contact",
-        "hero.title":"HOSSAM ALY","hero.subtitle":"HR Leader & Data Analytics Expert","hero.experience":"10+ Years Experience","hero.tag1":"Power BI","hero.tag2":"ERP Systems","hero.tag3":"HR Analytics","hero.tag4":"Team Leadership","hero.cta":"Let's Connect",
-        "about.title":"About Me","about.card1.title":"Innovation Leader","about.card1.text":"Transforming traditional HR practices through cutting-edge technology and data-driven insights. Over 10 years of progressive experience in Qatar's dynamic business landscape.","about.card2.title":"Data Analytics Expert","about.card2.text":"Specialized in Power BI dashboard development, ERP integration, and advanced HR analytics that drive strategic decision-making and operational excellence.","about.card3.title":"Multicultural Management","about.card3.text":"Successfully managing 500+ employees from diverse backgrounds while ensuring 100% compliance with Qatar Labor Law and maximizing team performance.","about.quote":"I believe that empowering people through technology creates sustainable success.",
-        "skills.title":"Technical Expertise","skills.category1":"Data Analytics","skills.skill1":"Power BI","skills.level1":"Expert","skills.skill2":"Advanced Excel","skills.level2":"Expert","skills.skill3":"SQL","skills.level3":"Advanced","skills.skill4":"Data Visualization","skills.level4":"Expert","skills.category2":"ERP Systems","skills.skill5":"SAP HR","skills.level5":"Advanced","skills.skill6":"Oracle HCM","skills.level6":"Advanced","skills.skill7":"Workday","skills.level7":"Intermediate","skills.skill8":"Microsoft Dynamics","skills.level8":"Advanced","skills.category3":"HR Leadership","skills.skill9":"Strategic Planning","skills.level9":"Expert","skills.skill10":"Team Management","skills.level10":"Expert","skills.skill11":"Qatar Labor Law","skills.level11":"Expert","skills.skill12":"Digital Transformation","skills.level12":"Advanced",
-        "experience.title":"Professional Journey","experience.job1.title":"HR & Admin Supervisor","experience.job1.company":"FBA GROUP | Feb 2017 - Present","experience.job1.description":"Leading HR operations for 500+ employees, implementing ERP-integrated systems, and developing Power BI dashboards for executive decision-making. Achieved 40% efficiency improvement and 100% compliance with Qatar Labor Law.","experience.job2.title":"HR & Admin Coordinator","experience.job2.company":"IL FIORE ROSSO | Mar 2015 - Feb 2017","experience.job2.description":"Established digital document management systems, automated workflow processes, and HR analytics frameworks. Reduced transition time by 35% and improved collaboration across departments.","experience.job3.title":"Public Relations Officer","experience.job3.company":"Sama Alwatan Contracting | Oct 2013 - Feb 2015","experience.job3.description":"Managed government relations, processed official documentation, and ensured regulatory compliance. Built a strong foundation in Qatar's business environment and legal framework.",
-        "achievements.title":"Key Achievements","achievements.card1.title":"Process Automation","achievements.card1.text":"Automated leave management and HR workflows, reducing processing time by 70% and improving employee satisfaction.","achievements.card2.title":"Data-Driven Insights","achievements.card2.text":"Developed Power BI dashboards adopted by senior management to drive strategic decisions across departments.","achievements.card3.title":"Compliance Excellence","achievements.card3.text":"Led HR audits that achieved 100% compliance with Qatar Labor Law for 500+ employees across multiple entities.",
-        "contact.title":"Let's Connect","contact.subtitle":"Ready to discuss how data-driven HR can transform your organization?","contact.method1":"Email","contact.method2":"Phone","contact.method3":"Location","contact.method4":"LinkedIn","contact.linkedin":"Visit My LinkedIn Profile","contact.cta":"Send Message"
+        "hero.title":"HOSSAM ALY","hero.subtitle":"HR & Admin Supervisor | HR Analytics","hero.experience":"10+ Years Experience","hero.tag1":"HR Analytics","hero.tag2":"Qatar Labor Law","hero.tag3":"Digital Transformation","hero.tag4":"Team Leadership","hero.cta":"Let's Connect",
+        "about.title":"About Me","about.card1.title":"Strategic HR Operations","about.card1.text":"Leading HR operations and compliance in Qatar; optimizing leave, payroll inputs, and documentation with reliable automations.","about.card2.title":"HR Analytics (Excel/PowerBI)","about.card2.text":"Building dashboards and reports for turnover, retention, and workforce metrics to support C‑level decisions.","about.card3.title":"Qatar Labor Law Expertise","about.card3.text":"Ensuring policies, contracts, and actions align with Qatari Labor Law across 500+ employees and multiple entities.","about.quote":"I believe that empowering people through technology creates sustainable success.",
+        "skills.title":"Technical Expertise","skills.category1":"Data Analytics","skills.skill1":"Advanced MS Excel","skills.level1":"Expert","skills.skill2":"PowerBI & Tableau","skills.level2":"Expert","skills.skill3":"HRIS & ATS Systems","skills.level3":"Advanced","skills.skill4":"Data Analytics","skills.level4":"Expert","skills.category2":"ERP Systems","skills.skill5":"SAP HR","skills.level5":"Advanced","skills.skill6":"Oracle HCM","skills.level6":"Advanced","skills.skill7":"Odoo","skills.level7":"Intermediate","skills.skill8":"Microsoft Dynamics","skills.level8":"Advanced","skills.category3":"HR Leadership","skills.skill9":"Strategic Planning","skills.level9":"Expert","skills.skill10":"Team Management","skills.level10":"Expert","skills.skill11":"Qatar Labor Law","skills.level11":"Expert","skills.skill12":"Digital Transformation","skills.level12":"Advanced",
+        "experience.title":"Professional Journey","experience.job1.title":"HR & Admin Supervisor","experience.job1.company":"FBA Group | Feb 2017 – Present","experience.job1.description":"Lead HR for 500+ employees; designed HR analytics dashboards, improved time‑to‑hire, and maintained 100% Qatar Labor Law compliance.","experience.job2.title":"HR & Admin Coordinator","experience.job2.company":"IL FIORE ROSSO | Mar 2015 – Feb 2017","experience.job2.description":"Streamlined onboarding/offboarding, documentation, and payroll inputs; established an organized document management system.","experience.job3.title":"Public Relations Officer","experience.job3.company":"Sama Al‑Watan Contracting | Oct 2013 – Feb 2015","experience.job3.description":"Managed visas, labor permits, trade licenses, and municipality approvals; liaised with authorities and ensured timely renewals.",
+        "achievements.title":"Key Achievements","achievements.card1.title":"Employee Excellence Award (2019)","achievements.card1.text":"Recognized by FBA Group for outstanding HR service and operational impact.","achievements.card2.title":"Scaled Workforce by 200+","achievements.card2.text":"Supported rapid expansion with structured hiring and onboarding during peak projects.","achievements.card3.title":"COVID‑19 Compliance (Zero Transmission)","achievements.card3.text":"Led workplace safety and crisis protocols, ensuring uninterrupted operations.",
+        "contact.title":"Let's Connect","contact.subtitle":"Ready to discuss how data-driven HR can transform your organization?","contact.method1":"Email","contact.method2":"Phone","contact.method3":"Location","contact.method4":"LinkedIn","contact.linkedin":"www.linkedin.com/in/hossam-ali-2234a32a0","contact.cta":"Send Message"
       },
       ar:{
         "nav.about":"نبذة","nav.skills":"المهارات","nav.experience":"الخبرة","nav.achievements":"الإنجازات","nav.contact":"التواصل",
-        "hero.title":"حسام علي","hero.subtitle":"قائد الموارد البشرية وخبير تحليل البيانات","hero.experience":"أكثر من 10 سنوات من الخبرة","hero.tag1":"Power BI","hero.tag2":"أنظمة ERP","hero.tag3":"تحليلات الموارد البشرية","hero.tag4":"قيادة الفريق","hero.cta":"لنتواصل",
-        "about.title":"نبذة عني","about.card1.title":"قائد الابتكار","about.card1.text":"تحويل ممارسات الموارد البشرية التقليدية من خلال التكنولوجيا المتطورة والرؤى القائمة على البيانات. أكثر من 10 سنوات من الخبرة المتطورة في بيئة الأعمال الديناميكية في قطر.","about.card2.title":"خبير تحليل البيانات","about.card2.text":"متخصص في تطوير لوحات Power BI، وتكامل أنظمة ERP، وتحليلات الموارد البشرية المتقدمة التي تدفع اتخاذ القرارات الاستراتيجية والتميز التشغيلي.","about.card3.title":"إدارة متعددة الثقافات","about.card3.text":"إدارة ناجحة لأكثر من 500 موظف من خلفيات متنوعة مع ضمان الامتثال بنسبة 100% لقانون العمل القطري وتعظيم أداء الفريق.","about.quote":"أؤمن بأن تمكين الأشخاص من خلال التكنولوجيا يخلق نجاحاً مستداماً.",
-        "skills.title":"الخبرات التقنية","skills.category1":"تحليل البيانات","skills.skill1":"Power BI","skills.level1":"خبير","skills.skill2":"Excel المتقدم","skills.level2":"خبير","skills.skill3":"SQL","skills.level3":"متقدم","skills.skill4":"تصور البيانات","skills.level4":"خبير","skills.category2":"أنظمة ERP","skills.skill5":"SAP HR","skills.level5":"متقدم","skills.skill6":"Oracle HCM","skills.level6":"متقدم","skills.skill7":"Workday","skills.level7":"متوسط","skills.skill8":"Microsoft Dynamics","skills.level8":"متقدم","skills.category3":"قيادة الموارد البشرية","skills.skill9":"التخطيط الاستراتيجي","skills.level9":"خبير","skills.skill10":"إدارة الفرق","skills.level10":"خبير","skills.skill11":"قانون العمل القطري","skills.level11":"خبير","skills.skill12":"التحول الرقمي","skills.level12":"متقدم",
-        "experience.title":"الرحلة المهنية","experience.job1.title":"مشرف الموارد البشرية والإدارة","experience.job1.company":"مجموعة FBA | فبراير 2017 - حتى الآن","experience.job1.description":"قيادة عمليات الموارد البشرية لأكثر من 500 موظف، وتنفيذ أنظمة متكاملة مع ERP، وتطوير لوحات Power BI لاتخاذ القرارات التنفيذية. تحقيق تحسن في الكفاءة بنسبة 40% والامتثال بنسبة 100% لقانون العمل القطري.","experience.job2.title":"منسق الموارد البشرية والإدارة","experience.job2.company":"IL FIORE ROSSO | مارس 2015 - فبراير 2017","experience.job2.description":"إنشاء أنظمة إدارة الوثائق الرقمية، وأتمتة عمليات سير العمل، وأطر تحليلات الموارد البشرية. تقليل وقت الانتقال بنسبة 35% وتحسين التعاون عبر الأقسام.","experience.job3.title":"مسؤول العلاقات العامة","experience.job3.company":"شركة سما الوطن للمقاولات | أكتوبر 2013 - فبراير 2015","experience.job3.description":"إدارة العلاقات الحكومية، ومعالجة الوثائق الرسمية، وضمان الامتثال التنظيمي. بناء أساس قوي في بيئة الأعمال القطرية والإطار القانوني.",
-        "achievements.title":"الإنجازات الرئيسية","achievements.card1.title":"أتمتة العمليات","achievements.card1.text":"أتمت إدارة الإجازات وسير العمل في الموارد البشرية، مما قلل وقت المعالجة بنسبة 70٪ وحسّن رضا الموظفين.","achievements.card2.title":"رؤى قائمة على البيانات","achievements.card2.text":"تطوير لوحات Power BI اعتمدت عليها الإدارة العليا لاتخاذ قرارات استراتيجية عبر الأقسام.","achievements.card3.title":"تميز الامتثال","achievements.card3.text":"قيادة تدقيق الموارد البشرية الذي حقق امتثالًا بنسبة 100٪ لقانون العمل القطري لأكثر من 500 موظف.",
-        "contact.title":"لنتواصل","contact.subtitle":"مستعد لمناقشة كيف يمكن للموارد البشرية القائمة على البيانات أن تحول مؤسستك؟","contact.method1":"البريد الإلكتروني","contact.method2":"الهاتف","contact.method3":"الموقع","contact.method4":"LinkedIn","contact.linkedin":"زيارة ملفي على LinkedIn","contact.cta":"أرسل رسالة"
+        "hero.title":"حسام علي","hero.subtitle":"مشرف موارد بشرية وإدارة | تحليلات موارد بشرية","hero.experience":"أكثر من 10 سنوات من الخبرة","hero.tag1":"تحليلات الموارد البشرية","hero.tag2":"قانون العمل القطري","hero.tag3":"التحول الرقمي","hero.tag4":"قيادة الفريق","hero.cta":"لنتواصل",
+        "about.title":"نبذة عني","about.card1.title":"تشغيل الموارد البشرية الاستراتيجي","about.card1.text":"قيادة تشغيل الموارد البشرية والامتثال في قطر؛ تحسين الإجازات ومدخلات الرواتب والتوثيق عبر أتمتة موثوقة.","about.card2.title":"تحليلات الموارد البشرية (Excel/PowerBI)","about.card2.text":"بناء لوحات وتقارير للدوران والاحتفاظ ومؤشرات القوى العاملة لدعم قرارات الإدارة التنفيذية.","about.card3.title":"خبرة قانون العمل القطري","about.card3.text":"ضمان توافق السياسات والعقود والإجراءات مع قانون العمل القطري لأكثر من 500 موظف عبر عدة كيانات.","about.quote":"أؤمن بأن تمكين الأشخاص من خلال التكنولوجيا يخلق نجاحاً مستداماً.",
+        "skills.title":"الخبرات التقنية","skills.category1":"تحليل البيانات","skills.skill1":"إكسل متقدم","skills.level1":"خبير","skills.skill2":"PowerBI وTableau","skills.level2":"خبير","skills.skill3":"أنظمة HRIS وATS","skills.level3":"متقدم","skills.skill4":"تحليلات البيانات","skills.level4":"خبير","skills.category2":"أنظمة ERP","skills.skill5":"SAP HR","skills.level5":"متقدم","skills.skill6":"Oracle HCM","skills.level6":"متقدم","skills.skill7":"Odoo","skills.level7":"متوسط","skills.skill8":"Microsoft Dynamics","skills.level8":"متقدم","skills.category3":"قيادة الموارد البشرية","skills.skill9":"التخطيط الاستراتيجي","skills.level9":"خبير","skills.skill10":"إدارة الفرق","skills.level10":"خبير","skills.skill11":"قانون العمل القطري","skills.level11":"خبير","skills.skill12":"التحول الرقمي","skills.level12":"متقدم",
+        "experience.title":"الرحلة المهنية","experience.job1.title":"مشرف الموارد البشرية والإدارة","experience.job1.company":"مجموعة FBA | فبراير 2017 – حتى الآن","experience.job1.description":"قيادة الموارد البشرية لأكثر من 500 موظف؛ تصميم لوحات تحليلات، تحسين وقت التوظيف، وضمان امتثال كامل لقانون العمل القطري.","experience.job2.title":"منسق الموارد البشرية والإدارة","experience.job2.company":"IL FIORE ROSSO | مارس 2015 – فبراير 2017","experience.job2.description":"تبسيط إجراءات الانضمام/الخروج، التوثيق، ومدخلات الرواتب؛ إنشاء نظام منظم لإدارة المستندات.","experience.job3.title":"موظف علاقات عامة","experience.job3.company":"سما الوطن للمقاولات | أكتوبر 2013 – فبراير 2015","experience.job3.description":"إدارة التأشيرات وتصاريح العمل والسجلات والتصاريح البلدية؛ التنسيق مع الجهات الرسمية وتجديد المستندات في المواعيد.",
+        "achievements.title":"الإنجازات الرئيسية","achievements.card1.title":"جائزة التميز الوظيفي (2019)","achievements.card1.text":"تكريم من مجموعة FBA على خدمة الموارد البشرية المتميزة والأثر التشغيلي.","achievements.card2.title":"توسيع القوى العاملة بأكثر من 200 موظف","achievements.card2.text":"دعم التوسع السريع من خلال توظيف منظّم وإجراءات انضمام فعالة.","achievements.card3.title":"الامتثال خلال كوفيد‑19 (صفر انتقال)","achievements.card3.text":"قيادة بروتوكولات السلامة والأزمات لضمان استمرارية العمل.",
+        "contact.title":"لنتواصل","contact.subtitle":"مستعد لمناقشة كيف يمكن للموارد البشرية القائمة على البيانات أن تحول مؤسستك؟","contact.method1":"البريد الإلكتروني","contact.method2":"الهاتف","contact.method3":"الموقع","contact.method4":"LinkedIn","contact.linkedin":"www.linkedin.com/in/hossam-ali-2234a32a0","contact.cta":"أرسل رسالة"
       }
     };
 
@@ -506,5 +587,32 @@
     };
     if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
   </script>
+<script>
+    /* reveal observer */
+    const ro = new IntersectionObserver((entries)=>{
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target);} });
+    }, {threshold: .15});
+    document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+    /* WhatsApp CTA */
+    function buildWhatsAppLink(){
+      const phone = '97433190656'; // Hossam's number with country code
+      const lang = document.documentElement.lang || 'en';
+      const msgEn = "Hello Hossam! I’d like to book a consultation about company formation / HR / Qatar Labor Law. Can we start with a free initial consultation?";
+      const msgAr = "مرحبًا حسام! أرغب بحجز استشارة بخصوص تأسيس شركة / الموارد البشرية / قانون العمل القطري. هل يمكن أن نبدأ باستشارة أولية مجانية؟";
+      const text = encodeURIComponent(lang.startsWith('ar') ? msgAr : msgEn);
+      return `https://wa.me/${phone}?text=${text}`;
+    }
+    const waBtn = document.getElementById('whatsapp-cta');
+    if(waBtn){ waBtn.setAttribute('href', buildWhatsAppLink()); }
+    // Also reapply after language switch if site has a language toggle
+    const langToggle = document.querySelector('[data-lang-toggle]');
+    if(langToggle){
+      langToggle.addEventListener('click', ()=>{
+        setTimeout(()=>{ const b=document.getElementById('whatsapp-cta'); if(b) b.setAttribute('href', buildWhatsAppLink()); }, 50);
+      });
+    }
+    
+</script>
 </body>
 </html>

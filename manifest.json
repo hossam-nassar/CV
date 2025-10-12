@@ -1,0 +1,24 @@
+<!-- Favicon & PWA -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0f0f23">
+  
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hossam Aly",
+    "jobTitle": "HR Leader & Data Analytics Expert",
+    "url": "https://hossamaly.com",
+    "email": "aly.a.hossam@outlook.com",
+    "telephone": "+974-33190656",
+    "sameAs": ["https://www.linkedin.com/in/hossamaly"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Doha",
+      "addressCountry": "QA"
+    },
+    "knowsAbout": ["Power BI", "HR Analytics", "ERP Systems", "Data Visualization", "Team Leadership"]
+  }
+  </script>

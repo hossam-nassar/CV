@@ -8,7 +8,728 @@
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cairo:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cairo:wght@400;600;700&display=swap"></noscript>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
-<style>:root{--color-primary:#64ffda;--color-secondary:#00bfa5;--color-text:#fff;--color-text-muted:rgba(255,255,255,.9);--color-bg:#0f0f23;--color-card-bg:rgba(255,255,255,.05);--color-card-bg-hover:rgba(255,255,255,.08);--color-card-border:rgba(255,255,255,.1);--space-xs:.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2rem;--space-xl:2.5rem;--shadow-lg:0 20px 40px rgba(0,0,0,.3);--transition-fast:.15s ease;--transition-medium:.3s ease;--radius-sm:12px;--radius-md:20px;--radius-lg:30px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--color-text);background:var(--color-bg);overflow-x:hidden}body[lang="ar"]{direction:rtl;font-family:Cairo,'Segoe UI',Tahoma,sans-serif}.container{max-width:1200px;margin:0 auto;padding:0 var(--space-md)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.header-card{position:fixed;top:calc(var(--space-md) + env(safe-area-inset-top));left:50%;transform:translateX(-50%);background:var(--color-card-bg);backdrop-filter:blur(20px);border:1px solid var(--color-card-border);border-radius:var(--radius-md);padding:var(--space-sm) var(--space-md);z-index:1000;transition:var(--transition-medium);will-change:transform}.header-card:hover{background:var(--color-card-bg-hover);box-shadow:var(--shadow-lg)}nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-md)}.nav-links{display:flex;list-style:none;gap:var(--space-md)}.nav-links a{text-decoration:none;color:var(--color-text);font-weight:500;padding:var(--space-xs) var(--space-sm);border-radius:var(--radius-sm);transition:var(--transition-medium)}.nav-links a:hover,.nav-links a:focus{background:rgba(100,255,218,.2);color:var(--color-primary);outline:none}.hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;background:0 0;border:none;padding:5px}.hamburger span{width:25px;height:3px;background:var(--color-text);transition:var(--transition-medium)}.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}.nav-links.active{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--color-card-bg);backdrop-filter:blur(20px);padding:var(--space-sm);border-radius:0 0 var(--radius-md) var(--radius-md)}.hero{height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:radial-gradient(circle at 20% 50%,#120a8f 0,#000 50%),radial-gradient(circle at 80% 50%,#8b0000 0,#000 50%)}.hero-card{background:var(--color-card-bg);backdrop-filter:blur(30px);border:1px solid var(--color-card-border);border-radius:var(--radius-lg);padding:var(--space-xl);max-width:700px;box-shadow:var(--shadow-lg);transition:var(--transition-medium);position:relative}@supports not (backdrop-filter:blur(30px)){.hero-card,.header-card,.card,.skill-card,.timeline-card,.contact-card{background:rgba(15,15,35,.9)}}.hero-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);background:var(--color-card-bg-hover)}.hero-avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;margin:0 auto var(--space-lg);box-shadow:0 0 30px rgba(0,0,0,.4);transition:var(--transition-medium);position:relative}.hero-avatar:hover{transform:scale(1.05);box-shadow:0 0 40px rgba(100,255,218,.3)}.hero-avatar::before{content:'';position:absolute;top:-3px;left:-3px;right:-3px;bottom:-3px;background:linear-gradient(45deg,var(--color-primary),var(--color-secondary));border-radius:50%;z-index:-1;opacity:0;transition:var(--transition-medium)}.hero-avatar:hover::before{opacity:1}.hero-avatar img{width:100%;height:100%;object-fit:cover;display:block}.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;margin-bottom:var(--space-sm);transition:var(--transition-medium)}.hero-card:hover h1{color:var(--color-primary);text-shadow:0 0 20px rgba(100,255,218,.3)}.hero-subtitle{font-size:clamp(1rem,3vw,1.3rem);color:var(--color-text-muted);margin-bottom:var(--space-lg)}.hero-experience{font-size:clamp(.9rem,2vw,1.1rem);color:var(--color-primary);font-weight:700;margin-bottom:var(--space-md);text-transform:uppercase;letter-spacing:1px}.hero-tags{display:flex;flex-wrap:wrap;gap:var(--space-sm);justify-content:center;margin-bottom:var(--space-lg)}.tag{background:rgba(100,255,218,.2);color:var(--color-primary);padding:var(--space-xs) var(--space-sm);border-radius:var(--radius-sm);font-size:.9rem;font-weight:500;display:flex;align-items:center;gap:var(--space-xs);transition:var(--transition-medium);cursor:pointer}.tag:hover{background:rgba(100,255,218,.3);transform:translateY(-2px) scale(1.05);box-shadow:0 5px 15px rgba(100,255,218,.2)}.cta-button{display:inline-block;padding:var(--space-sm) var(--space-lg);background:linear-gradient(45deg,var(--color-primary),var(--color-secondary));color:var(--color-bg);text-decoration:none;border-radius:var(--radius-sm);font-weight:700;font-size:1.1rem;box-shadow:0 10px 30px rgba(100,255,218,.3);position:relative;overflow:hidden;border:none;cursor:pointer;transition:var(--transition-medium)}.cta-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .5s ease}.cta-button:hover::before,.cta-button:focus::before{left:100%}.cta-button:hover,.cta-button:focus{transform:translateY(-3px) scale(1.05);box-shadow:0 20px 40px rgba(100,255,218,.4);outline:none}.section{padding:var(--space-xl) 0}.section-title{text-align:center;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;background:linear-gradient(45deg,var(--color-primary),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:var(--space-xl)}.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-xl);align-items:start}#achievements .cards-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.card,.skill-card,.timeline-card,.contact-card{background:var(--color-card-bg);backdrop-filter:blur(20px);border:1px solid var(--color-card-border);border-radius:var(--radius-md);padding:var(--space-xl);transition:var(--transition-medium);position:relative;overflow:hidden;will-change:transform;display:flex;flex-direction:column;contain:layout style paint}.skill-card{min-height:350px}.timeline-card{min-height:250px}.contact-card{min-height:200px;justify-content:center}.card:hover,.skill-card:hover,.timeline-card:hover,.contact-card:hover{transform:translateY(-8px);background:var(--color-card-bg-hover);box-shadow:var(--shadow-lg)}.card::before,.skill-card::before,.timeline-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));transform:scaleX(0);transition:transform var(--transition-medium);will-change:transform}.card:hover::before,.skill-card:hover::before,.timeline-card:hover::before{transform:scaleX(1)}.card-icon,.contact-icon{font-size:3rem;margin-bottom:var(--space-md);display:block}.card h3,.skill-category-title h4,.timeline-card h3,.contact-card h4{color:var(--color-primary);font-size:1.5rem;margin-bottom:var(--space-sm);font-weight:700}.card p,.timeline-card p,.contact-card p{color:var(--color-text-muted);line-height:1.7}.skill-category-title{display:flex;align-items:center;gap:var(--space-sm);margin-bottom:var(--space-lg)}.skill-item{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-md);padding:var(--space-sm);background:rgba(255,255,255,.05);border-radius:var(--radius-sm);transition:var(--transition-medium)}.skill-item:hover{background:rgba(100,255,218,.1);transform:translateX(5px)}.skill-name{color:var(--color-text);font-weight:600}.skill-level{background:rgba(100,255,218,.2);color:var(--color-primary);padding:4px 12px;border-radius:var(--radius-sm);font-size:.9rem;font-weight:600}.timeline-card .company{color:var(--color-text-muted);font-weight:600;margin-bottom:var(--space-sm);font-size:1.1rem}.contact-card{text-align:center;cursor:pointer}.contact-card a{color:var(--color-primary);text-decoration:none;transition:var(--transition-medium)}.contact-card a:hover,.contact-card a:focus{color:var(--color-secondary);text-shadow:0 0 10px rgba(100,255,218,.5);outline:none}.floating-bg{position:fixed;pointer-events:none;z-index:-1}.floating-bg:nth-child(1){top:20%;left:10%;width:100px;height:100px;background:radial-gradient(circle,rgba(100,255,218,.1),transparent);border-radius:50%;animation:float 8s ease-in-out infinite}.floating-bg:nth-child(2){bottom:20%;right:10%;width:150px;height:150px;background:radial-gradient(circle,rgba(100,255,218,.05),transparent);border-radius:50%;animation:float 10s ease-in-out infinite reverse}@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-20px) rotate(180deg)}}.loading-spinner{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;border:3px solid rgba(100,255,218,.1);border-top:3px solid var(--color-primary);border-radius:50%;animation:spin 1s linear infinite;z-index:9999}@keyframes spin{0%{transform:translate(-50%,-50%) rotate(0)}100%{transform:translate(-50%,-50%) rotate(360deg)}}.page-loaded .loading-spinner{display:none}.language-switcher{position:fixed;top:calc(var(--space-md) + env(safe-area-inset-top));right:var(--space-md);z-index:1000;display:flex;gap:var(--space-xs)}.language-switcher button{background:var(--color-card-bg);backdrop-filter:blur(20px);color:var(--color-text);border:1px solid var(--color-card-border);padding:var(--space-xs) var(--space-sm);border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition-medium);font-family:inherit}.language-switcher button:hover,.language-switcher button:focus{background:var(--color-primary);color:var(--color-bg);outline:none}.language-switcher button[aria-pressed=true]{background:var(--color-primary);color:var(--color-bg);font-weight:700}.whatsapp-float{position:fixed;bottom:var(--space-md);right:var(--space-md);background:#25D366;color:var(--color-text);width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 4px 8px rgba(0,0,0,.2);z-index:1000;text-decoration:none;transition:transform var(--transition-fast),box-shadow var(--transition-fast)}.whatsapp-float:hover,.whatsapp-float:focus{transform:scale(1.1);box-shadow:0 8px 20px rgba(37,211,102,.4);color:var(--color-text);outline:none}.whatsapp-float svg{width:28px;height:28px;fill:var(--color-text)}@media (max-width:768px){.hero-card{padding:var(--space-lg);margin:0 var(--space-sm)}.nav-links{display:none}.hamburger{display:flex}.language-switcher{top:calc(80px + env(safe-area-inset-top));right:var(--space-sm)}.cards-grid{grid-template-columns:1fr;gap:var(--space-lg)}.card,.skill-card,.timeline-card,.contact-card{padding:var(--space-md);min-height:auto}}@media (max-width:480px){.hero-card{padding:var(--space-md)}.whatsapp-float{width:50px;height:50px;bottom:var(--space-sm);right:var(--space-sm)}.whatsapp-float svg{width:24px;height:24px}}@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}.animate-on-scroll{opacity:0;transform:translateY(30px);transition:all .8s ease}.animate-on-scroll.visible{opacity:1;transform:translateY(0)}</style>
+<style>
+/* إضافة CSS لقسم الخدمات */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+.service-category {
+  background: var(--color-card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  contain: layout style paint;
+}
+
+.service-category:hover {
+  transform: translateY(-8px);
+  background: var(--color-card-bg-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transform: scaleX(0);
+  transition: transform var(--transition-medium);
+  will-change: transform;
+}
+
+.service-category:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  display: block;
+  text-align: center;
+}
+
+.service-category h3 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+  font-weight: 700;
+  text-align: center;
+}
+
+.service-list {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-sm);
+  padding: var(--space-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-medium);
+}
+
+.service-item:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateX(5px);
+}
+
+.service-item-icon {
+  font-size: 1.2rem;
+  margin-right: var(--space-sm);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-item-content {
+  flex: 1;
+}
+
+.service-item-title {
+  color: var(--color-text);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.service-item-description {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.service-benefits {
+  background: rgba(100, 255, 218, 0.1);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  margin-top: auto;
+}
+
+.service-benefits h4 {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+  font-weight: 600;
+}
+
+.service-benefits ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-benefits li {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+.service-benefits li::before {
+  content: '✓';
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* بقية CSS كما هي */
+:root{
+  --color-primary:#64ffda;
+  --color-secondary:#00bfa5;
+  --color-text:#fff;
+  --color-text-muted:rgba(255,255,255,.9);
+  --color-bg:#0f0f23;
+  --color-card-bg:rgba(255,255,255,.05);
+  --color-card-bg-hover:rgba(255,255,255,.08);
+  --color-card-border:rgba(255,255,255,.1);
+  --space-xs:.5rem;
+  --space-sm:1rem;
+  --space-md:1.5rem;
+  --space-lg:2rem;
+  --space-xl:2.5rem;
+  --shadow-lg:0 20px 40px rgba(0,0,0,.3);
+  --transition-fast:.15s ease;
+  --transition-medium:.3s ease;
+  --radius-sm:12px;
+  --radius-md:20px;
+  --radius-lg:30px
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box
+}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  line-height:1.6;
+  color:var(--color-text);
+  background:var(--color-bg);
+  overflow-x:hidden
+}
+body[lang="ar"]{
+  direction:rtl;
+  font-family:Cairo,'Segoe UI',Tahoma,sans-serif
+}
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 var(--space-md)
+}
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  border:0
+}
+.header-card{
+  position:fixed;
+  top:calc(var(--space-md) + env(safe-area-inset-top));
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--color-card-bg);
+  backdrop-filter:blur(20px);
+  border:1px solid var(--color-card-border);
+  border-radius:var(--radius-md);
+  padding:var(--space-sm) var(--space-md);
+  z-index:1000;
+  transition:var(--transition-medium);
+  will-change:transform
+}
+.header-card:hover{
+  background:var(--color-card-bg-hover);
+  box-shadow:var(--shadow-lg)
+}
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--space-md)
+}
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:var(--space-md)
+}
+.nav-links a{
+  text-decoration:none;
+  color:var(--color-text);
+  font-weight:500;
+  padding:var(--space-xs) var(--space-sm);
+  border-radius:var(--radius-sm);
+  transition:var(--transition-medium)
+}
+.nav-links a:hover,.nav-links a:focus{
+  background:rgba(100,255,218,.2);
+  color:var(--color-primary);
+  outline:none
+}
+.hamburger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+  gap:5px;
+  background:0 0;
+  border:none;
+  padding:5px
+}
+.hamburger span{
+  width:25px;
+  height:3px;
+  background:var(--color-text);
+  transition:var(--transition-medium)
+}
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg) translate(5px,5px)
+}
+.hamburger.active span:nth-child(2){
+  opacity:0
+}
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg) translate(7px,-7px)
+}
+.nav-links.active{
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  top:60px;
+  left:0;
+  right:0;
+  background:var(--color-card-bg);
+  backdrop-filter:blur(20px);
+  padding:var(--space-sm);
+  border-radius:0 0 var(--radius-md) var(--radius-md)
+}
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  background:radial-gradient(circle at 20% 50%,#120a8f 0,#000 50%),radial-gradient(circle at 80% 50%,#8b0000 0,#000 50%)
+}
+.hero-card{
+  background:var(--color-card-bg);
+  backdrop-filter:blur(30px);
+  border:1px solid var(--color-card-border);
+  border-radius:var(--radius-lg);
+  padding:var(--space-xl);
+  max-width:700px;
+  box-shadow:var(--shadow-lg);
+  transition:var(--transition-medium);
+  position:relative
+}
+@supports not (backdrop-filter:blur(30px)){
+  .hero-card,.header-card,.card,.skill-card,.timeline-card,.contact-card,.service-category{
+    background:rgba(15,15,35,.9)
+  }
+}
+.hero-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-lg);
+  background:var(--color-card-bg-hover)
+}
+.hero-avatar{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:0 auto var(--space-lg);
+  box-shadow:0 0 30px rgba(0,0,0,.4);
+  transition:var(--transition-medium);
+  position:relative
+}
+.hero-avatar:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 40px rgba(100,255,218,.3)
+}
+.hero-avatar::before{
+  content:'';
+  position:absolute;
+  top:-3px;
+  left:-3px;
+  right:-3px;
+  bottom:-3px;
+  background:linear-gradient(45deg,var(--color-primary),var(--color-secondary));
+  border-radius:50%;
+  z-index:-1;
+  opacity:0;
+  transition:var(--transition-medium)
+}
+.hero-avatar:hover::before{
+  opacity:1
+}
+.hero-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block
+}
+.hero h1{
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:800;
+  margin-bottom:var(--space-sm);
+  transition:var(--transition-medium)
+}
+.hero-card:hover h1{
+  color:var(--color-primary);
+  text-shadow:0 0 20px rgba(100,255,218,.3)
+}
+.hero-subtitle{
+  font-size:clamp(1rem,3vw,1.3rem);
+  color:var(--color-text-muted);
+  margin-bottom:var(--space-lg)
+}
+.hero-experience{
+  font-size:clamp(.9rem,2vw,1.1rem);
+  color:var(--color-primary);
+  font-weight:700;
+  margin-bottom:var(--space-md);
+  text-transform:uppercase;
+  letter-spacing:1px
+}
+.hero-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--space-sm);
+  justify-content:center;
+  margin-bottom:var(--space-lg)
+}
+.tag{
+  background:rgba(100,255,218,.2);
+  color:var(--color-primary);
+  padding:var(--space-xs) var(--space-sm);
+  border-radius:var(--radius-sm);
+  font-size:.9rem;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:var(--space-xs);
+  transition:var(--transition-medium);
+  cursor:pointer
+}
+.tag:hover{
+  background:rgba(100,255,218,.3);
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:0 5px 15px rgba(100,255,218,.2)
+}
+.cta-button{
+  display:inline-block;
+  padding:var(--space-sm) var(--space-lg);
+  background:linear-gradient(45deg,var(--color-primary),var(--color-secondary));
+  color:var(--color-bg);
+  text-decoration:none;
+  border-radius:var(--radius-sm);
+  font-weight:700;
+  font-size:1.1rem;
+  box-shadow:0 10px 30px rgba(100,255,218,.3);
+  position:relative;
+  overflow:hidden;
+  border:none;
+  cursor:pointer;
+  transition:var(--transition-medium)
+}
+.cta-button::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+  transition:left .5s ease
+}
+.cta-button:hover::before,.cta-button:focus::before{
+  left:100%
+}
+.cta-button:hover,.cta-button:focus{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 20px 40px rgba(100,255,218,.4);
+  outline:none
+}
+.section{
+  padding:var(--space-xl) 0
+}
+.section-title{
+  text-align:center;
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  font-weight:700;
+  background:linear-gradient(45deg,var(--color-primary),#fff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:var(--space-xl)
+}
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:var(--space-xl);
+  align-items:start
+}
+#achievements .cards-grid{
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr))
+}
+.card,.skill-card,.timeline-card,.contact-card{
+  background:var(--color-card-bg);
+  backdrop-filter:blur(20px);
+  border:1px solid var(--color-card-border);
+  border-radius:var(--radius-md);
+  padding:var(--space-xl);
+  transition:var(--transition-medium);
+  position:relative;
+  overflow:hidden;
+  will-change:transform;
+  display:flex;
+  flex-direction:column;
+  contain:layout style paint
+}
+.skill-card{
+  min-height:350px
+}
+.timeline-card{
+  min-height:250px
+}
+.contact-card{
+  min-height:200px;
+  justify-content:center
+}
+.card:hover,.skill-card:hover,.timeline-card:hover,.contact-card:hover{
+  transform:translateY(-8px);
+  background:var(--color-card-bg-hover);
+  box-shadow:var(--shadow-lg)
+}
+.card::before,.skill-card::before,.timeline-card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));
+  transform:scaleX(0);
+  transition:transform var(--transition-medium);
+  will-change:transform
+}
+.card:hover::before,.skill-card:hover::before,.timeline-card:hover::before{
+  transform:scaleX(1)
+}
+.card-icon,.contact-icon{
+  font-size:3rem;
+  margin-bottom:var(--space-md);
+  display:block
+}
+.card h3,.skill-category-title h4,.timeline-card h3,.contact-card h4{
+  color:var(--color-primary);
+  font-size:1.5rem;
+  margin-bottom:var(--space-sm);
+  font-weight:700
+}
+.card p,.timeline-card p,.contact-card p{
+  color:var(--color-text-muted);
+  line-height:1.7
+}
+.skill-category-title{
+  display:flex;
+  align-items:center;
+  gap:var(--space-sm);
+  margin-bottom:var(--space-lg)
+}
+.skill-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:var(--space-md);
+  padding:var(--space-sm);
+  background:rgba(255,255,255,.05);
+  border-radius:var(--radius-sm);
+  transition:var(--transition-medium)
+}
+.skill-item:hover{
+  background:rgba(100,255,218,.1);
+  transform:translateX(5px)
+}
+.skill-name{
+  color:var(--color-text);
+  font-weight:600
+}
+.skill-level{
+  background:rgba(100,255,218,.2);
+  color:var(--color-primary);
+  padding:4px 12px;
+  border-radius:var(--radius-sm);
+  font-size:.9rem;
+  font-weight:600
+}
+.timeline-card .company{
+  color:var(--color-text-muted);
+  font-weight:600;
+  margin-bottom:var(--space-sm);
+  font-size:1.1rem
+}
+.contact-card{
+  text-align:center;
+  cursor:pointer
+}
+.contact-card a{
+  color:var(--color-primary);
+  text-decoration:none;
+  transition:var(--transition-medium)
+}
+.contact-card a:hover,.contact-card a:focus{
+  color:var(--color-secondary);
+  text-shadow:0 0 10px rgba(100,255,218,.5);
+  outline:none
+}
+.floating-bg{
+  position:fixed;
+  pointer-events:none;
+  z-index:-1
+}
+.floating-bg:nth-child(1){
+  top:20%;
+  left:10%;
+  width:100px;
+  height:100px;
+  background:radial-gradient(circle,rgba(100,255,218,.1),transparent);
+  border-radius:50%;
+  animation:float 8s ease-in-out infinite
+}
+.floating-bg:nth-child(2){
+  bottom:20%;
+  right:10%;
+  width:150px;
+  height:150px;
+  background:radial-gradient(circle,rgba(100,255,218,.05),transparent);
+  border-radius:50%;
+  animation:float 10s ease-in-out infinite reverse
+}
+@keyframes float{
+  0%,100%{
+    transform:translateY(0) rotate(0)
+  }
+  50%{
+    transform:translateY(-20px) rotate(180deg)
+  }
+}
+.loading-spinner{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:50px;
+  height:50px;
+  border:3px solid rgba(100,255,218,.1);
+  border-top:3px solid var(--color-primary);
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  z-index:9999
+}
+@keyframes spin{
+  0%{
+    transform:translate(-50%,-50%) rotate(0)
+  }
+  100%{
+    transform:translate(-50%,-50%) rotate(360deg)
+  }
+}
+.page-loaded .loading-spinner{
+  display:none
+}
+.language-switcher{
+  position:fixed;
+  top:calc(var(--space-md) + env(safe-area-inset-top));
+  right:var(--space-md);
+  z-index:1000;
+  display:flex;
+  gap:var(--space-xs)
+}
+.language-switcher button{
+  background:var(--color-card-bg);
+  backdrop-filter:blur(20px);
+  color:var(--color-text);
+  border:1px solid var(--color-card-border);
+  padding:var(--space-xs) var(--space-sm);
+  border-radius:var(--radius-sm);
+  cursor:pointer;
+  transition:var(--transition-medium);
+  font-family:inherit
+}
+.language-switcher button:hover,.language-switcher button:focus{
+  background:var(--color-primary);
+  color:var(--color-bg);
+  outline:none
+}
+.language-switcher button[aria-pressed=true]{
+  background:var(--color-primary);
+  color:var(--color-bg);
+  font-weight:700
+}
+.whatsapp-float{
+  position:fixed;
+  bottom:var(--space-md);
+  right:var(--space-md);
+  background:#25D366;
+  color:var(--color-text);
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  box-shadow:0 4px 8px rgba(0,0,0,.2);
+  z-index:1000;
+  text-decoration:none;
+  transition:transform var(--transition-fast),box-shadow var(--transition-fast)
+}
+.whatsapp-float:hover,.whatsapp-float:focus{
+  transform:scale(1.1);
+  box-shadow:0 8px 20px rgba(37,211,102,.4);
+  color:var(--color-text);
+  outline:none
+}
+.whatsapp-float svg{
+  width:28px;
+  height:28px;
+  fill:var(--color-text)
+}
+@media (max-width:768px){
+  .hero-card{
+    padding:var(--space-lg);
+    margin:0 var(--space-sm)
+  }
+  .nav-links{
+    display:none
+  }
+  .hamburger{
+    display:flex
+  }
+  .language-switcher{
+    top:calc(80px + env(safe-area-inset-top));
+    right:var(--space-sm)
+  }
+  .cards-grid{
+    grid-template-columns:1fr;
+    gap:var(--space-lg)
+  }
+  .card,.skill-card,.timeline-card,.contact-card,.service-category{
+    padding:var(--space-md);
+    min-height:auto
+  }
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+}
+@media (max-width:480px){
+  .hero-card{
+    padding:var(--space-md)
+  }
+  .whatsapp-float{
+    width:50px;
+    height:50px;
+    bottom:var(--space-sm);
+    right:var(--space-sm)
+  }
+  .whatsapp-float svg{
+    width:24px;
+    height:24px
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  *{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important
+  }
+}
+.animate-on-scroll{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .8s ease
+}
+.animate-on-scroll.visible{
+  opacity:1;
+  transform:translateY(0)
+}
+</style>
 </head>
 <body>
 <a href="#main-content" class="sr-only">Skip to main content</a>
@@ -27,6 +748,7 @@
 <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
 <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
 <li><a href="#achievements" data-i18n="nav.achievements">Achievements</a></li>
+<li><a href="#services" data-i18n="nav.services">Services</a></li>
 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
 </ul>
 </nav>
@@ -172,6 +894,115 @@
 </div>
 </div>
 </section>
+<!-- قسم الخدمات الجديد -->
+<section id="services" class="section">
+<div class="container">
+<h2 class="section-title" data-i18n="services.title">My Services</h2>
+<div class="services-grid">
+<div class="service-category animate-on-scroll">
+<span class="service-icon" aria-hidden="true">🤖</span>
+<h3 data-i18n="services.automation.title">Automation Services</h3>
+<ul class="service-list">
+<li class="service-item">
+<span class="service-item-icon" aria-hidden="true">👤</span>
+<div class="service-item-content">
+<div class="service-item-title" data-i18n="services.automation.item1.title">For Individuals</div>
+<div class="service-item-description" data-i18n="services.automation.item1.description">Automation of personal tasks, email, and social media management</div>
+</div>
+</li>
+<li class="service-item">
+<span class="service-item-icon" aria-hidden="true">🏢</span>
+<div class="service-item-content">
+<div class="service-item-title" data-i18n="services.automation.item2.title">For Companies</div>
+<div class="service-item-description" data-i18n="services.automation.item2.description">Enterprise solutions with ERP & API integration, saving up to 80% of costs</div>
+</div>
+</li>
+</ul>
+<div class="service-benefits">
+<h4 data-i18n="services.automation.benefits.title">Key Benefits</h4>
+<ul>
+<li data-i18n="services.automation.benefits.item1">Save 80% of operational costs</li>
+<li data-i18n="services.automation.benefits.item2">Eliminate manual errors</li>
+<li data-i18n="services.automation.benefits.item3">Increase productivity by 3x</li>
+<li data-i18n="services.automation.benefits.item4">Real-time process monitoring</li>
+</ul>
+</div>
+</div>
+<div class="service-category animate-on-scroll">
+<span class="service-icon" aria-hidden="true">📄</span>
+<h3 data-i18n="services.resume.title">CV & Resume Services</h3>
+<ul class="service-list">
+<li class="service-item">
+<span class="service-item-icon" aria-hidden="true">✍️</span>
+<div class="service-item-content">
+<div class="service-item-title" data-i18n="services.resume.item1.title">Creation & Writing</div>
+<div class="service-item-description" data-i18n="services.resume.item1.description">From scratch in English & Arabic with ATS optimization</div>
+</div>
+</li>
+<li class="service-item">
+<span class="service-item-icon" aria-hidden="true">🔄</span>
+<div class="service-item-content">
+<div class="service-item-title" data-i18n="services.resume.item2.title">Improvement</div>
+<div class="service-item-description" data-i18n="services.resume.item2.description">Complete content and design renewal</div>
+</div>
+</li>
+<li class="service-item">
+<span class="service-item-icon" aria-hidden="true">🔍</span>
+<div class="service-item-content">
+<div class="service-item-title" data-i18n="services.resume.item3.title">Review & Analysis</div>
+<div class="service-item-description" data-i18n="services.resume.item3.description">Detailed feedback with recommendations</div>
+</div>
+</li>
+<li class="service-item">
+<span class="service-item-icon" aria-hidden="true">💼</span>
+<div class="service-item-content">
+<div class="service-item-title" data-i18n="services.resume.item4.title">LinkedIn</div>
+<div class="service-item-description" data-i18n="services.resume.item4.description">Profile optimization</div>
+</div>
+</li>
+</ul>
+<div class="service-benefits">
+<h4 data-i18n="services.resume.benefits.title">Key Benefits</h4>
+<ul>
+<li data-i18n="services.resume.benefits.item1">ATS-friendly formatting</li>
+<li data-i18n="services.resume.benefits.item2">Professional design</li>
+<li data-i18n="services.resume.benefits.item3">Increased interview calls</li>
+<li data-i18n="services.resume.benefits.item4">Bilingual support</li>
+</ul>
+</div>
+</div>
+<div class="service-category animate-on-scroll">
+<span class="service-icon" aria-hidden="true">🌐</span>
+<h3 data-i18n="services.portfolio.title">Business Portfolio Services</h3>
+<ul class="service-list">
+<li class="service-item">
+<span class="service-item-icon" aria-hidden="true">💻</span>
+<div class="service-item-content">
+<div class="service-item-title" data-i18n="services.portfolio.item1.title">Professional Website Design</div>
+<div class="service-item-description" data-i18n="services.portfolio.item1.description">For companies with dual language support</div>
+</div>
+</li>
+<li class="service-item">
+<span class="service-item-icon" aria-hidden="true">🎨</span>
+<div class="service-item-content">
+<div class="service-item-title" data-i18n="services.portfolio.item2.title">Branding & Content</div>
+<div class="service-item-description" data-i18n="services.portfolio.item2.description">Company profiles and service catalogs</div>
+</div>
+</li>
+</ul>
+<div class="service-benefits">
+<h4 data-i18n="services.portfolio.benefits.title">Key Benefits</h4>
+<ul>
+<li data-i18n="services.portfolio.benefits.item1">Professional online presence</li>
+<li data-i18n="services.portfolio.benefits.item2">Dual language support</li>
+<li data-i18n="services.portfolio.benefits.item3">Enhanced brand image</li>
+<li data-i18n="services.portfolio.benefits.item4">Mobile responsive design</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="contact" class="section">
 <div class="container">
 <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
@@ -214,21 +1045,91 @@
 const debounce=(fn,wait)=>{let t;return(...args)=>{clearTimeout(t);t=setTimeout(()=>fn(...args),wait)}};
 const translations={
 en:{
-"nav.about":"About","nav.skills":"Skills","nav.experience":"Experience","nav.achievements":"Achievements","nav.contact":"Contact",
+"nav.about":"About","nav.skills":"Skills","nav.experience":"Experience","nav.achievements":"Achievements","nav.services":"Services","nav.contact":"Contact",
 "hero.title":"HOSSAM ALY","hero.subtitle":"HR Leader & Data Analytics Expert","hero.experience":"10+ Years Experience","hero.tag1":"Power BI","hero.tag2":"ERP Systems","hero.tag3":"HR Analytics","hero.tag4":"Automation","hero.tag5":"Team Leadership","hero.cta":"Let's Connect",
 "about.title":"About Me","about.card1.title":"Innovation Leader","about.card1.text":"Transforming traditional HR practices through cutting-edge technology and data-driven insights. Over 10 years of progressive experience in Qatar's dynamic business landscape.","about.card2.title":"Data Analytics Expert","about.card2.text":"Specialized in Power BI dashboard development, ERP integration, and advanced HR analytics that drive strategic decision-making and operational excellence.","about.card3.title":"Multicultural Management","about.card3.text":"Successfully managing 500+ employees from diverse backgrounds while ensuring 100% compliance with Qatar Labor Law and maximizing team performance.","about.card4.title":"Automation Specialist","about.card4.text":"Designing and implementing end-to-end automation solutions using n8n, Zapier, and custom workflows that eliminate manual tasks and boost operational efficiency by up to 80%.",
 "skills.title":"Technical Expertise","skills.category1":"Data Analytics","skills.skill1":"Power BI","skills.level1":"Expert","skills.skill2":"Advanced Excel","skills.level2":"Expert","skills.skill3":"SQL","skills.level3":"Advanced","skills.skill4":"Data Visualization","skills.level4":"Expert","skills.category2":"ERP Systems","skills.skill5":"SAP HR","skills.level5":"Advanced","skills.skill6":"Oracle HCM","skills.level6":"Advanced","skills.skill7":"Workday","skills.level7":"Intermediate","skills.skill8":"Microsoft Dynamics","skills.level8":"Advanced","skills.category3":"HR Leadership","skills.skill9":"Strategic Planning","skills.level9":"Expert","skills.skill10":"Team Management","skills.level10":"Expert","skills.skill11":"Qatar Labor Law","skills.level11":"Expert","skills.skill12":"Digital Transformation","skills.level12":"Advanced","skills.category4":"Automation & Integration","skills.skill13":"n8n Workflows","skills.level13":"Expert","skills.skill14":"Zapier Integration","skills.level14":"Advanced","skills.skill15":"API Integration","skills.level15":"Advanced","skills.skill16":"Process Automation","skills.level16":"Expert",
 "experience.title":"Professional Journey","experience.job1.title":"HR & Admin Supervisor","experience.job1.company":"FBA GROUP | Feb 2017 - Present","experience.job1.description":"Leading HR operations for 500+ employees, implementing ERP-integrated systems, and developing Power BI dashboards for executive decision-making. Achieved 40% efficiency improvement and 100% compliance with Qatar Labor Law.","experience.job2.title":"HR & Admin Coordinator","experience.job2.company":"IL FIORE ROSSO | Mar 2015 - Feb 2017","experience.job2.description":"Established digital document management systems, automated workflow processes, and HR analytics frameworks. Reduced transition time by 35% and improved collaboration across departments.","experience.job3.title":"Public Relations Officer","experience.job3.company":"Sama Alwatan Contracting | Oct 2013 - Feb 2015","experience.job3.description":"Managed government relations, processed official documentation, and ensured regulatory compliance. Built a strong foundation in Qatar's business environment and legal framework.",
 "achievements.title":"Key Achievements","achievements.card1.title":"Process Automation","achievements.card1.text":"Automated leave management and HR workflows, reducing processing time by 70% and improving employee satisfaction.","achievements.card2.title":"Data-Driven Insights","achievements.card2.text":"Developed Power BI dashboards adopted by senior management to drive strategic decisions across departments.","achievements.card3.title":"Compliance Excellence","achievements.card3.text":"Led HR audits that achieved 100% compliance with Qatar Labor Law for 500+ employees across multiple entities.","achievements.card4.title":"Workflow Automation","achievements.card4.text":"Built 50+ automated workflows using n8n connecting multiple systems (ERP, Email, Slack, Google Workspace) saving 200+ hours monthly across departments.","achievements.card5.title":"System Integration","achievements.card5.text":"Integrated 15+ business applications through custom API solutions and automation platforms, eliminating data silos and reducing manual data entry by 90%.","achievements.card6.title":"AI-Powered Solutions","achievements.card6.text":"Implemented AI chatbots and automated response systems for HR inquiries, reducing response time from 24 hours to under 5 minutes with 95% accuracy.",
+"services.title":"My Services",
+"services.automation.title":"Automation Services",
+"services.automation.item1.title":"For Individuals",
+"services.automation.item1.description":"Automation of personal tasks, email, and social media management",
+"services.automation.item2.title":"For Companies",
+"services.automation.item2.description":"Enterprise solutions with ERP & API integration, saving up to 80% of costs",
+"services.automation.benefits.title":"Key Benefits",
+"services.automation.benefits.item1":"Save 80% of operational costs",
+"services.automation.benefits.item2":"Eliminate manual errors",
+"services.automation.benefits.item3":"Increase productivity by 3x",
+"services.automation.benefits.item4":"Real-time process monitoring",
+"services.resume.title":"CV & Resume Services",
+"services.resume.item1.title":"Creation & Writing",
+"services.resume.item1.description":"From scratch in English & Arabic with ATS optimization",
+"services.resume.item2.title":"Improvement",
+"services.resume.item2.description":"Complete content and design renewal",
+"services.resume.item3.title":"Review & Analysis",
+"services.resume.item3.description":"Detailed feedback with recommendations",
+"services.resume.item4.title":"LinkedIn",
+"services.resume.item4.description":"Profile optimization",
+"services.resume.benefits.title":"Key Benefits",
+"services.resume.benefits.item1":"ATS-friendly formatting",
+"services.resume.benefits.item2":"Professional design",
+"services.resume.benefits.item3":"Increased interview calls",
+"services.resume.benefits.item4":"Bilingual support",
+"services.portfolio.title":"Business Portfolio Services",
+"services.portfolio.item1.title":"Professional Website Design",
+"services.portfolio.item1.description":"For companies with dual language support",
+"services.portfolio.item2.title":"Branding & Content",
+"services.portfolio.item2.description":"Company profiles and service catalogs",
+"services.portfolio.benefits.title":"Key Benefits",
+"services.portfolio.benefits.item1":"Professional online presence",
+"services.portfolio.benefits.item2":"Dual language support",
+"services.portfolio.benefits.item3":"Enhanced brand image",
+"services.portfolio.benefits.item4":"Mobile responsive design",
 "contact.title":"Let's Connect","contact.subtitle":"Ready to discuss how data-driven HR can transform your organization?","contact.method1":"Email","contact.method2":"Phone","contact.method3":"Location","contact.method4":"LinkedIn","contact.linkedin":"Visit Profile","contact.cta":"Send Message"
 },
 ar:{
-"nav.about":"نبذة","nav.skills":"المهارات","nav.experience":"الخبرة","nav.achievements":"الإنجازات","nav.contact":"التواصل",
+"nav.about":"نبذة","nav.skills":"المهارات","nav.experience":"الخبرة","nav.achievements":"الإنجازات","nav.services":"الخدمات","nav.contact":"التواصل",
 "hero.title":"حسام علي","hero.subtitle":"قائد الموارد البشرية وخبير تحليل البيانات","hero.experience":"أكثر من 10 سنوات خبرة","hero.tag1":"Power BI","hero.tag2":"أنظمة ERP","hero.tag3":"تحليلات الموارد البشرية","hero.tag4":"الأتمتة","hero.tag5":"قيادة الفريق","hero.cta":"لنتواصل",
 "about.title":"نبذة عني","about.card1.title":"قائد الابتكار","about.card1.text":"تحويل ممارسات الموارد البشرية التقليدية من خلال التكنولوجيا المتطورة والرؤى القائمة على البيانات. أكثر من 10 سنوات من الخبرة المتطورة في بيئة الأعمال الديناميكية في قطر.","about.card2.title":"خبير تحليل البيانات","about.card2.text":"متخصص في تطوير لوحات Power BI، وتكامل أنظمة ERP، وتحليلات الموارد البشرية المتقدمة التي تدفع اتخاذ القرارات الاستراتيجية والتميز التشغيلي.","about.card3.title":"إدارة متعددة الثقافات","about.card3.text":"إدارة ناجحة لأكثر من 500 موظف من خلفيات متنوعة مع ضمان الامتثال بنسبة 100% لقانون العمل القطري وتعظيم أداء الفريق.","about.card4.title":"متخصص في الأتمتة","about.card4.text":"تصميم وتنفيذ حلول أتمتة شاملة باستخدام n8n و Zapier وسير عمل مخصص يزيل المهام اليدوية ويعزز الكفاءة التشغيلية بنسبة تصل إلى 80%.",
 "skills.title":"الخبرات التقنية","skills.category1":"تحليل البيانات","skills.skill1":"Power BI","skills.level1":"خبير","skills.skill2":"Excel المتقدم","skills.level2":"خبير","skills.skill3":"SQL","skills.level3":"متقدم","skills.skill4":"تصور البيانات","skills.level4":"خبير","skills.category2":"أنظمة ERP","skills.skill5":"SAP HR","skills.level5":"متقدم","skills.skill6":"Oracle HCM","skills.level6":"متقدم","skills.skill7":"Workday","skills.level7":"متوسط","skills.skill8":"Microsoft Dynamics","skills.level8":"متقدم","skills.category3":"قيادة الموارد البشرية","skills.skill9":"التخطيط الاستراتيجي","skills.level9":"خبير","skills.skill10":"إدارة الفرق","skills.level10":"خبير","skills.skill11":"قانون العمل القطري","skills.level11":"خبير","skills.skill12":"التحول الرقمي","skills.level12":"متقدم","skills.category4":"الأتمتة والتكامل","skills.skill13":"سير عمل n8n","skills.level13":"خبير","skills.skill14":"تكامل Zapier","skills.level14":"متقدم","skills.skill15":"تكامل API","skills.level15":"متقدم","skills.skill16":"أتمتة العمليات","skills.level16":"خبير",
 "experience.title":"الرحلة المهنية","experience.job1.title":"مشرف الموارد البشرية والإدارة","experience.job1.company":"مجموعة FBA | فبراير 2017 - حتى الآن","experience.job1.description":"قيادة عمليات الموارد البشرية لأكثر من 500 موظف، وتنفيذ أنظمة متكاملة مع ERP، وتطوير لوحات Power BI لاتخاذ القرارات التنفيذية. تحقيق تحسن 40% في الكفاءة و100% امتثال لقانون العمل القطري.","experience.job2.title":"منسق الموارد البشرية والإدارة","experience.job2.company":"IL FIORE ROSSO | مارس 2015 - فبراير 2017","experience.job2.description":"إنشاء أنظمة إدارة الوثائق الرقمية وعمليات سير العمل الآلية وأطر تحليلات الموارد البشرية. تقليل وقت الانتقال بنسبة 35% وتحسين التعاون بين الأقسام.","experience.job3.title":"مسؤول العلاقات العامة","experience.job3.company":"سما الوطن للمقاولات | أكتوبر 2013 - فبراير 2015","experience.job3.description":"إدارة العلاقات الحكومية ومعالجة الوثائق الرسمية وضمان الامتثال التنظيمي. بناء أساس قوي في بيئة الأعمال القطرية والإطار القانوني.",
 "achievements.title":"الإنجازات الرئيسية","achievements.card1.title":"أتمتة العمليات","achievements.card1.text":"أتمتة إدارة الإجازات وسير عمل الموارد البشرية، مما قلل وقت المعالجة بنسبة 70% وحسّن رضا الموظفين.","achievements.card2.title":"رؤى قائمة على البيانات","achievements.card2.text":"تطوير لوحات Power BI اعتمدتها الإدارة العليا لدفع القرارات الاستراتيجية عبر الأقسام.","achievements.card3.title":"تميز الامتثال","achievements.card3.text":"قيادة عمليات تدقيق الموارد البشرية التي حققت امتثالاً بنسبة 100% لقانون العمل القطري لأكثر من 500 موظف عبر كيانات متعددة.","achievements.card4.title":"أتمتة سير العمل","achievements.card4.text":"بناء أكثر من 50 سير عمل تلقائي باستخدام n8n يربط أنظمة متعددة (ERP، البريد الإلكتروني، Slack، Google Workspace) موفراً أكثر من 200 ساعة شهرياً عبر الأقسام.","achievements.card5.title":"تكامل الأنظمة","achievements.card5.text":"تكامل أكثر من 15 تطبيق أعمال من خلال حلول API مخصصة ومنصات الأتمتة، مما أزال صوامع البيانات وقلل إدخال البيانات اليدوي بنسبة 90%.","achievements.card6.title":"حلول مدعومة بالذكاء الاصطناعي","achievements.card6.text":"تنفيذ روبوتات الدردشة الذكية وأنظمة الرد الآلي لاستفسارات الموارد البشرية، مما قلل وقت الاستجابة من 24 ساعة إلى أقل من 5 دقائق بدقة 95%.",
+"services.title":"خدماتي",
+"services.automation.title":"خدمات الأتمتة",
+"services.automation.item1.title":"للأفراد",
+"services.automation.item1.description":"أتمتة المهام الشخصية والبريد والسوشيال ميديا",
+"services.automation.item2.title":"للشركات",
+"services.automation.item2.description":"حلول المؤسسات مع ERP وتكامل API وتوفير 80% من التكاليف",
+"services.automation.benefits.title":"المزايا الرئيسية",
+"services.automation.benefits.item1":"توفير 80% من التكاليف التشغيلية",
+"services.automation.benefits.item2":"القضاء على الأخطاء اليدوية",
+"services.automation.benefits.item3":"زيادة الإنتاجية 3 أضعاف",
+"services.automation.benefits.item4":"مراقبة العمليات في الوقت الفعلي",
+"services.resume.title":"خدمات السيرة الذاتية",
+"services.resume.item1.title":"إنشاء وكتابة",
+"services.resume.item1.description":"من الصفر بالإنجليزي والعربي مع تحسين ATS",
+"services.resume.item2.title":"تحسين",
+"services.resume.item2.description":"تجديد شامل للمحتوى والتصميم",
+"services.resume.item3.title":"مراجعة وتحليل",
+"services.resume.item3.description":"feedback مفصل مع توصيات",
+"services.resume.item4.title":"LinkedIn",
+"services.resume.item4.description":"تحسين البروفايل",
+"services.resume.benefits.title":"المزايا الرئيسية",
+"services.resume.benefits.item1":"تنسيق متوافق مع ATS",
+"services.resume.benefits.item2":"تصميم احترافي",
+"services.resume.benefits.item3":"زيادة فرص المقابلات",
+"services.resume.benefits.item4":"دعم ثنائي اللغة",
+"services.portfolio.title":"خدمات بورتفوليو الأعمال",
+"services.portfolio.item1.title":"تصميم مواقع احترافية",
+"services.portfolio.item1.description":"للشركات بدعم ثنائي اللغة",
+"services.portfolio.item2.title":"العلامة التجارية والمحتوى",
+"services.portfolio.item2.description":"ملفات الشركة وكتالوجات الخدمات",
+"services.portfolio.benefits.title":"المزايا الرئيسية",
+"services.portfolio.benefits.item1":"تواجد احترافي على الإنترنت",
+"services.portfolio.benefits.item2":"دعم ثنائي اللغة",
+"services.portfolio.benefits.item3":"تعزيز صورة العلامة التجارية",
+"services.portfolio.benefits.item4":"تصميم متجاوب مع الجوال",
 "contact.title":"لنتواصل","contact.subtitle":"مستعد لمناقشة كيف يمكن للموارد البشرية القائمة على البيانات تحويل مؤسستك؟","contact.method1":"البريد الإلكتروني","contact.method2":"الهاتف","contact.method3":"الموقع","contact.method4":"LinkedIn","contact.linkedin":"زيارة الملف الشخصي","contact.cta":"أرسل رسالة"
 }
 };

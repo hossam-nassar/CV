@@ -35,3 +35,15 @@ Submit this sitemap in Google Search Console and Bing Webmaster Tools:
 
 The package includes separate Arabic and English URLs, ProfilePage/Article structured data,
 Open Graph metadata, robots.txt, llms.txt and a PWA manifest.
+
+## 2026 redesign notes
+
+The site was visually redesigned (editorial/executive identity) without changing URLs,
+SEO metadata, structured data, sitemap, robots, llms.txt or the bilingual structure.
+
+- Design tokens live in `assets/css/main.css` (`:root` variables for color, type, spacing).
+- Typography: Newsreader + IBM Plex Sans (English); Noto Naskh Arabic + IBM Plex Sans Arabic (Arabic).
+- JavaScript (`assets/js/main.js`) handles only the mobile menu, footer year and optional
+  scroll reveals; everything works without JavaScript.
+- BreadcrumbList JSON-LD was added to case-study, insight and listing pages; all
+  pre-existing schema (ProfilePage, Person, TechArticle, Article, CollectionPage) is unchanged.

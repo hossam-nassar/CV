@@ -1,12 +1,12 @@
 {
-  "name": "Hossam Aly — HR Operations & Digital Transformation",
+  "name": "Hossam Aly \u2014 HR Operations & Digital Transformation",
   "short_name": "Hossam Aly",
   "description": "Personal website of Hossam Aly, focused on HR operations, automation and workforce analytics in Qatar.",
   "start_url": "/CV/",
   "scope": "/CV/",
   "display": "standalone",
-  "background_color": "#090d1a",
-  "theme_color": "#090d1a",
+  "background_color": "#122b3a",
+  "theme_color": "#122b3a",
   "lang": "en",
   "icons": [
     {

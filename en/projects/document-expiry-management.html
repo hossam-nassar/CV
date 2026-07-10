@@ -1,9 +1,122 @@
-<!doctype html><html lang="en" dir="ltr"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Document Expiry Management System | Hossam Aly</title><meta name="description" content="A practical architecture for tracking employee and company documents, assigning ownership and sending controlled reminders.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="author" content="Hossam Aly"><meta name="theme-color" content="#090d1a">
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Document Expiry Management System | Hossam Aly</title>
+<meta name="description" content="A practical architecture for tracking employee and company documents, assigning ownership and sending controlled reminders.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="Hossam Aly">
+<meta name="theme-color" content="#122b3a">
 <link rel="canonical" href="https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html"><link rel="alternate" hreflang="en" href="https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html"><link rel="alternate" hreflang="ar" href="https://hossam-nassar.github.io/CV/ar/projects/document-expiry-management.html"><link rel="alternate" hreflang="x-default" href="https://hossam-nassar.github.io/CV/en/">
 <meta property="og:type" content="article"><meta property="og:site_name" content="Hossam Aly"><meta property="og:title" content="Document Expiry Management System | Hossam Aly"><meta property="og:description" content="A practical architecture for tracking employee and company documents, assigning ownership and sending controlled reminders."><meta property="og:url" content="https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html"><meta property="og:image" content="https://hossam-nassar.github.io/CV/assets/images/social-card.png"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ar_QA">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Document Expiry Management System | Hossam Aly"><meta name="twitter:description" content="A practical architecture for tracking employee and company documents, assigning ownership and sending controlled reminders."><meta name="twitter:image" content="https://hossam-nassar.github.io/CV/assets/images/social-card.png">
-<link rel="icon" href="/CV/assets/images/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/CV/manifest.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/CV/assets/css/main.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Document Expiry Management System","description":"A practical architecture for tracking employee and company documents, assigning ownership and sending controlled reminders.","inLanguage":"en","url":"https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html","datePublished":"2026-07-10","dateModified":"2026-07-10","author":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Aly"},"publisher":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Aly"},"image":"https://hossam-nassar.github.io/CV/assets/images/social-card.png","mainEntityOfPage":"https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html"}</script></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav"><a class="brand" href="/CV/en/">Hossam <span>Aly</span></a><button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu">Menu</button><ul class="nav-links" id="site-menu" data-nav><li><a href="/CV/en/#about">About</a></li><li><a href="/CV/en/#expertise">Expertise</a></li><li><a href="/CV/en/#experience">Experience</a></li><li><a href="/CV/en/projects/" aria-current="page">Projects</a></li><li><a href="/CV/en/insights/">Insights</a></li><li><a href="/CV/en/#contact">Contact</a></li></ul><a class="language-link" href="/CV/ar/" hreflang="ar">العربية</a></div></header><main id="main"><div class="container breadcrumb"><a href="/CV/en/">Home</a> / <a href="/CV/en/projects/">Projects</a> / Document Expiry Management System</div><header class="article-header"><div class="container"><p class="eyebrow">Case study</p><h1>Document Expiry Management System</h1><p class="lead">A practical architecture for tracking employee and company documents, assigning ownership and sending controlled reminders.</p><div class="article-meta"><span>Last updated: 10 July 2026</span><span>Hossam Aly</span></div></div></header><article class="article"><div class="callout">This page documents the design approach without exposing confidential company or employee information.</div><h2>The operational problem</h2><p>Document-expiry tracking often starts as a spreadsheet with dates and colors. The real risk is not the absence of a date; it is unclear ownership, inconsistent alert thresholds, duplicate records and no evidence that a reminder was acted upon.</p><h2>Design approach</h2><p>The system separates document types, entities, owners, status rules and notification settings. A normalized register holds one record per document instance, while configurable thresholds determine upcoming, urgent and expired states.</p><h2>Core controls</h2><p>Role-based access limits who can edit master data. Validation prevents impossible dates and missing owners. Every alert run is logged, and repeated notifications are governed by frequency settings rather than being sent on every page refresh.</p><h2>Reporting</h2><p>The dashboard shows documents by company, category, owner and risk status. Exception views focus attention on missing attachments, overdue renewals and records with incomplete responsibility assignments.</p><h2>Technology</h2><p>Google Sheets can serve as the controlled data layer for a small or medium internal workflow, with Apps Script handling validation, scheduled alerts, PDFs, email and a lightweight web interface. The architecture can later move to a database without changing the business rules.</p><h2>Outcome</h2><p>The value is a clearer control environment: every document has an owner, every status follows the same rules, and every notification can be traced.</p><h2>Next step</h2><p>A robust implementation begins with the actual policy, data sources, roles and exception scenarios—not with the interface alone.</p><p><a class="button" href="/CV/en/#contact">Discuss a similar system</a></p></article></main><footer class="footer"><div class="container footer-grid"><span>© <span data-year></span> Hossam Aly. All rights reserved.</span><span><a href="/CV/sitemap.xml">Sitemap</a> · <a href="/CV/llms.txt">llms.txt</a></span></div></footer><script src="/CV/assets/js/main.js" defer></script></body></html>
+<link rel="icon" href="/CV/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/CV/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/CV/assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Document Expiry Management System","description":"A practical architecture for tracking employee and company documents, assigning ownership and sending controlled reminders.","inLanguage":"en","url":"https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html","datePublished":"2026-07-10","dateModified":"2026-07-10","author":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Aly"},"publisher":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Aly"},"image":"https://hossam-nassar.github.io/CV/assets/images/social-card.png","mainEntityOfPage":"https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hossam-nassar.github.io/CV/en/"}, {"@type": "ListItem", "position": 2, "name": "Case studies", "item": "https://hossam-nassar.github.io/CV/en/projects/"}, {"@type": "ListItem", "position": 3, "name": "Document Expiry Management"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/CV/en/"><span class="brand-mark" aria-hidden="true">HA</span>Hossam Aly</a>
+    <nav aria-label="Main navigation">
+      <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu" aria-label="Open main menu">Menu</button>
+      <ul class="nav-links" id="site-menu" data-nav><li><a href="/CV/en/#about">About</a></li><li><a href="/CV/en/#expertise">Expertise</a></li><li><a href="/CV/en/#experience">Experience</a></li><li><a href="/CV/en/projects/" aria-current="page">Case studies</a></li><li><a href="/CV/en/insights/">Insights</a></li><li><a href="/CV/en/#contact">Contact</a></li></ul>
+    </nav>
+    <a class="language-link" href="/CV/ar/" hreflang="ar" lang="ar" aria-label="Switch to the Arabic version">العربية</a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="/CV/en/">Home</a></li><li><a href="/CV/en/projects/">Case studies</a></li><li><span aria-current="page">Document Expiry Management</span></li></ol></nav>
+<header class="page-header plain">
+  <div class="container">
+    <p class="eyebrow">Case study</p>
+    <h1>Document Expiry Management System</h1>
+    <p class="lead">A practical architecture for tracking employee and company documents, assigning ownership and sending controlled reminders.</p>
+    <div class="page-meta"><span>Last updated: 10 July 2026</span><span>Hossam Aly</span></div>
+  </div>
+</header>
+<div class="container article-layout">
+  <article class="prose numbered-sections">
+    <div class="callout"><p>This page documents the design approach without exposing confidential company or employee information.</p></div>
+    <h2 id="sec-1">The operational problem</h2>
+<p>Document-expiry tracking often starts as a spreadsheet with dates and colors. The real risk is not the absence of a date; it is unclear ownership, inconsistent alert thresholds, duplicate records and no evidence that a reminder was acted upon.</p>
+<h2 id="sec-2">Design approach</h2>
+<p>The system separates document types, entities, owners, status rules and notification settings. A normalized register holds one record per document instance, while configurable thresholds determine upcoming, urgent and expired states.</p>
+<h2 id="sec-3">Core controls</h2>
+<p>Role-based access limits who can edit master data. Validation prevents impossible dates and missing owners. Every alert run is logged, and repeated notifications are governed by frequency settings rather than being sent on every page refresh.</p>
+<h2 id="sec-4">Reporting</h2>
+<p>The dashboard shows documents by company, category, owner and risk status. Exception views focus attention on missing attachments, overdue renewals and records with incomplete responsibility assignments.</p>
+<h2 id="sec-5">Technology</h2>
+<p>Google Sheets can serve as the controlled data layer for a small or medium internal workflow, with Apps Script handling validation, scheduled alerts, PDFs, email and a lightweight web interface. The architecture can later move to a database without changing the business rules.</p>
+<h2 id="sec-6">Outcome</h2>
+<p>The value is a clearer control environment: every document has an owner, every status follows the same rules, and every notification can be traced.</p>
+<h2 id="sec-7">Next step</h2>
+<p>A robust implementation begins with the actual policy, data sources, roles and exception scenarios—not with the interface alone.</p>
+    <p class="article-cta"><a class="button" href="/CV/en/#contact">Discuss a similar system</a></p>
+    <div class="author-block">
+  <img src="/CV/assets/images/profile.webp" alt="" width="112" height="112" loading="lazy">
+  <div><strong>Hossam Aly</strong><p>HR &amp; Administration Supervisor in Doha, Qatar. Writing about HR operations, reporting, controls and practical automation.</p></div>
+</div>
+  </article>
+  <aside class="article-aside">
+    <div class="aside-panel facts">
+      <p class="panel-title">Project facts</p>
+      <dl><dt>Focus</dt><dd>Document control and compliance reminders</dd><dt>Stack</dt><dd>Google Sheets · Apps Script</dd><dt>Interfaces</dt><dd>Dashboards, email alerts, web interface</dd><dt>Data</dt><dd>Anonymized — no company or employee records</dd></dl>
+      <div class="fact-tags"><span class="tag">Apps Script</span><span class="tag">Google Sheets</span><span class="tag">Alerts</span></div>
+    </div>
+    <nav class="aside-panel toc" aria-label="On this page">
+      <p class="panel-title">On this page</p>
+      <ul><li><a href="#sec-1">The operational problem</a></li><li><a href="#sec-2">Design approach</a></li><li><a href="#sec-3">Core controls</a></li><li><a href="#sec-4">Reporting</a></li><li><a href="#sec-5">Technology</a></li><li><a href="#sec-6">Outcome</a></li><li><a href="#sec-7">Next step</a></li></ul>
+    </nav>
+  </aside>
+</div>
+<section class="related">
+  <div class="container">
+    <h2>Related case studies</h2>
+    <div class="grid three"><a class="card linked" href="/CV/en/projects/salary-certificate-automation.html">
+  <p class="card-kicker">Case study</p>
+  <h3>Salary Certificate Automation</h3><p>A bilingual request, approval and PDF-generation workflow with serial numbers and QR-based verification.</p>
+  <span class="card-link arrow">Read more</span>
+</a><a class="card linked" href="/CV/en/projects/workforce-dashboard.html">
+  <p class="card-kicker">Case study</p>
+  <h3>Workforce &amp; Manpower Dashboard</h3><p>A structured workforce dataset with validation, staffing views, expiry indicators and management-level reporting.</p>
+  <span class="card-link arrow">Read more</span>
+</a><a class="card linked" href="/CV/en/insights/how-to-design-hr-document-expiry-system.html">
+  <p class="card-kicker">Practical guide</p>
+  <h3>How to Design an HR Document Expiry System</h3><p>A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail.</p>
+  <span class="card-link arrow">Read more</span>
+</a></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="brand"><span class="brand-mark" aria-hidden="true">HA</span>Hossam Aly</p>
+        <p>HR operations and digital transformation professional in Doha, focused on automation, workforce analytics and practical HR systems.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h2 class="footer-title">Explore</h2>
+        <ul><li><a href="/CV/en/">Home</a></li><li><a href="/CV/en/projects/">Case studies</a></li><li><a href="/CV/en/insights/">Insights</a></li><li><a href="/CV/en/#about">About</a></li><li><a href="/CV/en/#contact">Contact</a></li><li><a href="/CV/ar/"><span lang="ar">العربية</span> — Arabic version</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="footer-title">Contact</h2>
+        <ul><li><a href="mailto:aly.a.hossam@outlook.com">Email</a></li><li><a href="https://www.linkedin.com/in/hossamaly" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://wa.me/97433190656" target="_blank" rel="noopener noreferrer">WhatsApp</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Hossam Aly. All rights reserved.</span>
+      <span><a href="/CV/sitemap.xml">Sitemap</a> · <a href="/CV/llms.txt">llms.txt</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/CV/assets/js/main.js" defer></script>
+</body>
+</html>

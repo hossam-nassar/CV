@@ -1,9 +1,117 @@
-<!doctype html><html lang="en" dir="ltr"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>How to Design an HR Document Expiry System | Hossam Aly</title><meta name="description" content="A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="author" content="Hossam Aly"><meta name="theme-color" content="#090d1a">
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Design an HR Document Expiry System | Hossam Aly</title>
+<meta name="description" content="A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="Hossam Aly">
+<meta name="theme-color" content="#122b3a">
 <link rel="canonical" href="https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html"><link rel="alternate" hreflang="en" href="https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html"><link rel="alternate" hreflang="ar" href="https://hossam-nassar.github.io/CV/ar/insights/how-to-design-hr-document-expiry-system.html"><link rel="alternate" hreflang="x-default" href="https://hossam-nassar.github.io/CV/en/">
 <meta property="og:type" content="article"><meta property="og:site_name" content="Hossam Aly"><meta property="og:title" content="How to Design an HR Document Expiry System | Hossam Aly"><meta property="og:description" content="A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail."><meta property="og:url" content="https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html"><meta property="og:image" content="https://hossam-nassar.github.io/CV/assets/images/social-card.png"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ar_QA">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How to Design an HR Document Expiry System | Hossam Aly"><meta name="twitter:description" content="A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail."><meta name="twitter:image" content="https://hossam-nassar.github.io/CV/assets/images/social-card.png">
-<link rel="icon" href="/CV/assets/images/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/CV/manifest.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/CV/assets/css/main.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Design an HR Document Expiry System","description":"A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail.","inLanguage":"en","url":"https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html","datePublished":"2026-07-10","dateModified":"2026-07-10","author":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Aly"},"publisher":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Aly"},"image":"https://hossam-nassar.github.io/CV/assets/images/social-card.png","mainEntityOfPage":"https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html"}</script></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav"><a class="brand" href="/CV/en/">Hossam <span>Aly</span></a><button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu">Menu</button><ul class="nav-links" id="site-menu" data-nav><li><a href="/CV/en/#about">About</a></li><li><a href="/CV/en/#expertise">Expertise</a></li><li><a href="/CV/en/#experience">Experience</a></li><li><a href="/CV/en/projects/">Projects</a></li><li><a href="/CV/en/insights/" aria-current="page">Insights</a></li><li><a href="/CV/en/#contact">Contact</a></li></ul><a class="language-link" href="/CV/ar/" hreflang="ar">العربية</a></div></header><main id="main"><div class="container breadcrumb"><a href="/CV/en/">Home</a> / <a href="/CV/en/insights/">Insights</a> / How to Design an HR Document Expiry System</div><header class="article-header"><div class="container"><p class="eyebrow">Practical guide</p><h1>How to Design an HR Document Expiry System</h1><p class="lead">A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail.</p><div class="article-meta"><span>Last updated: 10 July 2026</span><span>Hossam Aly</span></div></div></header><article class="article"><div class="callout">This page documents the design approach without exposing confidential company or employee information.</div><h2>1. Define ownership before building alerts</h2><p>Every document type needs a business owner and an action owner. The person receiving a notification must know exactly what action is expected.</p><h2>2. Use one record per document instance</h2><p>Avoid storing many document dates in one employee row. A document register is easier to filter, validate and extend.</p><h2>3. Separate status from raw dates</h2><p>Calculate status using configurable thresholds such as 90, 60, 30 and 7 days. Do not manually type “urgent” or rely only on cell colors.</p><h2>4. Control notification frequency</h2><p>Scheduled alerts should be idempotent. The system must know what was sent, to whom and when, so page refreshes do not trigger duplicate emails.</p><h2>5. Build exception views</h2><p>The most useful dashboard is not the total count. It is the list of records with no owner, no attachment, invalid dates or overdue action.</p><h2>6. Preserve an audit trail</h2><p>Track who changed the date, status, owner or attachment. This is essential when the system becomes a compliance control.</p><h2>Next step</h2><p>A robust implementation begins with the actual policy, data sources, roles and exception scenarios—not with the interface alone.</p><p><a class="button" href="/CV/en/#contact">Discuss a similar system</a></p></article></main><footer class="footer"><div class="container footer-grid"><span>© <span data-year></span> Hossam Aly. All rights reserved.</span><span><a href="/CV/sitemap.xml">Sitemap</a> · <a href="/CV/llms.txt">llms.txt</a></span></div></footer><script src="/CV/assets/js/main.js" defer></script></body></html>
+<link rel="icon" href="/CV/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/CV/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/CV/assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Design an HR Document Expiry System","description":"A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail.","inLanguage":"en","url":"https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html","datePublished":"2026-07-10","dateModified":"2026-07-10","author":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Aly"},"publisher":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Aly"},"image":"https://hossam-nassar.github.io/CV/assets/images/social-card.png","mainEntityOfPage":"https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hossam-nassar.github.io/CV/en/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://hossam-nassar.github.io/CV/en/insights/"}, {"@type": "ListItem", "position": 3, "name": "How to Design an HR Document Expiry System"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/CV/en/"><span class="brand-mark" aria-hidden="true">HA</span>Hossam Aly</a>
+    <nav aria-label="Main navigation">
+      <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu" aria-label="Open main menu">Menu</button>
+      <ul class="nav-links" id="site-menu" data-nav><li><a href="/CV/en/#about">About</a></li><li><a href="/CV/en/#expertise">Expertise</a></li><li><a href="/CV/en/#experience">Experience</a></li><li><a href="/CV/en/projects/">Case studies</a></li><li><a href="/CV/en/insights/" aria-current="page">Insights</a></li><li><a href="/CV/en/#contact">Contact</a></li></ul>
+    </nav>
+    <a class="language-link" href="/CV/ar/" hreflang="ar" lang="ar" aria-label="Switch to the Arabic version">العربية</a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="/CV/en/">Home</a></li><li><a href="/CV/en/insights/">Insights</a></li><li><span aria-current="page">How to Design an HR Document Expiry System</span></li></ol></nav>
+<header class="page-header plain">
+  <div class="container">
+    <p class="eyebrow">Practical guide</p>
+    <h1>How to Design an HR Document Expiry System</h1>
+    <p class="lead">A durable expiry system needs ownership, normalized data, configurable thresholds, escalation and an audit trail.</p>
+    <div class="page-meta"><span>Last updated: 10 July 2026</span><span>Hossam Aly</span></div>
+  </div>
+</header>
+<div class="container article-layout">
+  <article class="prose">
+    <div class="callout"><p>This page documents the design approach without exposing confidential company or employee information.</p></div>
+    <h2 id="sec-1">1. Define ownership before building alerts</h2>
+<p>Every document type needs a business owner and an action owner. The person receiving a notification must know exactly what action is expected.</p>
+<h2 id="sec-2">2. Use one record per document instance</h2>
+<p>Avoid storing many document dates in one employee row. A document register is easier to filter, validate and extend.</p>
+<h2 id="sec-3">3. Separate status from raw dates</h2>
+<p>Calculate status using configurable thresholds such as 90, 60, 30 and 7 days. Do not manually type “urgent” or rely only on cell colors.</p>
+<h2 id="sec-4">4. Control notification frequency</h2>
+<p>Scheduled alerts should be idempotent. The system must know what was sent, to whom and when, so page refreshes do not trigger duplicate emails.</p>
+<h2 id="sec-5">5. Build exception views</h2>
+<p>The most useful dashboard is not the total count. It is the list of records with no owner, no attachment, invalid dates or overdue action.</p>
+<h2 id="sec-6">6. Preserve an audit trail</h2>
+<p>Track who changed the date, status, owner or attachment. This is essential when the system becomes a compliance control.</p>
+<h2 id="sec-7">Next step</h2>
+<p>A robust implementation begins with the actual policy, data sources, roles and exception scenarios—not with the interface alone.</p>
+    <p class="article-cta"><a class="button" href="/CV/en/#contact">Discuss a similar system</a></p>
+    <div class="author-block">
+  <img src="/CV/assets/images/profile.webp" alt="" width="112" height="112" loading="lazy">
+  <div><strong>Hossam Aly</strong><p>HR &amp; Administration Supervisor in Doha, Qatar. Writing about HR operations, reporting, controls and practical automation.</p></div>
+</div>
+  </article>
+  <aside class="article-aside">
+    <nav class="aside-panel toc" aria-label="On this page">
+      <p class="panel-title">On this page</p>
+      <ul><li><a href="#sec-1">1. Define ownership before building alerts</a></li><li><a href="#sec-2">2. Use one record per document instance</a></li><li><a href="#sec-3">3. Separate status from raw dates</a></li><li><a href="#sec-4">4. Control notification frequency</a></li><li><a href="#sec-5">5. Build exception views</a></li><li><a href="#sec-6">6. Preserve an audit trail</a></li><li><a href="#sec-7">Next step</a></li></ul>
+    </nav>
+  </aside>
+</div>
+<section class="related">
+  <div class="container">
+    <h2>Related reading</h2>
+    <div class="grid three"><a class="card linked" href="/CV/en/insights/what-makes-an-hr-dashboard-useful.html">
+  <p class="card-kicker">Practical guide</p>
+  <h3>What Makes an HR Dashboard Useful?</h3><p>A useful HR dashboard connects trustworthy data to decisions, exceptions and accountable owners.</p>
+  <span class="card-link arrow">Read more</span>
+</a><a class="card linked" href="/CV/en/insights/apps-script-vs-n8n-for-hr-automation.html">
+  <p class="card-kicker">Comparison</p>
+  <h3>Google Apps Script vs n8n for HR Automation</h3><p>Choose based on the data location, integration breadth, governance and maintenance model.</p>
+  <span class="card-link arrow">Read more</span>
+</a><a class="card linked" href="/CV/en/projects/document-expiry-management.html">
+  <p class="card-kicker">Case study</p>
+  <h3>Document Expiry Management</h3><p>A centralized register, automated reminders, ownership controls and dashboards for employee and company documents.</p>
+  <span class="card-link arrow">Read more</span>
+</a></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="brand"><span class="brand-mark" aria-hidden="true">HA</span>Hossam Aly</p>
+        <p>HR operations and digital transformation professional in Doha, focused on automation, workforce analytics and practical HR systems.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h2 class="footer-title">Explore</h2>
+        <ul><li><a href="/CV/en/">Home</a></li><li><a href="/CV/en/projects/">Case studies</a></li><li><a href="/CV/en/insights/">Insights</a></li><li><a href="/CV/en/#about">About</a></li><li><a href="/CV/en/#contact">Contact</a></li><li><a href="/CV/ar/"><span lang="ar">العربية</span> — Arabic version</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="footer-title">Contact</h2>
+        <ul><li><a href="mailto:aly.a.hossam@outlook.com">Email</a></li><li><a href="https://www.linkedin.com/in/hossamaly" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://wa.me/97433190656" target="_blank" rel="noopener noreferrer">WhatsApp</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Hossam Aly. All rights reserved.</span>
+      <span><a href="/CV/sitemap.xml">Sitemap</a> · <a href="/CV/llms.txt">llms.txt</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/CV/assets/js/main.js" defer></script>
+</body>
+</html>

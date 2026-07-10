@@ -15,6 +15,7 @@ Persistence (Master + Overrides pattern):
 """
 
 import argparse
+import json
 import sys
 import io
 from core import CSV_CONFIG, AVAILABLE_STACKS, MAX_RESULTS, search, search_stack
@@ -100,7 +101,6 @@ if __name__ == "__main__":
     elif args.stack:
         result = search_stack(args.query, args.stack, args.max_results)
         if args.json:
-            import json
             print(json.dumps(result, indent=2, ensure_ascii=False))
         else:
             print(format_output(result))
@@ -108,7 +108,6 @@ if __name__ == "__main__":
     else:
         result = search(args.query, args.domain, args.max_results)
         if args.json:
-            import json
             print(json.dumps(result, indent=2, ensure_ascii=False))
         else:
             print(format_output(result))

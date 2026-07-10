@@ -91,6 +91,21 @@ _STACK_COLS = {
 
 AVAILABLE_STACKS = list(STACK_CONFIG.keys())
 
+_csv_cache = {}
+
+_DOMAIN_KEYWORDS = {
+    "color": ["color", "palette", "hex", "#", "rgb"],
+    "chart": ["chart", "graph", "visualization", "trend", "bar", "pie", "scatter", "heatmap", "funnel"],
+    "landing": ["landing", "page", "cta", "conversion", "hero", "testimonial", "pricing", "section"],
+    "product": ["saas", "ecommerce", "e-commerce", "fintech", "healthcare", "gaming", "portfolio", "crypto", "dashboard"],
+    "style": ["style", "design", "ui", "minimalism", "glassmorphism", "neumorphism", "brutalism", "dark mode", "flat", "aurora", "prompt", "css", "implementation", "variable", "checklist", "tailwind"],
+    "ux": ["ux", "usability", "accessibility", "wcag", "touch", "scroll", "animation", "keyboard", "navigation", "mobile"],
+    "typography": ["font", "typography", "heading", "serif", "sans"],
+    "icons": ["icon", "icons", "lucide", "heroicons", "symbol", "glyph", "pictogram", "svg icon"],
+    "react": ["react", "next.js", "nextjs", "suspense", "memo", "usecallback", "useeffect", "rerender", "bundle", "waterfall", "barrel", "dynamic import", "rsc", "server component"],
+    "web": ["aria", "focus", "outline", "semantic", "virtualize", "autocomplete", "form", "input type", "preconnect"],
+}
+
 
 # ============ BM25 IMPLEMENTATION ============
 class BM25:
@@ -104,6 +119,7 @@ class BM25:
         self.avgdl = 0
         self.idf = {}
         self.doc_freqs = defaultdict(int)
+        self.term_freqs = []
         self.N = 0
 
     def tokenize(self, text):
@@ -120,12 +136,16 @@ class BM25:
         self.doc_lengths = [len(doc) for doc in self.corpus]
         self.avgdl = sum(self.doc_lengths) / self.N
 
+        self.term_freqs = []
         for doc in self.corpus:
+            tf = defaultdict(int)
             seen = set()
             for word in doc:
+                tf[word] += 1
                 if word not in seen:
                     self.doc_freqs[word] += 1
                     seen.add(word)
+            self.term_freqs.append(tf)
 
         for word, freq in self.doc_freqs.items():
             self.idf[word] = log((self.N - freq + 0.5) / (freq + 0.5) + 1)
@@ -138,9 +158,7 @@ class BM25:
         for idx, doc in enumerate(self.corpus):
             score = 0
             doc_len = self.doc_lengths[idx]
-            term_freqs = defaultdict(int)
-            for word in doc:
-                term_freqs[word] += 1
+            term_freqs = self.term_freqs[idx]
 
             for token in query_tokens:
                 if token in self.idf:
@@ -157,9 +175,11 @@ class BM25:
 
 # ============ SEARCH FUNCTIONS ============
 def _load_csv(filepath):
-    """Load CSV and return list of dicts"""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return list(csv.DictReader(f))
+    """Load CSV and return list of dicts, cached by filepath."""
+    if filepath not in _csv_cache:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            _csv_cache[filepath] = list(csv.DictReader(f))
+    return _csv_cache[filepath]
 
 
 def _search_csv(filepath, search_cols, output_cols, query, max_results):
@@ -182,7 +202,7 @@ def _search_csv(filepath, search_cols, output_cols, query, max_results):
     for idx, score in ranked[:max_results]:
         if score > 0:
             row = data[idx]
-            results.append({col: row.get(col, "") for col in output_cols if col in row})
+            results.append({col: row.get(col, "") for col in output_cols})
 
     return results
 
@@ -190,23 +210,8 @@ def _search_csv(filepath, search_cols, output_cols, query, max_results):
 def detect_domain(query):
     """Auto-detect the most relevant domain from query"""
     query_lower = query.lower()
-
-    domain_keywords = {
-        "color": ["color", "palette", "hex", "#", "rgb"],
-        "chart": ["chart", "graph", "visualization", "trend", "bar", "pie", "scatter", "heatmap", "funnel"],
-        "landing": ["landing", "page", "cta", "conversion", "hero", "testimonial", "pricing", "section"],
-        "product": ["saas", "ecommerce", "e-commerce", "fintech", "healthcare", "gaming", "portfolio", "crypto", "dashboard"],
-        "style": ["style", "design", "ui", "minimalism", "glassmorphism", "neumorphism", "brutalism", "dark mode", "flat", "aurora", "prompt", "css", "implementation", "variable", "checklist", "tailwind"],
-        "ux": ["ux", "usability", "accessibility", "wcag", "touch", "scroll", "animation", "keyboard", "navigation", "mobile"],
-        "typography": ["font", "typography", "heading", "serif", "sans"],
-        "icons": ["icon", "icons", "lucide", "heroicons", "symbol", "glyph", "pictogram", "svg icon"],
-        "react": ["react", "next.js", "nextjs", "suspense", "memo", "usecallback", "useeffect", "rerender", "bundle", "waterfall", "barrel", "dynamic import", "rsc", "server component"],
-        "web": ["aria", "focus", "outline", "semantic", "virtualize", "autocomplete", "form", "input type", "preconnect"]
-    }
-
-    scores = {domain: sum(1 for kw in keywords if kw in query_lower) for domain, keywords in domain_keywords.items()}
-    best = max(scores, key=scores.get)
-    return best if scores[best] > 0 else "style"
+    best = max(_DOMAIN_KEYWORDS, key=lambda d: sum(1 for kw in _DOMAIN_KEYWORDS[d] if kw in query_lower))
+    return best if any(kw in query_lower for kw in _DOMAIN_KEYWORDS[best]) else "style"
 
 
 def search(query, domain=None, max_results=MAX_RESULTS):

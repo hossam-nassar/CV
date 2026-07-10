@@ -1,0 +1,24 @@
+# Hossam Aly
+
+> Hossam Aly is an HR and administration professional in Doha, Qatar, focused on HR operations, workforce analytics, reporting and practical process automation.
+
+## Primary profiles
+- [English profile](https://hossam-nassar.github.io/CV/en/)
+- [Arabic profile](https://hossam-nassar.github.io/CV/ar/)
+
+## Selected project case studies
+- [Document Expiry Management](https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html)
+- [Salary Certificate Automation](https://hossam-nassar.github.io/CV/en/projects/salary-certificate-automation.html)
+- [Workforce and Manpower Dashboard](https://hossam-nassar.github.io/CV/en/projects/workforce-dashboard.html)
+
+## Practical guides
+- [How to Design an HR Document Expiry System](https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html)
+- [What Makes an HR Dashboard Useful?](https://hossam-nassar.github.io/CV/en/insights/what-makes-an-hr-dashboard-useful.html)
+- [Google Apps Script vs n8n for HR Automation](https://hossam-nassar.github.io/CV/en/insights/apps-script-vs-n8n-for-hr-automation.html)
+
+## Contact
+- Email: aly.a.hossam@outlook.com
+- LinkedIn: https://www.linkedin.com/in/hossamaly
+- Location: Doha, Qatar
+
+The site does not publish confidential company or employee data.

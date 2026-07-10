@@ -47,3 +47,9 @@ SEO metadata, structured data, sitemap, robots, llms.txt or the bilingual struct
   scroll reveals; everything works without JavaScript.
 - BreadcrumbList JSON-LD was added to case-study, insight and listing pages; all
   pre-existing schema (ProfilePage, Person, TechArticle, Article, CollectionPage) is unchanged.
+
+## QA maintenance patch
+
+The reviewed package also includes corrected capability-strip CSS, page-specific x-default hreflang,
+multilingual sitemap alternates, richer social metadata, improved mobile-menu announcements and a
+new social sharing image consistent with the editorial design.

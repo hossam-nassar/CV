@@ -56,7 +56,7 @@ html[lang="ar"]{
 
 /* ---------- Base ---------- */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
+html{scroll-behavior:smooth;scroll-padding-top:96px;color-scheme:light}
 body{
   margin:0;
   background:var(--paper);
@@ -148,6 +148,11 @@ html[lang="ar"] .eyebrow{letter-spacing:.05em;font-size:.85rem}
   display:none;background:transparent;border:1px solid var(--line-strong);
   border-radius:var(--radius);padding:.45rem .8rem;font:inherit;font-weight:500;
   color:var(--ink);cursor:pointer;
+}
+
+
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .site-header{background:rgba(246,244,238,.98)}
 }
 
 /* ---------- Buttons ---------- */

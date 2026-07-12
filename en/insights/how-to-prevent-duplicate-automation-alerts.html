@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>How to Prevent Duplicate Alerts in Business Automation | Hossam Ali</title>
+<meta content="A practical architecture for preventing duplicate email, Telegram and workflow alerts using event keys, notification ledgers, locks, retries and audit evidence." name="description"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="Hossam Ali" name="author"/><meta content="#122b3a" name="theme-color"/>
+<link href="https://hossam-nassar.github.io/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html" rel="canonical"/><link href="https://hossam-nassar.github.io/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html" hreflang="en" rel="alternate"/><link href="https://hossam-nassar.github.io/CV/ar/insights/how-to-prevent-duplicate-automation-alerts.html" hreflang="ar" rel="alternate"/><link href="https://hossam-nassar.github.io/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html" hreflang="x-default" rel="alternate"/><link href="/CV/feed.xml" rel="alternate" type="application/rss+xml" title="Hossam Ali Knowledge Blog"/>
+<meta content="article" property="og:type"/><meta content="Hossam Ali" property="og:site_name"/><meta content="How to Prevent Duplicate Alerts in Business Automation" property="og:title"/><meta content="A practical architecture for preventing duplicate email, Telegram and workflow alerts." property="og:description"/><meta content="https://hossam-nassar.github.io/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html" property="og:url"/><meta content="2026-07-12" property="article:published_time"/><meta content="2026-07-12" property="article:modified_time"/><meta content="https://hossam-nassar.github.io/CV/assets/images/social-card.png" property="og:image"/><meta content="en_US" property="og:locale"/><meta content="ar_QA" property="og:locale:alternate"/>
+<meta content="summary_large_image" name="twitter:card"/><meta content="How to Prevent Duplicate Alerts in Business Automation" name="twitter:title"/><meta content="Event keys, ledgers, locks, retries and audit evidence for reliable notifications." name="twitter:description"/><meta content="https://hossam-nassar.github.io/CV/assets/images/social-card.png" name="twitter:image"/>
+<link href="/CV/assets/images/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/CV/manifest.webmanifest" rel="manifest"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="/CV/assets/css/main.css" rel="stylesheet"/><link href="/CV/assets/css/insights.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How to Prevent Duplicate Alerts in Business Automation","description":"A practical architecture for preventing duplicate email, Telegram and workflow alerts using event keys, notification ledgers, locks, retries and audit evidence.","inLanguage":"en","url":"https://hossam-nassar.github.io/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html","datePublished":"2026-07-12","dateModified":"2026-07-12","proficiencyLevel":"Advanced","author":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Ali"},"publisher":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Ali"},"image":"https://hossam-nassar.github.io/CV/assets/images/social-card.png","mainEntityOfPage":"https://hossam-nassar.github.io/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html","keywords":["workflow automation","idempotency","duplicate alerts","Google Apps Script","n8n","audit trail"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hossam-nassar.github.io/CV/en/"},{"@type":"ListItem","position":2,"name":"Knowledge blog","item":"https://hossam-nassar.github.io/CV/en/insights/"},{"@type":"ListItem","position":3,"name":"Preventing duplicate automation alerts"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav"><a class="brand" href="/CV/en/"><span aria-hidden="true" class="brand-mark">HA</span>Hossam Ali</a><nav aria-label="Main navigation"><button aria-controls="site-menu" aria-expanded="false" aria-label="Open main menu" class="menu-button" data-close-label="Close main menu" data-menu-button="" data-open-label="Open main menu" type="button">Menu</button><ul class="nav-links" data-nav="" id="site-menu"><li><a href="/CV/en/#about">About</a></li><li><a href="/CV/en/#expertise">Expertise</a></li><li><a href="/CV/en/#experience">Experience</a></li><li><a href="/CV/en/projects/">Case studies</a></li><li><a aria-current="page" href="/CV/en/insights/">Insights</a></li><li><a href="/CV/en/#contact">Contact</a></li></ul></nav><a aria-label="Read in Arabic" class="language-link" href="/CV/ar/insights/how-to-prevent-duplicate-automation-alerts.html" hreflang="ar" lang="ar">العربية</a></div></header>
+<main id="main">
+<nav aria-label="Breadcrumb" class="breadcrumb container"><ol><li><a href="/CV/en/">Home</a></li><li><a href="/CV/en/insights/">Knowledge blog</a></li><li><span aria-current="page">Preventing duplicate alerts</span></li></ol></nav>
+<header class="page-header plain"><div class="container"><p class="eyebrow">Reliability engineering · Practical guide</p><h1>How to Prevent Duplicate Alerts in Business Automation</h1><p class="lead">A notification workflow is not reliable merely because it sends a message. It must send the correct message, to the correct recipient, once per business event—even when triggers overlap, APIs time out or the workflow is retried.</p><div class="page-meta"><span>Published: 12 July 2026</span><span>12 min read</span><span>Hossam Ali</span></div></div></header>
+<div class="container reading-facts"><div class="reading-fact"><strong>Use case</strong><span>Email, Telegram and workflow alerts</span></div><div class="reading-fact"><strong>Level</strong><span>Intermediate to advanced</span></div><div class="reading-fact"><strong>Core principle</strong><span>Safe retries through idempotency</span></div></div>
+<div class="container article-layout">
+<article class="prose">
+<div class="callout"><p><strong>Operating principle:</strong> a retry should recover a failed execution, not create a second business action. The workflow therefore needs a durable record of what event was processed and what notification was actually delivered.</p></div>
+<h2 id="problem">1. Why duplicate notifications happen</h2>
+<p>Duplicate messages usually come from execution design, not from the messaging channel. Common causes include two scheduled triggers running close together, a user refreshing a web app that also invokes notification logic, a timeout after the provider accepted the message, or a workflow platform automatically retrying a failed step.</p>
+<p>The difficult scenario is a <em>partial failure</em>: the external service sends the email or Telegram message, but the workflow fails before recording success. The next run sees no success record and sends the message again. A simple “last run timestamp” does not solve this because one run may contain many employees, documents or recipients.</p>
+<h2 id="event">2. Define the business event before the message</h2>
+<p>The system must identify the event independently from the execution. “The script ran at 08:00” is an execution fact. “Employee document 184 entered the 30-day warning window for the first time” is a business event.</p>
+<p>Create a stable event key from fields that define uniqueness:</p>
+<pre><code>event_key = SHA256(
+  event_type + "|" + entity_id + "|" + threshold + "|" + effective_date
+)
+
+Example:
+document_expiry|DOC-184|30-days|2026-08-11</code></pre>
+<p>The key must remain identical across retries. Do not include the current timestamp, execution ID or random number. Those values make every retry look like a new event.</p>
+<h2 id="ledger">3. Use a notification ledger, not a single status cell</h2>
+<p>A ledger stores one row per event-recipient-channel combination. This is more reliable than adding columns such as “Email Sent” to the source record because the same event may have several recipients, escalation levels and delivery channels.</p>
+<table><thead><tr><th>Field</th><th>Purpose</th></tr></thead><tbody><tr><td><code>event_key</code></td><td>Stable identifier for the business event.</td></tr><tr><td><code>recipient</code></td><td>Email address, chat ID or destination identifier.</td></tr><tr><td><code>channel</code></td><td>Email, Telegram, WhatsApp or another provider.</td></tr><tr><td><code>status</code></td><td>Pending, sending, sent, retryable-failure or permanent-failure.</td></tr><tr><td><code>attempt_count</code></td><td>Number of delivery attempts.</td></tr><tr><td><code>provider_reference</code></td><td>Message ID or response reference when available.</td></tr><tr><td><code>sent_at</code></td><td>Confirmed delivery-request timestamp.</td></tr><tr><td><code>last_error</code></td><td>Latest diagnostic information without secrets.</td></tr></tbody></table>
+<p>Use a unique constraint—or its logical equivalent—on <code>event_key + recipient + channel</code>. The workflow should refuse to create a second active record for the same combination.</p>
+<h2 id="state">4. Treat delivery as a state machine</h2>
+<p>A Boolean field cannot represent uncertainty. The workflow needs explicit states:</p>
+<div class="formula">PENDING → SENDING → SENT
+                 ↘ RETRYABLE_FAILURE → SENDING
+                 ↘ PERMANENT_FAILURE</div>
+<ul><li><strong>Pending:</strong> the event exists but delivery has not started.</li><li><strong>Sending:</strong> a worker has claimed the record. Store a lease timestamp so abandoned work can be recovered.</li><li><strong>Sent:</strong> the provider call completed successfully and the result was recorded.</li><li><strong>Retryable failure:</strong> a temporary timeout, rate limit or service error occurred.</li><li><strong>Permanent failure:</strong> the address, credentials, payload or permission is invalid and needs intervention.</li></ul>
+<p>Retries should be limited and delayed. A typical pattern is exponential backoff with a maximum attempt count. The exact values depend on operational urgency and provider limits; they should be configurable rather than hard-coded.</p>
+<h2 id="locking">5. Prevent concurrent workers from claiming the same event</h2>
+<p>Before sending, acquire a lock or perform an atomic claim. In Google Apps Script, <code>LockService</code> can prevent overlapping executions from entering the same critical section. In a database-backed workflow, update the row only when its current status is <code>PENDING</code> or an expired <code>SENDING</code> lease, then verify that exactly one row was claimed.</p>
+<pre><code>claim = update notification_ledger
+        set status = 'SENDING', lease_until = now + 5 minutes
+        where event_key = ?
+          and status in ('PENDING', 'RETRYABLE_FAILURE')
+          and next_attempt_at &lt;= now
+
+if affected_rows != 1:
+    stop; another execution owns the event</code></pre>
+<p>A lock protects the critical section. It does not replace the durable ledger: locks expire, processes crash and systems restart.</p>
+<h2 id="sequence">6. Use the correct processing sequence</h2>
+<ol><li>Read and validate the source record.</li><li>Calculate the stable event key.</li><li>Insert the ledger record if it does not already exist.</li><li>Atomically claim an eligible ledger record.</li><li>Build the message from a versioned template.</li><li>Call the provider with a timeout.</li><li>Record the provider response and mark the row <code>SENT</code>.</li><li>If the call fails, classify the error and schedule a controlled retry.</li></ol>
+<p>Where a provider supports its own idempotency key, send the same event key with every retry. This reduces the remaining ambiguity when the provider accepts a message but the client loses the response.</p>
+<h2 id="apps-script">7. Practical pattern for Google Apps Script</h2>
+<p>For small internal systems, use a dedicated sheet or datastore as the ledger. <code>PropertiesService</code> is suitable for compact configuration and cursors, but it should not become an unstructured replacement for a queryable notification history.</p>
+<pre><code>function processAlerts() {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(30000);
+  try {
+    const events = findEligibleBusinessEvents();
+    events.forEach(event =&gt; {
+      const key = buildStableEventKey(event);
+      const record = getOrCreateLedgerRecord(key, event.recipient, 'email');
+      if (!claimRecord(record)) return;
+      deliverAndRecord(record, event);
+    });
+  } finally {
+    lock.releaseLock();
+  }
+}</code></pre>
+<p>Keep trigger handlers thin. A page load, edit event or web request should enqueue or evaluate work; it should not casually execute the full notification routine.</p>
+<h2 id="n8n">8. Practical pattern for n8n</h2>
+<p>In n8n, place the ledger lookup and claim before the email or Telegram node. Route temporary errors into a retry path and permanent errors into an operational review queue. Use a separate error workflow to report failed executions, but do not let the error notification itself recursively trigger the main workflow.</p>
+<p>For higher volume, use a database with a unique key and transactional claim rather than workflow static data. Execution history is useful for diagnosis, but it is not the business ledger and may be pruned according to retention settings.</p>
+<h2 id="metrics">9. Measure reliability, not just message count</h2>
+<table><thead><tr><th>Metric</th><th>Interpretation</th></tr></thead><tbody><tr><td>Duplicate rate</td><td>Duplicate deliveries divided by successful business events. Target should be effectively zero.</td></tr><tr><td>Delivery success rate</td><td>Events reaching <code>SENT</code> within the required time window.</td></tr><tr><td>Retry recovery rate</td><td>Temporary failures later completed without manual action.</td></tr><tr><td>Permanent failure age</td><td>How long invalid destinations or permissions remain unresolved.</td></tr><tr><td>Alert-to-action ratio</td><td>Whether notifications produce a real operational response or merely create noise.</td></tr></tbody></table>
+<p>High message volume is not evidence of effective automation. A mature system reduces duplicates, identifies exceptions and shows which alerts resulted in action.</p>
+<h2 id="controls">10. Minimum production controls</h2>
+<ul><li>Validate recipient and payload before claiming delivery.</li><li>Do not log access tokens, passwords or sensitive employee data.</li><li>Separate test and production recipients.</li><li>Version message templates and record the version used.</li><li>Provide a controlled manual resend action that creates an explicit new event or authorized override.</li><li>Run a reconciliation report: eligible events without sent records, and sent records without valid source events.</li><li>Define retention rules for both the source data and notification ledger.</li></ul>
+<blockquote>A reliable automation is not one that never fails. It is one that fails visibly, retries safely and preserves enough evidence to explain every business action.</blockquote>
+<h2 id="sources">Sources and further reading</h2>
+<ul class="source-list"><li><a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-idempotent-methods" rel="noopener noreferrer" target="_blank">RFC 9110 — Idempotent Methods</a>, for the underlying concept of repeatable operations with the same intended effect.</li><li><a href="https://developers.google.com/apps-script/reference/lock/lock-service" rel="noopener noreferrer" target="_blank">Google Apps Script LockService</a>, for preventing concurrent access to critical sections.</li><li><a href="https://developers.google.com/apps-script/reference/properties/properties-service" rel="noopener noreferrer" target="_blank">Google Apps Script PropertiesService</a>, for scoped key-value configuration and state.</li><li><a href="https://docs.n8n.io/flow-logic/error-handling/" rel="noopener noreferrer" target="_blank">n8n error handling documentation</a>, for error workflows and failure routing.</li><li><a href="https://docs.n8n.io/hosting/scaling/queue-mode/" rel="noopener noreferrer" target="_blank">n8n queue mode documentation</a>, for worker-based execution at scale.</li></ul>
+<p class="article-cta"><a class="button" href="/CV/en/#contact">Discuss a similar workflow</a></p>
+<div class="author-block"><img alt="" height="112" loading="lazy" src="/CV/assets/images/profile.webp" width="112"/><div><strong>Hossam Ali</strong><p>HR & Administration Supervisor in Doha, writing about HR operations, data controls and practical automation.</p></div></div>
+</article>
+<aside class="article-aside"><nav aria-label="On this page" class="aside-panel toc"><p class="panel-title">On this page</p><ul><li><a href="#problem">Why duplicates happen</a></li><li><a href="#event">Define the event</a></li><li><a href="#ledger">Notification ledger</a></li><li><a href="#state">State machine</a></li><li><a href="#locking">Concurrency control</a></li><li><a href="#sequence">Processing sequence</a></li><li><a href="#apps-script">Apps Script pattern</a></li><li><a href="#n8n">n8n pattern</a></li><li><a href="#metrics">Metrics</a></li><li><a href="#controls">Production controls</a></li><li><a href="#sources">Sources</a></li></ul></nav><div class="aside-panel facts"><p class="panel-title">Article scope</p><dl><div><dt>Focus</dt><dd>Reliability and auditability</dd></div><div><dt>Channels</dt><dd>Email, Telegram and APIs</dd></div><div><dt>Tools</dt><dd>Apps Script, n8n, databases</dd></div></dl></div></aside>
+</div>
+<section class="related"><div class="container"><h2>Related reading</h2><div class="grid three"><a class="card linked" href="/CV/en/insights/how-to-design-hr-document-expiry-system.html"><p class="card-kicker">HR systems</p><h3>How to Design an HR Document Expiry System</h3><p>Apply reliable alerts to a recurring compliance process.</p><span class="card-link arrow">Read more</span></a><a class="card linked" href="/CV/en/insights/apps-script-vs-n8n-for-hr-automation.html"><p class="card-kicker">Tool selection</p><h3>Apps Script vs n8n</h3><p>Choose an automation platform based on the operating model.</p><span class="card-link arrow">Read more</span></a><a class="card linked" href="/CV/en/insights/what-makes-an-hr-dashboard-useful.html"><p class="card-kicker">Analytics</p><h3>What Makes an HR Dashboard Useful?</h3><p>Turn exceptions and failed deliveries into actionable reporting.</p><span class="card-link arrow">Read more</span></a></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><p class="brand"><span aria-hidden="true" class="brand-mark">HA</span>Hossam Ali</p><p>HR operations and digital transformation professional in Doha.</p></div><nav aria-label="Explore"><h2 class="footer-title">Explore</h2><ul><li><a href="/CV/en/">Home</a></li><li><a href="/CV/en/projects/">Case studies</a></li><li><a href="/CV/en/insights/">Knowledge blog</a></li><li><a href="/CV/feed.xml">RSS feed</a></li></ul></nav><div><h2 class="footer-title">Contact</h2><ul><li><a href="mailto:aly.a.hossam@outlook.com">Email</a></li><li><a href="https://www.linkedin.com/in/hossam-ali-2234a32a0" rel="noopener noreferrer me" target="_blank">LinkedIn</a></li></ul></div></div><div class="footer-bottom"><span>© <span data-year="">2026</span> Hossam Ali.</span><span><a href="/CV/sitemap.xml">Sitemap</a></span></div></div></footer>
+<script defer src="/CV/assets/js/main.js"></script>
+</body></html>

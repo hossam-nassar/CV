@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>كيف تمنع تكرار التنبيهات في أنظمة الأتمتة؟ | حسام علي</title>
+<meta content="بنية عملية لمنع تكرار رسائل البريد وتيليجرام وتنبيهات تدفقات العمل باستخدام مفاتيح الأحداث وسجل التنبيهات والأقفال وإعادة المحاولة وسجل المراجعة." name="description"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="Hossam Ali" name="author"/><meta content="#122b3a" name="theme-color"/>
+<link href="https://hossam-nassar.github.io/CV/ar/insights/how-to-prevent-duplicate-automation-alerts.html" rel="canonical"/><link href="https://hossam-nassar.github.io/CV/ar/insights/how-to-prevent-duplicate-automation-alerts.html" hreflang="ar" rel="alternate"/><link href="https://hossam-nassar.github.io/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html" hreflang="en" rel="alternate"/><link href="https://hossam-nassar.github.io/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html" hreflang="x-default" rel="alternate"/><link href="/CV/feed.xml" rel="alternate" type="application/rss+xml" title="مدونة حسام علي المعرفية"/>
+<meta content="article" property="og:type"/><meta content="Hossam Ali" property="og:site_name"/><meta content="كيف تمنع تكرار التنبيهات في أنظمة الأتمتة؟" property="og:title"/><meta content="بنية عملية لمنع تكرار البريد وتيليجرام وتنبيهات تدفقات العمل." property="og:description"/><meta content="https://hossam-nassar.github.io/CV/ar/insights/how-to-prevent-duplicate-automation-alerts.html" property="og:url"/><meta content="2026-07-12" property="article:published_time"/><meta content="2026-07-12" property="article:modified_time"/><meta content="https://hossam-nassar.github.io/CV/assets/images/social-card.png" property="og:image"/><meta content="ar_QA" property="og:locale"/><meta content="en_US" property="og:locale:alternate"/>
+<meta content="summary_large_image" name="twitter:card"/><meta content="كيف تمنع تكرار التنبيهات في أنظمة الأتمتة؟" name="twitter:title"/><meta content="مفاتيح الأحداث وسجل التنبيهات والأقفال وإعادة المحاولة لبناء إشعارات موثوقة." name="twitter:description"/><meta content="https://hossam-nassar.github.io/CV/assets/images/social-card.png" name="twitter:image"/>
+<link href="/CV/assets/images/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/CV/manifest.webmanifest" rel="manifest"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;family=Markazi+Text:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="/CV/assets/css/main.css" rel="stylesheet"/><link href="/CV/assets/css/insights.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"كيف تمنع تكرار التنبيهات في أنظمة الأتمتة؟","description":"بنية عملية لمنع تكرار رسائل البريد وتيليجرام وتنبيهات تدفقات العمل باستخدام مفاتيح الأحداث وسجل التنبيهات والأقفال وإعادة المحاولة.","inLanguage":"ar","url":"https://hossam-nassar.github.io/CV/ar/insights/how-to-prevent-duplicate-automation-alerts.html","datePublished":"2026-07-12","dateModified":"2026-07-12","proficiencyLevel":"Advanced","author":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Ali"},"publisher":{"@type":"Person","@id":"https://hossam-nassar.github.io/CV/#hossam-aly","name":"Hossam Ali"},"image":"https://hossam-nassar.github.io/CV/assets/images/social-card.png","mainEntityOfPage":"https://hossam-nassar.github.io/CV/ar/insights/how-to-prevent-duplicate-automation-alerts.html","keywords":["أتمتة تدفقات العمل","منع التكرار","Google Apps Script","n8n","سجل المراجعة"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://hossam-nassar.github.io/CV/ar/"},{"@type":"ListItem","position":2,"name":"مدونة المعرفة","item":"https://hossam-nassar.github.io/CV/ar/insights/"},{"@type":"ListItem","position":3,"name":"منع تكرار التنبيهات"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+<header class="site-header"><div class="container nav"><a class="brand" href="/CV/ar/"><span aria-hidden="true" class="brand-mark">HA</span>حسام علي</a><nav aria-label="التنقل الرئيسي"><button aria-controls="site-menu" aria-expanded="false" aria-label="فتح القائمة الرئيسية" class="menu-button" data-close-label="إغلاق القائمة الرئيسية" data-menu-button="" data-open-label="فتح القائمة الرئيسية" type="button">القائمة</button><ul class="nav-links" data-nav="" id="site-menu"><li><a href="/CV/ar/#about">نبذة</a></li><li><a href="/CV/ar/#expertise">الخبرات</a></li><li><a href="/CV/ar/#experience">المسيرة</a></li><li><a href="/CV/ar/projects/">دراسات الحالة</a></li><li><a aria-current="page" href="/CV/ar/insights/">المقالات</a></li><li><a href="/CV/ar/#contact">التواصل</a></li></ul></nav><a aria-label="Read in English" class="language-link" href="/CV/en/insights/how-to-prevent-duplicate-automation-alerts.html" hreflang="en" lang="en">English</a></div></header>
+<main id="main">
+<nav aria-label="مسار التنقل" class="breadcrumb container"><ol><li><a href="/CV/ar/">الرئيسية</a></li><li><a href="/CV/ar/insights/">مدونة المعرفة</a></li><li><span aria-current="page">منع تكرار التنبيهات</span></li></ol></nav>
+<header class="page-header plain"><div class="container"><p class="eyebrow">هندسة الموثوقية · دليل عملي</p><h1>كيف تمنع تكرار التنبيهات في أنظمة الأتمتة؟</h1><p class="lead">لا يصبح تدفق التنبيهات موثوقًا لمجرد أنه يرسل رسالة. المطلوب أن يرسل الرسالة الصحيحة إلى المستلم الصحيح مرة واحدة لكل حدث تشغيلي، حتى عند تداخل المشغلات أو انقطاع الاتصال أو إعادة تنفيذ التدفق.</p><div class="page-meta"><span>نشر في 12 يوليو 2026</span><span>12 دقيقة قراءة</span><span>حسام علي</span></div></div></header>
+<div class="container reading-facts"><div class="reading-fact"><strong>حالة الاستخدام</strong><span>البريد وتيليجرام وتنبيهات الأنظمة</span></div><div class="reading-fact"><strong>المستوى</strong><span>متوسط إلى متقدم</span></div><div class="reading-fact"><strong>المبدأ الأساسي</strong><span>إعادة محاولة آمنة دون تكرار</span></div></div>
+<div class="container article-layout">
+<article class="prose">
+<div class="callout"><p><strong>المبدأ التشغيلي:</strong> إعادة المحاولة يجب أن تستعيد التنفيذ الفاشل، لا أن تنشئ إجراءً تجاريًا ثانيًا. لذلك يحتاج النظام إلى سجل دائم يحدد الحدث الذي عولج والتنبيه الذي أرسل فعليًا.</p></div>
+<h2 id="problem">1. لماذا تتكرر التنبيهات؟</h2>
+<p>غالبًا لا تكون المشكلة في البريد أو تيليجرام، بل في تصميم التنفيذ. من الأسباب الشائعة: تشغيل Triggerين في وقت متقارب، تحديث المستخدم لصفحة تستدعي منطق التنبيه، انتهاء مهلة الاتصال بعد أن قبل مزود الخدمة الرسالة، أو إعادة المنصة للمحاولة بعد فشل إحدى الخطوات.</p>
+<p>الحالة الأخطر هي <strong>الفشل الجزئي</strong>: يرسل المزود الرسالة بالفعل، لكن التدفق يفشل قبل تسجيل النجاح. عند التشغيل التالي لا يجد النظام دليلًا على الإرسال فيكرر الرسالة. خانة واحدة باسم «تم الإرسال» أو «وقت آخر تشغيل» لا تكفي، لأن التشغيل الواحد قد يشمل عشرات الموظفين والمستندات والمستلمين.</p>
+<h2 id="event">2. عرّف الحدث التشغيلي قبل صياغة الرسالة</h2>
+<p>يجب التمييز بين واقعة التنفيذ والحدث التجاري. عبارة «اشتغل السكربت الساعة الثامنة» تصف تنفيذًا تقنيًا، بينما «دخل المستند رقم 184 لأول مرة في نطاق التنبيه قبل 30 يومًا» تصف حدثًا تشغيليًا.</p>
+<p>أنشئ مفتاحًا ثابتًا من العناصر التي تحدد فرادة الحدث:</p>
+<pre><code>event_key = SHA256(
+  event_type + "|" + entity_id + "|" + threshold + "|" + effective_date
+)
+
+مثال:
+document_expiry|DOC-184|30-days|2026-08-11</code></pre>
+<p>يجب أن يظل المفتاح نفسه في كل إعادة محاولة. لا تضف الوقت الحالي أو رقم التنفيذ أو قيمة عشوائية، لأنها تجعل كل محاولة تبدو كحدث جديد.</p>
+<h2 id="ledger">3. استخدم سجل تنبيهات مستقلًا</h2>
+<p>يسجل النظام صفًا واحدًا لكل تركيبة من الحدث والمستلم والقناة. هذا أفضل من إضافة أعمدة مثل «تم إرسال البريد» داخل سجل الموظف، لأن الحدث الواحد قد يذهب إلى عدة أشخاص وبمستويات تصعيد وقنوات مختلفة.</p>
+<table><thead><tr><th>الحقل</th><th>الغرض</th></tr></thead><tbody><tr><td><code>event_key</code></td><td>المعرف الثابت للحدث.</td></tr><tr><td><code>recipient</code></td><td>البريد أو Chat ID أو وجهة الإرسال.</td></tr><tr><td><code>channel</code></td><td>البريد أو تيليجرام أو أي مزود آخر.</td></tr><tr><td><code>status</code></td><td>قيد الانتظار، جارٍ الإرسال، تم، فشل قابل للمحاولة، فشل دائم.</td></tr><tr><td><code>attempt_count</code></td><td>عدد محاولات التسليم.</td></tr><tr><td><code>provider_reference</code></td><td>رقم الرسالة أو مرجع المزود إن توفر.</td></tr><tr><td><code>sent_at</code></td><td>وقت تأكيد طلب الإرسال.</td></tr><tr><td><code>last_error</code></td><td>آخر خطأ تشخيصي دون أسرار أو بيانات حساسة.</td></tr></tbody></table>
+<p>يجب منع وجود سجلين نشطين لنفس <code>event_key + recipient + channel</code> باستخدام قيد فريد في قاعدة البيانات أو منطق مكافئ له.</p>
+<h2 id="state">4. تعامل مع الإرسال كآلة حالات</h2>
+<p>الخانة المنطقية نعم/لا لا تمثل حالات عدم اليقين. استخدم حالات واضحة:</p>
+<div class="formula">PENDING → SENDING → SENT
+                 ↘ RETRYABLE_FAILURE → SENDING
+                 ↘ PERMANENT_FAILURE</div>
+<ul><li><strong>قيد الانتظار:</strong> الحدث موجود ولم يبدأ الإرسال.</li><li><strong>جارٍ الإرسال:</strong> عملية معينة حجزت السجل. أضف وقت انتهاء للحجز حتى يمكن استعادة العمل المتروك.</li><li><strong>تم الإرسال:</strong> اكتملت استجابة المزود وسجلت النتيجة.</li><li><strong>فشل قابل للمحاولة:</strong> مهلة أو Rate Limit أو عطل مؤقت.</li><li><strong>فشل دائم:</strong> عنوان أو صلاحية أو بيانات اعتماد أو Payload غير صالح.</li></ul>
+<p>حدد عددًا أقصى للمحاولات وتأخيرًا متزايدًا بينها. يجب أن تكون القيم إعدادات قابلة للتغيير وفق أهمية العملية وحدود مزود الخدمة.</p>
+<h2 id="locking">5. امنع عمليتين من حجز الحدث نفسه</h2>
+<p>قبل الإرسال احصل على Lock أو نفذ حجزًا ذريًا للسجل. في Google Apps Script يمكن استخدام <code>LockService</code> لحماية الجزء الحرج من التنفيذ. وفي قواعد البيانات حدّث السجل فقط إذا كانت حالته تسمح بالحجز ثم تحقق أن صفًا واحدًا فقط تأثر.</p>
+<pre><code>claim = update notification_ledger
+        set status = 'SENDING', lease_until = now + 5 minutes
+        where event_key = ?
+          and status in ('PENDING', 'RETRYABLE_FAILURE')
+          and next_attempt_at &lt;= now
+
+if affected_rows != 1:
+    stop; another execution owns the event</code></pre>
+<p>الـLock يحمي لحظة التنافس، لكنه لا يغني عن السجل الدائم؛ لأن الأقفال تنتهي والعمليات قد تتوقف والأنظمة يعاد تشغيلها.</p>
+<h2 id="sequence">6. تسلسل التنفيذ الصحيح</h2>
+<ol><li>اقرأ سجل المصدر وتحقق من صحته.</li><li>احسب مفتاح الحدث الثابت.</li><li>أنشئ سجل التنبيه إن لم يكن موجودًا.</li><li>احجز سجلًا مؤهلًا بطريقة ذرية.</li><li>كوّن الرسالة من Template له رقم إصدار.</li><li>استدعِ مزود الخدمة بمهلة زمنية محددة.</li><li>سجل الاستجابة والمرجع ثم غيّر الحالة إلى <code>SENT</code>.</li><li>عند الفشل صنف الخطأ وحدد محاولة لاحقة منضبطة.</li></ol>
+<p>إذا كان المزود يدعم Idempotency Key فأرسل إليه مفتاح الحدث نفسه في جميع المحاولات. هذا يقلل احتمال التكرار عندما يقبل المزود الرسالة بينما يفقد العميل الاستجابة.</p>
+<h2 id="apps-script">7. نمط عملي في Google Apps Script</h2>
+<p>في الأنظمة الداخلية الصغيرة يمكن استخدام Sheet مخصص كسجل تنبيهات. يناسب <code>PropertiesService</code> الإعدادات الصغيرة ومؤشرات الاستمرار، لكنه لا ينبغي أن يتحول إلى بديل غير منظم عن سجل قابل للبحث والمراجعة.</p>
+<pre><code>function processAlerts() {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(30000);
+  try {
+    const events = findEligibleBusinessEvents();
+    events.forEach(event =&gt; {
+      const key = buildStableEventKey(event);
+      const record = getOrCreateLedgerRecord(key, event.recipient, 'email');
+      if (!claimRecord(record)) return;
+      deliverAndRecord(record, event);
+    });
+  } finally {
+    lock.releaseLock();
+  }
+}</code></pre>
+<p>اجعل دوال الـTrigger قصيرة. فتح الصفحة أو تعديل خلية أو استقبال Web Request يجب أن يقيّم العمل أو يضعه في طابور، لا أن يشغل عشوائيًا دورة التنبيهات كاملة.</p>
+<h2 id="n8n">8. نمط عملي في n8n</h2>
+<p>ضع خطوة البحث في سجل التنبيهات وحجز الحدث قبل عقدة البريد أو تيليجرام. وجّه الأخطاء المؤقتة إلى مسار إعادة محاولة، والأخطاء الدائمة إلى قائمة مراجعة تشغيلية. استخدم Error Workflow منفصلًا للإبلاغ عن فشل التنفيذ، مع منع تنبيه الخطأ من إعادة تشغيل التدفق الأساسي.</p>
+<p>عند ارتفاع الحجم استخدم قاعدة بيانات بمفتاح فريد وحجز Transactional بدل الاعتماد على Static Data داخل التدفق. سجل تنفيذ n8n مفيد للتشخيص، لكنه ليس السجل التجاري للحدث وقد يخضع للحذف وفق إعدادات الاحتفاظ.</p>
+<h2 id="metrics">9. قِس الموثوقية لا عدد الرسائل</h2>
+<table><thead><tr><th>المؤشر</th><th>ماذا يعني؟</th></tr></thead><tbody><tr><td>معدل التكرار</td><td>عدد الرسائل المكررة ÷ الأحداث التي نجحت. الهدف العملي أن يقترب من الصفر.</td></tr><tr><td>نسبة التسليم في الوقت</td><td>الأحداث التي وصلت إلى <code>SENT</code> داخل المهلة المطلوبة.</td></tr><tr><td>نسبة التعافي بالمحاولة</td><td>الأخطاء المؤقتة التي اكتملت دون تدخل يدوي.</td></tr><tr><td>عمر الفشل الدائم</td><td>المدة التي تظل فيها العناوين أو الصلاحيات غير الصالحة دون حل.</td></tr><tr><td>نسبة التنبيه إلى الإجراء</td><td>هل أنتج التنبيه فعلًا تشغيليًا أم أضاف ضوضاء فقط؟</td></tr></tbody></table>
+<p>كثرة الرسائل ليست دليلًا على نجاح الأتمتة. النظام الناضج يقلل التكرار ويظهر الاستثناءات ويحدد التنبيهات التي أدت إلى إجراء حقيقي.</p>
+<h2 id="controls">10. الحد الأدنى من ضوابط الإنتاج</h2>
+<ul><li>تحقق من المستلم ومحتوى الرسالة قبل حجز الإرسال.</li><li>لا تسجل كلمات المرور أو Tokens أو بيانات الموظفين الحساسة.</li><li>افصل مستلمي الاختبار عن الإنتاج.</li><li>امنح كل Template رقم إصدار وسجل الإصدار المستخدم.</li><li>أنشئ وظيفة إعادة إرسال يدوية منضبطة تسجل Override مصرحًا أو حدثًا جديدًا واضحًا.</li><li>أنشئ تقرير مطابقة بين الأحداث المؤهلة التي لم ترسل والسجلات المرسلة التي لا يقابلها حدث صالح.</li><li>حدد سياسة احتفاظ لبيانات المصدر ولسجل التنبيهات.</li></ul>
+<blockquote>الأتمتة الموثوقة ليست التي لا تفشل أبدًا، بل التي تفشل بصورة ظاهرة، وتعيد المحاولة بأمان، وتحتفظ بأدلة تفسر كل إجراء تشغيلي.</blockquote>
+<h2 id="sources">المصادر والقراءة الإضافية</h2>
+<ul class="source-list"><li><a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-idempotent-methods" rel="noopener noreferrer" target="_blank">RFC 9110 — العمليات القابلة للتكرار بنفس الأثر المقصود</a>.</li><li><a href="https://developers.google.com/apps-script/reference/lock/lock-service" rel="noopener noreferrer" target="_blank">توثيق Google Apps Script LockService</a>.</li><li><a href="https://developers.google.com/apps-script/reference/properties/properties-service" rel="noopener noreferrer" target="_blank">توثيق Google Apps Script PropertiesService</a>.</li><li><a href="https://docs.n8n.io/flow-logic/error-handling/" rel="noopener noreferrer" target="_blank">توثيق معالجة الأخطاء في n8n</a>.</li><li><a href="https://docs.n8n.io/hosting/scaling/queue-mode/" rel="noopener noreferrer" target="_blank">توثيق Queue Mode في n8n</a>.</li></ul>
+<p class="article-cta"><a class="button" href="/CV/ar/#contact">ناقش نظامًا مشابهًا</a></p>
+<div class="author-block"><img alt="" height="112" loading="lazy" src="/CV/assets/images/profile.webp" width="112"/><div><strong>حسام علي</strong><p>مشرف موارد بشرية وإدارة في الدوحة، يكتب عن العمليات وضوابط البيانات والأتمتة العملية.</p></div></div>
+</article>
+<aside class="article-aside"><nav aria-label="محتويات الصفحة" class="aside-panel toc"><p class="panel-title">محتويات الصفحة</p><ul><li><a href="#problem">أسباب التكرار</a></li><li><a href="#event">تعريف الحدث</a></li><li><a href="#ledger">سجل التنبيهات</a></li><li><a href="#state">حالات التنفيذ</a></li><li><a href="#locking">منع التزامن</a></li><li><a href="#sequence">تسلسل التنفيذ</a></li><li><a href="#apps-script">نمط Apps Script</a></li><li><a href="#n8n">نمط n8n</a></li><li><a href="#metrics">المؤشرات</a></li><li><a href="#controls">ضوابط الإنتاج</a></li><li><a href="#sources">المصادر</a></li></ul></nav><div class="aside-panel facts"><p class="panel-title">نطاق المقال</p><dl><div><dt>التركيز</dt><dd>الموثوقية وقابلية المراجعة</dd></div><div><dt>القنوات</dt><dd>البريد وتيليجرام والـAPIs</dd></div><div><dt>الأدوات</dt><dd>Apps Script وn8n وقواعد البيانات</dd></div></dl></div></aside>
+</div>
+<section class="related"><div class="container"><h2>قراءات ذات صلة</h2><div class="grid three"><a class="card linked" href="/CV/ar/insights/how-to-design-hr-document-expiry-system.html"><p class="card-kicker">أنظمة الموارد البشرية</p><h3>تصميم نظام متابعة انتهاء المستندات</h3><p>طبّق بنية التنبيهات الموثوقة على عملية امتثال متكررة.</p><span class="card-link arrow">اقرأ المزيد</span></a><a class="card linked" href="/CV/ar/insights/apps-script-vs-n8n-for-hr-automation.html"><p class="card-kicker">اختيار الأدوات</p><h3>Apps Script أم n8n؟</h3><p>اختر منصة الأتمتة وفق نموذج التشغيل والصيانة.</p><span class="card-link arrow">اقرأ المزيد</span></a><a class="card linked" href="/CV/ar/insights/what-makes-an-hr-dashboard-useful.html"><p class="card-kicker">التحليلات</p><h3>ما الذي يجعل الداشبورد مفيدًا؟</h3><p>حوّل أخطاء التسليم والاستثناءات إلى تقارير قابلة للتنفيذ.</p><span class="card-link arrow">اقرأ المزيد</span></a></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><p class="brand"><span aria-hidden="true" class="brand-mark">HA</span>حسام علي</p><p>متخصص في عمليات الموارد البشرية والتحول الرقمي في الدوحة.</p></div><nav aria-label="استكشف"><h2 class="footer-title">استكشف</h2><ul><li><a href="/CV/ar/">الرئيسية</a></li><li><a href="/CV/ar/projects/">دراسات الحالة</a></li><li><a href="/CV/ar/insights/">مدونة المعرفة</a></li><li><a href="/CV/feed.xml">خلاصة RSS</a></li></ul></nav><div><h2 class="footer-title">التواصل</h2><ul><li><a href="mailto:aly.a.hossam@outlook.com">البريد الإلكتروني</a></li><li><a href="https://www.linkedin.com/in/hossam-ali-2234a32a0" rel="noopener noreferrer me" target="_blank">لينكدإن</a></li></ul></div></div><div class="footer-bottom"><span>© <span data-year="">2026</span> حسام علي.</span><span><a href="/CV/sitemap.xml">خريطة الموقع</a></span></div></div></footer>
+<script defer src="/CV/assets/js/main.js"></script>
+</body></html>

@@ -1,0 +1,55 @@
+name: Update site domain
+
+on:
+  push:
+    branches:
+      - agent/update-site-domain
+
+permissions:
+  contents: write
+
+jobs:
+  migrate-domain:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/update-site-domain
+          fetch-depth: 0
+      - name: Replace old GitHub Pages domain
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          old = b"https://hossam-nassar.github.io"
+          new = b"https://hossam-ali-hr.github.io"
+          skip_dirs = {'.git'}
+          changed = []
+
+          for path in Path('.').rglob('*'):
+              if not path.is_file() or any(part in skip_dirs for part in path.parts):
+                  continue
+              data = path.read_bytes()
+              if old in data:
+                  path.write_bytes(data.replace(old, new))
+                  changed.append(str(path))
+
+          print(f"Updated {len(changed)} files")
+          for path in changed:
+              print(path)
+          PY
+          rm -f .github/workflows/update-site-domain.yml
+      - name: Commit migrated URLs
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes required"
+            exit 0
+          fi
+          git commit -m "Update GitHub Pages domain"
+          git push origin HEAD:agent/update-site-domain

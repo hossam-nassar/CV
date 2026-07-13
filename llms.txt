@@ -3,19 +3,19 @@
 > Hossam Ali is an HR and administration professional in Doha, Qatar, focused on HR operations, workforce analytics, reporting and practical process automation.
 
 ## Primary profiles
-- [English profile](https://hossam-nassar.github.io/CV/en/)
-- [Arabic profile](https://hossam-nassar.github.io/CV/ar/)
+- [English profile](https://hossam-ali-hr.github.io/CV/en/)
+- [Arabic profile](https://hossam-ali-hr.github.io/CV/ar/)
 
 ## Selected project case studies
-- [Document Expiry Management](https://hossam-nassar.github.io/CV/en/projects/document-expiry-management.html)
-- [Salary Certificate Automation](https://hossam-nassar.github.io/CV/en/projects/salary-certificate-automation.html)
-- [Workforce and Manpower Dashboard](https://hossam-nassar.github.io/CV/en/projects/workforce-dashboard.html)
+- [Document Expiry Management](https://hossam-ali-hr.github.io/CV/en/projects/document-expiry-management.html)
+- [Salary Certificate Automation](https://hossam-ali-hr.github.io/CV/en/projects/salary-certificate-automation.html)
+- [Workforce and Manpower Dashboard](https://hossam-ali-hr.github.io/CV/en/projects/workforce-dashboard.html)
 
 ## Practical guides
-- [How to Design an HR Document Expiry System](https://hossam-nassar.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html)
-- [What Makes an HR Dashboard Useful?](https://hossam-nassar.github.io/CV/en/insights/what-makes-an-hr-dashboard-useful.html)
-- [Google Apps Script vs n8n for HR Automation](https://hossam-nassar.github.io/CV/en/insights/apps-script-vs-n8n-for-hr-automation.html)
-- [How to Stay Compliant with Qatar Labour Administration](https://hossam-nassar.github.io/CV/en/insights/how-to-stay-compliant-with-qatar-labour-administration.html)
+- [How to Design an HR Document Expiry System](https://hossam-ali-hr.github.io/CV/en/insights/how-to-design-hr-document-expiry-system.html)
+- [What Makes an HR Dashboard Useful?](https://hossam-ali-hr.github.io/CV/en/insights/what-makes-an-hr-dashboard-useful.html)
+- [Google Apps Script vs n8n for HR Automation](https://hossam-ali-hr.github.io/CV/en/insights/apps-script-vs-n8n-for-hr-automation.html)
+- [How to Stay Compliant with Qatar Labour Administration](https://hossam-ali-hr.github.io/CV/en/insights/how-to-stay-compliant-with-qatar-labour-administration.html)
 
 ## Contact
 - Email: aly.a.hossam@outlook.com

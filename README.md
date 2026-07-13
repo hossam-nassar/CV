@@ -2,7 +2,7 @@
 
 ## Configured public URL
 
-`https://hossam-nassar.github.io/CV/`
+`https://hossam-ali-hr.github.io/CV/`
 
 This package is configured specifically for the GitHub Pages repository path `/CV/`.
 All canonical URLs, language alternatives, social metadata, structured data, sitemap links,
@@ -21,17 +21,17 @@ Keep the repository and Pages path capitalization as `CV` because URLs are case-
 
 After pushing the files, verify:
 
-- `https://hossam-nassar.github.io/CV/`
-- `https://hossam-nassar.github.io/CV/en/`
-- `https://hossam-nassar.github.io/CV/ar/`
-- `https://hossam-nassar.github.io/CV/sitemap.xml`
-- `https://hossam-nassar.github.io/CV/robots.txt`
+- `https://hossam-ali-hr.github.io/CV/`
+- `https://hossam-ali-hr.github.io/CV/en/`
+- `https://hossam-ali-hr.github.io/CV/ar/`
+- `https://hossam-ali-hr.github.io/CV/sitemap.xml`
+- `https://hossam-ali-hr.github.io/CV/robots.txt`
 
 ## Search setup
 
 Submit this sitemap in Google Search Console and Bing Webmaster Tools:
 
-`https://hossam-nassar.github.io/CV/sitemap.xml`
+`https://hossam-ali-hr.github.io/CV/sitemap.xml`
 
 The package includes separate Arabic and English URLs, ProfilePage/Article structured data,
 Open Graph metadata, robots.txt, llms.txt and a PWA manifest.

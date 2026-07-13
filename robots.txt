@@ -13,4 +13,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://hossam-nassar.github.io/CV/sitemap.xml
+Sitemap: https://hossam-ali-hr.github.io/CV/sitemap.xml

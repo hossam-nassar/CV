@@ -1,0 +1,138 @@
+name: Apply SEO enhancements
+
+on:
+  push:
+    branches:
+      - agent/seo-enhancement
+
+permissions:
+  contents: write
+
+jobs:
+  enhance-seo:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/seo-enhancement
+          fetch-depth: 0
+
+      - name: Improve technical and on-page SEO
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, re
+
+          site = 'https://hossam-ali-hr.github.io/CV'
+          changed = []
+
+          def save(path, text):
+              old = path.read_text(encoding='utf-8')
+              if text != old:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(str(path))
+
+          def replace_meta(text, name, value):
+              pattern = rf'<meta content="[^"]*" name="{re.escape(name)}"/>'
+              return re.sub(pattern, f'<meta content="{value}" name="{name}"/>', text, count=1)
+
+          def replace_property(text, prop, value):
+              pattern = rf'<meta content="[^"]*" property="{re.escape(prop)}"/>'
+              return re.sub(pattern, f'<meta content="{value}" property="{prop}"/>', text, count=1)
+
+          home = {
+              'en/index.html': {
+                  'title': 'Hossam Ali | HR & Administration Supervisor in Qatar',
+                  'description': 'Hossam Ali is an HR and Administration Supervisor in Doha, Qatar, with experience in HR operations, Qatar labour administration, payroll support, workforce analytics, Power BI, ERP reporting and practical automation.',
+                  'og_locale': 'en_US'
+              },
+              'ar/index.html': {
+                  'title': 'حسام علي | مشرف موارد بشرية وإدارة في قطر',
+                  'description': 'حسام علي مشرف موارد بشرية وإدارة في الدوحة، قطر، بخبرة في عمليات الموظفين وشؤون العمل والرواتب وتحليلات القوى العاملة وPower BI وتقارير ERP والأتمتة العملية.',
+                  'og_locale': 'ar_QA'
+              }
+          }
+
+          for filename, values in home.items():
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              text = re.sub(r'<title>.*?</title>', f'<title>{values["title"]}</title>', text, count=1)
+              text = replace_meta(text, 'description', values['description'])
+              text = replace_property(text, 'og:title', values['title'])
+              text = replace_property(text, 'og:description', values['description'])
+              text = replace_meta(text, 'twitter:title', values['title'])
+              text = replace_meta(text, 'twitter:description', values['description'])
+              text = text.replace('"sameAs":["https://www.linkedin.com/in/hossam-ali-2234a32a0"]', '"sameAs":["https://www.linkedin.com/in/hossam-ali-2234a32a0","https://github.com/hossam-ali-hr"]')
+              text = text.replace('"jobTitle":"HR & Administration Supervisor"', '"jobTitle":"HR & Administration Supervisor in Qatar"')
+              if '<link href="/CV/feed.xml" rel="alternate"' not in text:
+                  text = text.replace('<link href="/CV/manifest.webmanifest" rel="manifest"/>', '<link href="/CV/manifest.webmanifest" rel="manifest"/>\n<link href="/CV/feed.xml" rel="alternate" type="application/rss+xml" title="Hossam Ali HR Knowledge Blog"/>')
+              save(path, text)
+
+          project_meta = {
+              'en/projects/index.html': ('HR Systems & Automation Case Studies | Hossam Ali', 'Case studies by Hossam Ali covering HR systems, workforce dashboards, document controls and workflow automation for HR operations in Qatar.'),
+              'ar/projects/index.html': ('دراسات حالة في أنظمة وأتمتة الموارد البشرية | حسام علي', 'دراسات حالة عملية لحسام علي حول أنظمة الموارد البشرية ولوحات القوى العاملة وضبط المستندات وأتمتة الإجراءات في قطر.')
+          }
+          for filename, (title, description) in project_meta.items():
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              text = re.sub(r'<title>.*?</title>', f'<title>{title}</title>', text, count=1)
+              text = replace_meta(text, 'description', description)
+              text = replace_property(text, 'og:title', title)
+              text = replace_property(text, 'og:description', description)
+              text = replace_meta(text, 'twitter:title', title)
+              text = replace_meta(text, 'twitter:description', description)
+              save(path, text)
+
+          # Ensure every indexable HTML page advertises the RSS feed and has useful author-image alt text.
+          for path in list(Path('en').rglob('*.html')) + list(Path('ar').rglob('*.html')):
+              text = path.read_text(encoding='utf-8')
+              if '<meta content="noindex' not in text and '<link href="/CV/feed.xml" rel="alternate"' not in text:
+                  text = text.replace('<link href="/CV/manifest.webmanifest" rel="manifest"/>', '<link href="/CV/manifest.webmanifest" rel="manifest"/>\n<link href="/CV/feed.xml" rel="alternate" type="application/rss+xml" title="Hossam Ali HR Knowledge Blog"/>')
+              alt = 'Hossam Ali, HR and Administration Supervisor in Doha, Qatar' if path.parts[0] == 'en' else 'حسام علي، مشرف موارد بشرية وإدارة في الدوحة، قطر'
+              text = text.replace('<img alt="" height="112" loading="lazy" src="/CV/assets/images/profile.webp" width="112"/>', f'<img alt="{alt}" height="112" loading="lazy" src="/CV/assets/images/profile.webp" width="112"/>')
+              save(path, text)
+
+          manifest = Path('manifest.webmanifest')
+          data = json.loads(manifest.read_text(encoding='utf-8'))
+          data['start_url'] = '/CV/en/'
+          data['description'] = 'Professional website of Hossam Ali, HR and Administration Supervisor in Qatar, covering HR operations, workforce analytics and practical automation.'
+          new_manifest = json.dumps(data, ensure_ascii=False, indent=2) + '\n'
+          save(manifest, new_manifest)
+
+          sitemap = Path('sitemap.xml')
+          sm = sitemap.read_text(encoding='utf-8')
+          sm = re.sub(r'(<loc>https://hossam-ali-hr\.github\.io/CV/(?:en|ar)/</loc><lastmod>)[^<]+', r'\g<1>2026-07-13', sm)
+          sm = re.sub(r'(<loc>https://hossam-ali-hr\.github\.io/CV/(?:en|ar)/(?:projects|insights)/</loc><lastmod>)[^<]+', r'\g<1>2026-07-13', sm)
+          save(sitemap, sm)
+
+          robots = Path('robots.txt')
+          rb = robots.read_text(encoding='utf-8')
+          if 'Host:' not in rb:
+              rb = rb.rstrip() + '\nHost: hossam-ali-hr.github.io\n'
+          save(robots, rb)
+
+          # Remove this one-time workflow after it has completed its migration.
+          workflow = Path('.github/workflows/seo-enhancement.yml')
+          if workflow.exists():
+              workflow.unlink()
+              changed.append(str(workflow))
+
+          print(f'Changed {len(changed)} files')
+          for item in changed:
+              print(item)
+          PY
+
+      - name: Commit SEO changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes required"
+            exit 0
+          fi
+          git commit -m "Improve site SEO"
+          git push origin HEAD:agent/seo-enhancement

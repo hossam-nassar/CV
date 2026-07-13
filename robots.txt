@@ -14,3 +14,4 @@ User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://hossam-ali-hr.github.io/CV/sitemap.xml
+Host: hossam-ali-hr.github.io

@@ -9,19 +9,19 @@
 
 ## Public URL tests
 
-- [ ] `https://hossam-nassar.github.io/CV/`
-- [ ] `https://hossam-nassar.github.io/CV/en/`
-- [ ] `https://hossam-nassar.github.io/CV/ar/`
-- [ ] `https://hossam-nassar.github.io/CV/assets/images/profile.webp`
-- [ ] `https://hossam-nassar.github.io/CV/manifest.webmanifest`
-- [ ] `https://hossam-nassar.github.io/CV/robots.txt`
-- [ ] `https://hossam-nassar.github.io/CV/sitemap.xml`
-- [ ] `https://hossam-nassar.github.io/CV/llms.txt`
+- [ ] `https://hossam-ali-hr.github.io/CV/`
+- [ ] `https://hossam-ali-hr.github.io/CV/en/`
+- [ ] `https://hossam-ali-hr.github.io/CV/ar/`
+- [ ] `https://hossam-ali-hr.github.io/CV/assets/images/profile.webp`
+- [ ] `https://hossam-ali-hr.github.io/CV/manifest.webmanifest`
+- [ ] `https://hossam-ali-hr.github.io/CV/robots.txt`
+- [ ] `https://hossam-ali-hr.github.io/CV/sitemap.xml`
+- [ ] `https://hossam-ali-hr.github.io/CV/llms.txt`
 
 ## SEO verification
 
 - [ ] Add or verify the site in Google Search Console.
-- [ ] Submit `https://hossam-nassar.github.io/CV/sitemap.xml`.
+- [ ] Submit `https://hossam-ali-hr.github.io/CV/sitemap.xml`.
 - [ ] Inspect `/en/` and `/ar/` in URL Inspection.
 - [ ] Validate ProfilePage and Article JSON-LD.
 - [ ] Add the website URL to LinkedIn and other professional profiles.
